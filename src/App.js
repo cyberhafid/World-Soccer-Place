@@ -3,6 +3,18 @@ import './App.css';
 import MyNavbar from './components/navbar/navbar';
 import Progressbarre from "./components/header/progressbarre/progressbarre"
 import Carousel1 from "./components/header/carousel/carousel"
+import Menuv from "./components/menu/menubar"
+import Tableaut from "./components/menu/tableau"
+
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faEnvelope, faTruck, faKey, faBomb } from '@fortawesome/free-solid-svg-icons';
+
+
+
+library.add(faEnvelope, faTruck, faBomb,  faKey);
+
+
+
 
 class App extends Component {
   render() {
@@ -10,8 +22,15 @@ class App extends Component {
       <div className="App">
         <MyNavbar />
         <Carousel1 />
+
+        
         <div className="container">
           <Progressbarre />
+          <Menuv />
+          <Tableaut />
+
+
+
         </div>
       </div>
     );
