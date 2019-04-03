@@ -7,7 +7,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Navbar1 />
         <Carousel1 />
         <div className="container">
           <Progressbarre />
