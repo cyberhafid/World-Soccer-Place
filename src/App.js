@@ -10,7 +10,8 @@ class App extends Component {
       <div className="App">
         <MyNavbar />
         <Carousel1 />
-        <div className="container">
+        <div className="container-fluid backg">
+        <br></br>
           <Progressbarre />
         </div>
       </div>
