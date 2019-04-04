@@ -7,8 +7,10 @@ import {
   NavbarBrand,
   Nav,
   NavItem } from 'reactstrap';
-  import MyButton from '../shared/button';
+  import ModalLog from './modalLog';
+  import ModalSign from './modalSign';
   import './navbar.css';
+  import logo from '../../assets/img/logo.png';
 
 export default class MyNavbar extends React.Component {
   constructor(props) {
@@ -27,22 +29,27 @@ export default class MyNavbar extends React.Component {
   render() {
     return (
       <div>
-        <Navbar color="light" color="warning" light expand="md">
-          <NavbarBrand href="/">{/* logo */}</NavbarBrand>
+        <Navbar color="light" className="modalNavbar" light expand="md">
+          <NavbarBrand href="/">
+          <img src="https://i.ibb.co/MhQ35Pf/logo.png" height="50"></img>
+          <p className="text-light titleNav">Api-Football</p>
+          </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <MyButton 
-                colorButton="primary"
-                nameButton='Log In'
-                btnNavClass='btnNav'
+            
+                <ModalLog
+      
+                buttonLabel='LOG IN'
                 />
+                
+                
               </NavItem>
               <NavItem>
-                <MyButton 
-                colorButton="primary"
-                nameButton='Registration'
+              <ModalSign
+                buttonLabel='SIGN IN'
+                
                 />
               </NavItem>
             </Nav>
