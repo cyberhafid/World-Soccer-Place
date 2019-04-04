@@ -1,10 +1,5 @@
 import React from 'react';
 import { ListGroup, ListGroupItem } from 'reactstrap';
-<<<<<<< HEAD
-=======
-
->>>>>>> b807b38dafdaa1a3d461c687ef8fab075aa0f4f3
-/*import CartIcon from '/src/logo.png';*/
 
 
 export default class Menun extends React.Component {
@@ -12,8 +7,8 @@ export default class Menun extends React.Component {
     return (
 
       <ListGroup>
-  
-     
+
+
         <ListGroupItem>  Vestibulum at eros</ListGroupItem>
 
 <ListGroupItem> Vestibulum at eros</ListGroupItem>
@@ -30,7 +25,7 @@ export default class Menun extends React.Component {
       </ListGroup>
 
 
-   
+
     );
   }
 }
@@ -38,8 +33,8 @@ export default class Menun extends React.Component {
 
 
       <ListGroup>
-  
-     
+
+
         <ListGroupItem><FontAwesomeIcon
           icon="key"
         />   Vestibulum at eros</ListGroupItem>
@@ -67,6 +62,6 @@ export default class Menun extends React.Component {
 
 
 <div>
-       
+
        <img src={CartIcon}/>
   </div>*/
