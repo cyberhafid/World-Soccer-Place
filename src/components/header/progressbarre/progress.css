@@ -1,3 +1,23 @@
-.padding-progress{
-    padding: 50px;
+.text-progress{
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    font-weight: bold;
 }
+.bgprogress{
+    background-color: rgba(255, 255, 255, 0.288);
+    border-radius: 100px;
+    padding-bottom: 60px;
+}
+.App-logo {
+    animation: App-logo-spin infinite 5s linear;
+    pointer-events: none;
+}
+
+@keyframes App-logo-spin {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(360deg);
+    }
+  }
