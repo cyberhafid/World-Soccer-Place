@@ -8,11 +8,17 @@ import Menuv from "./components/menu/menubar"
 import Tableaut from "./components/menu/tableau"
 
 import { library } from './assets/fonts/@fortawesome/fontawesome-svg-core';
+import { library } from './assets/fonts/@fortawesome/fontawesome-svg-core';
 import { faEnvelope, faTruck, faKey, faBomb } from './assets/fonts/@fortawesome/free-solid-svg-icons';
 
+import { faEnvelope, faTruck, faKey, faBomb } from './assets/fonts/@fortawesome/free-solid-svg-icons';
 library.add(faEnvelope, faTruck, faBomb, faKey);
 
 
+
+
+
+library.add(faEnvelope, faTruck, faBomb,  faKey);
 
 
 class App extends Component {
