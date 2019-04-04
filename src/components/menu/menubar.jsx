@@ -1,6 +1,6 @@
 import React from 'react';
 import { ListGroup, ListGroupItem } from 'reactstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 /*import CartIcon from '/src/logo.png';*/
 
 
