@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "./carousel.css"
 import {
     Carousel,
     CarouselItem,
@@ -9,17 +10,17 @@ import {
 
 const items = [
     {
-        src: 'http://www.angelxp.eu/image/Twitter/divers/football01.jpg',
+        src: 'https://images.wallpaperscraft.com/image/football_soccer_ball_lawn_122654_3840x2400.jpg',
         altText: 'Slide 1',
         caption: 'Slide 1'
     },
     {
-        src: 'http://www.angelxp.eu/image/Twitter/divers/football01.jpg',
+        src: 'https://images.wallpaperscraft.com/image/football_boots_lawn_shoes_126910_1280x720.jpg',
         altText: 'Slide 2',
         caption: 'Slide 2'
     },
     {
-        src: 'http://www.angelxp.eu/image/Twitter/divers/football01.jpg',
+        src: 'https://images.wallpaperscraft.com/image/soccer_ball_football_lawn_121273_3840x2400.jpg',
         altText: 'Slide 3',
         caption: 'Slide 3'
     }
@@ -71,14 +72,14 @@ class Carousel1 extends Component {
                     onExited={this.onExited}
                     key={item.src}
                 >
-                    <img src={item.src} alt={item.altText} />
+                    <img src={item.src} alt={item.altText} width="100%" height="670" />
                     <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
                 </CarouselItem>
             );
         });
 
         return (
-            <Carousel
+            <Carousel className="carou"
                 activeIndex={activeIndex}
                 next={this.next}
                 previous={this.previous}
