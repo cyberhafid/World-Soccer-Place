@@ -1,5 +1,9 @@
 import React from 'react';
 import { ListGroup, ListGroupItem } from 'reactstrap';
+<<<<<<< HEAD
+=======
+
+>>>>>>> b807b38dafdaa1a3d461c687ef8fab075aa0f4f3
 /*import CartIcon from '/src/logo.png';*/
 
 
