@@ -72,7 +72,7 @@ class Carousel1 extends Component {
                     onExited={this.onExited}
                     key={item.src}
                 >
-                    <img src={item.src} alt={item.altText} width="100%" height="550" />
+                    <img src={item.src} alt={item.altText} width="100%" height="700" />
                     <div className="sizeTitleCarousel"><CarouselCaption font-size captionText={item.caption} captionHeader={item.altText} /></div>
                 </CarouselItem>
             );
