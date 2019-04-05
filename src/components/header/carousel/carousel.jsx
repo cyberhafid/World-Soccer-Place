@@ -10,19 +10,19 @@ import {
 
 const items = [
     {
-        src: 'https://images.wallpaperscraft.com/image/football_soccer_ball_lawn_122654_3840x2400.jpg',
-        altText: 'Slide 1',
-        caption: 'Slide 1'
+        src: 'https://i.ibb.co/ypWcdxn/82ca09c772b70646a3341a59219d4803.jpg',
+        altText: 'Welcome to Api-Football Actu-foot in real time',
+        caption: 'live match news, upcoming matches and finished match scores'
     },
     {
-        src: 'https://images.wallpaperscraft.com/image/football_boots_lawn_shoes_126910_1280x720.jpg',
-        altText: 'Slide 2',
-        caption: 'Slide 2'
+        src: 'https://i.imgur.com/gMdgPvO.jpg',
+        altText: 'Bet on your Best Team',
+        caption: 'MyMatch - Create your match scenario and get your personalized rating'
     },
     {
-        src: 'https://images.wallpaperscraft.com/image/soccer_ball_football_lawn_121273_3840x2400.jpg',
-        altText: 'Slide 3',
-        caption: 'Slide 3'
+        src: 'https://png.pngtree.com/thumb_back/fw800/back_pic/03/86/72/4157cfcc9b5ab2c.jpg',
+        altText: 'More about it',
+        caption: 'Follow your favorite teams in the Myteam section choose between a selection of leagues stay informed about upcoming games check team composition '
     }
 ];
 
@@ -72,14 +72,14 @@ class Carousel1 extends Component {
                     onExited={this.onExited}
                     key={item.src}
                 >
-                    <img src={item.src} alt={item.altText} width="100%" height="670" />
-                    <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
+                    <img src={item.src} alt={item.altText} width="100%" height="550" />
+                    <div className="sizeTitleCarousel"><CarouselCaption font-size captionText={item.caption} captionHeader={item.altText} /></div>
                 </CarouselItem>
             );
         });
 
         return (
-            <Carousel className="carou"
+            <Carousel
                 activeIndex={activeIndex}
                 next={this.next}
                 previous={this.previous}
