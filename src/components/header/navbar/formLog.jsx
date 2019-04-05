@@ -20,7 +20,7 @@ export default class FormLogNav extends React.Component {
                 colorButton="primary"
                 nameButton='LOG IN'
                 btnNavClass='btnNav'
-                />{' '}
+                />
       </Form>
     );
   }

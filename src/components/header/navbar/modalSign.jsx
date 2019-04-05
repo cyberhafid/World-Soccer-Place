@@ -33,7 +33,7 @@ class ModalSign extends React.Component {
                 colorButton="primary"
                 nameButton='CANCEL'
                 btnNavClass='btnNav'
-                />{' '}
+                />
           </ModalFooter>
         </Modal>
       </div>
