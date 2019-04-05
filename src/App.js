@@ -5,7 +5,8 @@ import ProgressBar from "./components/header/progressbar/progress"
 import Carousel1 from "./components/header/carousel/carousel"
 import MyTable from './components/contents/tables/tables_container';
 import MyFooter from './components/footer/containerFooter';
-
+import Book from './components/contents/bookmaker/bookmaker'
+import {Row, Col} from "reactstrap"
 
 class App extends Component {
   render() {
@@ -16,7 +17,12 @@ class App extends Component {
         <div className="container-fluid backg">
           <br></br>
           <ProgressBar />
-          <MyTable />
+          <Row>
+          <Col sm="3"></Col>
+          <Col sm="6"><MyTable /></Col>
+          <Col sm="3"><Book /></Col>
+          </Row>
+          
           <MyFooter />
         </div>
       </div>

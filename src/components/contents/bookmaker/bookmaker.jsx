@@ -1,11 +1,10 @@
 import React from 'react';
-import { Table } from 'reactstrap';
 import { Button } from 'reactstrap';
 import { ListGroup, ListGroupItem } from 'reactstrap';
 
 import "./bookmaker.css";
 // import Image from 'react-bootstrap/Image'
-export default class book extends React.Component {
+export default class Book extends React.Component {
   render() {
     return (
       <ListGroup className="book">
