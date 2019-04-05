@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
 import MyNavbar from './components/header/navbar/navbar';
-//import Progressbarre from "./components/header/progressbarre/progressbarre"
+import ProgressBar from "./components/header/progressbar/progress"
 import Carousel1 from "./components/header/carousel/carousel"
-import MyTables from './components/contents/tables/tables_container';
+import MyTable from './components/contents/tables/tables_container';
+import MyFooter from './components/footer/containerFooter';
+
 
 class App extends Component {
   render() {
@@ -11,9 +13,11 @@ class App extends Component {
       <div className="App">
         <MyNavbar />
         <Carousel1 />
-        <div className="container">
-         
-          <MyTables />
+        <div className="container-fluid backg">
+          <br></br>
+          <ProgressBar />
+          <MyTable />
+          <MyFooter />
         </div>
       </div>
     );
