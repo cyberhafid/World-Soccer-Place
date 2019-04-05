@@ -1,7 +1,7 @@
 #table_1{
   
 background-color: rgba(240, 232, 232, 0.966);
-    -moz-border-radius: 10px;
+-moz-border-radius: 10px;
 border-radius: 10px;
 -khtml-border-radius: 10px;
 -webkit-border-radius: 10px;
@@ -34,21 +34,12 @@ border-radius: 10px;
 .bold{
     font-weight: bold;
 }
-.span1{
+.toMarge_2{
     width:20%;
 }
-.span2{
+.toMarge_3{
     width:25%;
 }
-.span3{
+.toMarge_1{
     width:10%;
-}
-.span4{
-    width:10%;
-}
-.span5{
-    width:10%;
-}
-.span6{
-    width:25%;
 }

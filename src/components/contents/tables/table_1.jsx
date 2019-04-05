@@ -8,12 +8,12 @@ export default class MyTable_1 extends React.Component {
       <Table id="table_1">
         <tbody>
           <tr>
-            <td scope="row" className="direct span1">Direct •</td>
-            <td className="span2">Otto</td>
-            <td className="span3">1</td>
-            <td className="span4 bold">VS</td>
-            <td className="span5">0</td>
-            <td className="span6">@mdo</td>
+            <td scope="row" className="direct toMarge_2">Direct •</td>
+            <td className="toMarge_3">Otto</td>
+            <td className="toMarge_1">1</td>
+            <td className="toMarge_1 bold">VS</td>
+            <td className="toMarge_1">0</td>
+            <td className="toMarge_3">@mdo</td>
           </tr>
           <tr>
             <td scope="row" className="direct">Direct •</td>

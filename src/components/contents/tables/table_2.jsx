@@ -10,12 +10,12 @@ export default class MyTable_2 extends React.Component {
 
 
         <tr>
-            <td scope="row" className="finish span1">Finish</td>
-            <td className="span2">Otto</td>
-            <td className="span3">1</td>
-            <td className="span4 bold">VS</td>
-            <td className="span5">0</td>
-            <td className="span6">@mdo</td>
+            <td scope="row" className="finish toMarge_2">Finish</td>
+            <td className="toMarge_3">Otto</td>
+            <td className="toMarge_1">1</td>
+            <td className="toMarge_1 bold">VS</td>
+            <td className="toMarge_1">0</td>
+            <td className="toMarge_3">@mdo</td>
           </tr>
 
 
