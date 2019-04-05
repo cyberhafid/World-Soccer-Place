@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import "./carousel.css"
+import "./carousel.scss"
 import {
     Carousel,
     CarouselItem,
@@ -79,7 +79,7 @@ class Carousel1 extends Component {
         });
 
         return (
-            <Carousel
+            <Carousel className="styleCarousel"
                 activeIndex={activeIndex}
                 next={this.next}
                 previous={this.previous}
