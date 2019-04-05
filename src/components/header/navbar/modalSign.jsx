@@ -1,9 +1,9 @@
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-import MyButton from '../shared/button';
-import FormLogNav from './formLog';
+import MyButton from '../../shared/button';
+import FormSignNav from './formSign';
 
-class ModalLog extends React.Component {
+class ModalSign extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -23,9 +23,9 @@ class ModalLog extends React.Component {
       <div>
         <Button color="primary" className='modalNavbar' onClick={this.toggle}>{this.props.buttonLabel}</Button>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-          <ModalHeader toggle={this.toggle}>LOG IN   ZONE</ModalHeader>
+          <ModalHeader toggle={this.toggle}>SIGN IN   ZONE</ModalHeader>
           <ModalBody>
-             <FormLogNav />
+             <FormSignNav />
           </ModalBody>
           <ModalFooter>
           <MyButton 
@@ -34,9 +34,6 @@ class ModalLog extends React.Component {
                 nameButton='CANCEL'
                 btnNavClass='btnNav'
                 />{' '}
-            {/* <Button color="primary" onClick={this.toggle}>Do Something</Button>{' '}
-            <Button color="secondary" onClick={this.toggle}>Cancel</Button> */}
-            
           </ModalFooter>
         </Modal>
       </div>
@@ -44,4 +41,4 @@ class ModalLog extends React.Component {
   }
 }
 
-export default ModalLog;
+export default ModalSign;

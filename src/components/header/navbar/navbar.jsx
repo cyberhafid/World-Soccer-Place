@@ -10,7 +10,7 @@ import {
   import ModalLog from './modalLog';
   import ModalSign from './modalSign';
   import './navbar.css';
-  import logo from '../../assets/img/logo.png';
+  import logo from '../../../assets/img/logo.png';
 
 export default class MyNavbar extends React.Component {
   constructor(props) {
@@ -38,7 +38,6 @@ export default class MyNavbar extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-            
                 <ModalLog
       
                 buttonLabel='LOG IN'
