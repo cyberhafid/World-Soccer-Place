@@ -5,7 +5,9 @@ import ProgressBar from "./components/header/progressbar/progress"
 import Carousel1 from "./components/header/carousel/carousel"
 import MyTable from './components/contents/tables/tables_container';
 import MyFooter from './components/footer/containerFooter';
-
+import Menuv from "./components/contents/menu/menubar"
+import Menu2 from "./components/contents/menu/menubar2"
+import Menu3 from "./components/contents/menu/menubar3"
 
 class App extends Component {
   render() {
@@ -15,6 +17,8 @@ class App extends Component {
         <Carousel1 />
         <div className="container-fluid backg">
           <br></br>
+
+          <Menuv /> <Menu2 /> <Menu3 />
           <ProgressBar />
           <MyTable />
           <MyFooter />
