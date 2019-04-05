@@ -17,11 +17,8 @@ class App extends Component {
         <div className="container-fluid backg">
           <br></br>
           <ProgressBar />
-          <Row>
-          <Col sm="3"></Col>
-          <Col sm="6"><MyTable /></Col>
-          <Col sm="3"><Book /></Col>
-          </Row>
+          <MyTable />
+          <Book />
           
           <MyFooter />
         </div>
