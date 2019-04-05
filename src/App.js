@@ -20,7 +20,7 @@ class App extends Component {
         <br></br>
           <Progressbarre />
             <Row>
-              <Col sm="3">   <Menuv />  <span>{'    . '}  </span><Menu2 /> <span>{'    . '}  </span><Menu3 /></Col>
+              <Col sm="3">   <Menuv /> <Menu2 /> <Menu3 /></Col>
               <Col sm="6"> <Tableaut /></Col>
               <Col sm="6">3 of 3</Col>
             </Row>
