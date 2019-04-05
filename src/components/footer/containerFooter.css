@@ -1,0 +1,13 @@
+.footer_container{
+    background-color: #373A3C;
+    border : 2px ridge black;
+    color: white;
+}
+.fa-twitter{
+	color: #4286f4;
+	background-color: #373A3C;
+}
+.fa-facebook{
+	color: #1c3d72;
+	background-color: #373A3C;
+}
