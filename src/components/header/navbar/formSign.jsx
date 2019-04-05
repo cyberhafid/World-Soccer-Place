@@ -24,7 +24,7 @@ export default class FormSignNav extends React.Component {
                 colorButton="primary"
                 nameButton='SIGN IN'
                 btnNavClass='btnNav'
-                />{' '}
+                />
       </Form>
     );
   }
