@@ -3,7 +3,7 @@ import './menu.css';
 import { ListGroup, ListGroupItem } from 'reactstrap';
 
 
-export default class Menu3 extends React.Component {
+export default class Matchupcomming extends React.Component {
   render() {
     return (
       <div class="list-group">
