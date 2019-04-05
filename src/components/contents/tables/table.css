@@ -1,0 +1,28 @@
+#table_1{
+    background-color: #e8e8e8;
+}
+
+#table_2{
+    background-color: #e8e8e8;
+}
+
+#table_3{
+    background-color: #e8e8e8;
+}
+
+.title_table{
+    color: white;
+    text-align: center;
+}
+
+.direct{
+    color: red;
+}
+
+.finish{
+    color: green;
+}
+
+.bold{
+    font-weight: bold;
+}

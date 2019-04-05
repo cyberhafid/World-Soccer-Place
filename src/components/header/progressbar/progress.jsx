@@ -3,7 +3,7 @@ import { Progress } from 'reactstrap';
 import "./progress.css"
 
 
-const Progressbar = (props) => {
+const ProgressBar = (props) => {
     return (
 
             <div className="container bgprogress">
@@ -20,4 +20,4 @@ const Progressbar = (props) => {
     );
 };
 
-export default Progressbar;
+export default ProgressBar;
