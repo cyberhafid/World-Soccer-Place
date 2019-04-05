@@ -1,25 +1,22 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import MyNavbar from './components/navbar/navbar';
+import Progressbarre from "./components/header/progressbarre/progressbarre"
+import Carousel1 from "./components/header/carousel/carousel"
+import MyTable from './components/contents/tables/table';
+import MyFooter from './components/footer/containerFooter';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <MyNavbar />
+        <Carousel1 />
+        <div className="container">
+          <Progressbarre />
+          <MyTable />
+          <MyFooter />
+        </div>
       </div>
     );
   }
