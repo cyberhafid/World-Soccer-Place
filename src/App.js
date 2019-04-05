@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Progressbarre from "./components/header/progressbarre/progress"
+import Progressbar from "./components/header/progressbar/progress"
 
 class App extends Component {
   render() {
@@ -8,7 +8,7 @@ class App extends Component {
       <div className="App">
         <div className="container-fluid backg">
           <br></br>
-          <Progressbarre />
+          <Progressbar />
         </div>
       </div>
     );
