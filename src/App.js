@@ -10,11 +10,17 @@ import {Row, Col} from "reactstrap"
 import Matchencours from "./components/contents/menu/menubar"
 import Matchresults from "./components/contents/menu/menubar2"
 import Matchupcomming from "./components/contents/menu/menubar3"
+import ClassmentLigue from './components/contents/tables/classement';
+import Chien from './components/contents/tables/CChien';
 
 class App extends Component {
   render() {
     return (
+
          <div className="App">
+          <Chien />
+  <ClassmentLigue />
+
         <MyNavbar />
         <Carousel1 />
         <div className="container-fluid backg">
