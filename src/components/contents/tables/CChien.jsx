@@ -1,49 +1,52 @@
-import React from 'react';
+import React, { Component } from 'react';
 import axios from 'axios';
 
 
 
-
-
-
-
-export default class Chien extends React.Component {
-
-
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      imageURL: '',
-      status: "success",
-      message: "https://images.dog.ceo/breeds/pembroke/n02113023_3167.jpg"
-   
-
+export default class Chien extends Component
+{
+  constructor(props, context)
+  {
+    super();
+    this.state={
+      seasons:[]
     }
   }
 
+  _fetchData()
+  {
+      var instance = axios.create({
+        baseURL: 'http://api.football-data.org/v1',
+        headers: {'X-Auth-Token': 'a8fd10c1a4ce46889c901ab960eaecb1'}
+      });
 
-
-
-  componentDidMount() {
-    axios.get('https://dog.ceo/api/breeds/image/random')
-    .then(response => {
-      this.setState({ imageURL: response.data.message });
-    })
-    .catch(error => {
-      console.log(error);
-    });
-  }
-  
-
-
-
-  render() {
-    const { imageURL } = this.state;
-    return (
-      <img src={imageURL} />
-    );
+      instance.get('/soccerseasons?season=2015').then((seasons)=> {
+        this.setState({
+          seasons: seasons.data
+        },
+        (error)=>{
+          console.log(error);
+        
+        })
+      })
   }
 
+  componentDidMount()
+  {
+    this._fetchData();
+  }
 
+  render()
+  {
+    return(
+      <ul>
+          {this.state.seasons.map(function(season){
+            return<li key={season.id + season.caption}>
+              {season.caption}
+              </li>
+
+          })}
+      </ul>
+    )
+  }
 }

@@ -1,5 +1,29 @@
 import React, { Component } from 'react';
 import './App.css';
+
+import Chien from './components/contents/tables/CChien';
+
+class App extends Component {
+  render() {
+    return (
+
+         <div className="App">
+          <Chien />
+
+        <div>
+         
+        </div>
+      </div>
+    );
+  }
+}
+
+export default App;
+
+
+/*
+import React, { Component } from 'react';
+import './App.css';
 import MyNavbar from './components/header/navbar/navbar';
 import ProgressBar from "./components/header/progressbar/progress"
 import Carousel1 from "./components/header/carousel/carousel"
@@ -39,3 +63,4 @@ class App extends Component {
 }
 
 export default App;
+*/
