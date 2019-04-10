@@ -6,7 +6,12 @@ import {
   NavbarToggler,
   NavbarBrand,
   Nav,
-  NavItem } from 'reactstrap';
+  NavItem,
+  NavLink,
+  DropdownToggle,
+  UncontrolledDropdown,
+  DropdownMenu,
+  DropdownItem } from 'reactstrap';
   import ModalLog from './modalLog';
   import ModalSign from './modalSign';
   import './navbar.css';
@@ -31,11 +36,31 @@ export default class MyNavbar extends React.Component {
       <div>
         <Navbar color="light" className="modalNavbar" light expand="md">
           <NavbarBrand href="/">
-          <img src="https://i.ibb.co/MhQ35Pf/logo.png" height="50"></img>
+          <img src={logo} height="50"></img>
           <p className="text-light titleNav">Api-Football</p>
           </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
+          <UncontrolledDropdown nav inNavbar>
+                <DropdownToggle nav caret>
+                  Navigation
+                </DropdownToggle>
+                <DropdownMenu right>
+                  <DropdownItem>
+                  <NavLink activeClassName='selected' exact to="/"> Home </NavLink>
+                  </DropdownItem>
+                  <DropdownItem>
+                  <NavLink activeClassName='selected' to="/league"> League </NavLink>
+                  </DropdownItem>
+                  <DropdownItem>
+                  <NavLink activeClassName='selected' to="/bet"> Bet </NavLink>
+                  </DropdownItem>
+                  <DropdownItem>
+                  <NavLink activeClassName='selected' to="/contact"> Contact </NavLink>
+                  </DropdownItem>
+                  </DropdownMenu>
+              </UncontrolledDropdown>
+
             <Nav className="ml-auto" navbar>
               <NavItem>
                 <ModalLog
