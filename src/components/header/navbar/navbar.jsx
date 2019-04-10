@@ -1,4 +1,4 @@
-
+import { NavLink } from 'react-router-dom';
 import React from 'react';
 import {
   Collapse,
@@ -7,7 +7,6 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
   DropdownToggle,
   UncontrolledDropdown,
   DropdownMenu,
@@ -34,6 +33,8 @@ export default class MyNavbar extends React.Component {
   render() {
     return (
       <div>
+        
+        
         <Navbar color="light" className="modalNavbar" light expand="md">
           <NavbarBrand href="/">
           <img src={logo} height="50"></img>
@@ -47,16 +48,16 @@ export default class MyNavbar extends React.Component {
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem>
-                  <NavLink activeClassName='selected' exact to="/"> Home </NavLink>
+                  <NavLink className='nav-link' exact to="/"> Home </NavLink>
                   </DropdownItem>
                   <DropdownItem>
-                  <NavLink activeClassName='selected' to="/league"> League </NavLink>
+                  <NavLink className='nav-link' to="/league"> League </NavLink>
                   </DropdownItem>
                   <DropdownItem>
-                  <NavLink activeClassName='selected' to="/bet"> Bet </NavLink>
+                  <NavLink className='nav-link' to="/bet"> Bet </NavLink>
                   </DropdownItem>
                   <DropdownItem>
-                  <NavLink activeClassName='selected' to="/contact"> Contact </NavLink>
+                  <NavLink className='nav-link' to="/contact"> Contact </NavLink>
                   </DropdownItem>
                   </DropdownMenu>
               </UncontrolledDropdown>

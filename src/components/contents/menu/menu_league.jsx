@@ -4,7 +4,7 @@ import './menu.css';
 import { ListGroup, ListGroupItem} from 'reactstrap';
 
 
-export default class Matchencours extends React.Component {
+export default class MenuLeague extends React.Component {
   render() {
     return (
       <div class="list-group">
