@@ -1,23 +1,29 @@
 import React from 'react';
-import { ListGroup, ListGroupItem} from 'reactstrap';
-
+import { Table } from 'reactstrap';
+import './table.css';
 
 export default class ClassmentLigue extends React.Component {
   render() {
     return (
-      <div class="list-group">
-      <ListGroup >
-     
-        <ListGroupItem><img width="30px" src="https://icons.footendirect.com/competition/s/normal/226.png" alt="dd" class="img-thumbnail"></img><span class="titremenu"> Ligue 1</span></ListGroupItem>
-        <ListGroupItem> <img width="30px" src="https://icons.footendirect.com/competition/s/normal/227.png" alt="dd" class="img-thumbnail"></img><span class="titremenu">  Ligue 2</span></ListGroupItem>
-        <ListGroupItem>  <img width="30px" src="https://icons.footendirect.com/competition/s/normal/678.png" alt="dd" ></img><span class="titremenu">   Ligue des Champions</span></ListGroupItem>
-        <ListGroupItem> <img width="30px" src="https://icons.footendirect.com/competition/s/normal/234.png" alt="dd" class="img-thumbnail"></img><span class="titremenu"> Coup de France</span></ListGroupItem>
-        <ListGroupItem> <img width="30px" src="https://icons.footendirect.com/competition/s/normal/551.png" alt="dd" class="img-thumbnail"></img><span class="titremenu"> LaLiga</span></ListGroupItem>
-        <ListGroupItem> <img width="30px" src="https://icons.footendirect.com/competition/s/normal/762.png" alt="dd" class="img-thumbnail"></img><span class="titremenu"> Coup du Monde</span></ListGroupItem>
-        <ListGroupItem> <img width="30px" src="https://img.icons8.com/nolan/2x/circled-chevron-down.png" alt="dd" class="img-thumbnail"></img><span class="titremenu"> Voir +</span></ListGroupItem>
-      </ListGroup>
-</div>
+      <Table id="table_1">
+        <tbody>
+          <tr>
+            <td> #</td>
+            <td>Classement</td>
+            <td>Pts</td>
+            <td >Day</td>
+            <td>Diff</td>
+          </tr>
+          <tr>
+            <td className="bold"> #</td>
+            <td>Classement</td>
+            <td className="bold">Pts</td>
+            <td className="bold">Day</td>
+            <td className="direct">Diff</td>
+          </tr>
 
+        </tbody>
+      </Table>
 
 
     );
