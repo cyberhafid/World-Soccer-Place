@@ -5,7 +5,8 @@ import ProgressBar from "./components/header/progressbar/progress"
 import Carousel1 from "./components/header/carousel/carousel"
 import MyTable from './components/contents/tables/tables_container';
 import MyFooter from './components/footer/containerFooter';
-
+import Book from './components/contents/bookmaker/bookmaker'
+import {Row, Col} from "reactstrap"
 
 class App extends Component {
   render() {
@@ -17,6 +18,8 @@ class App extends Component {
           <br></br>
           <ProgressBar />
           <MyTable />
+          <Book />
+          
           <MyFooter />
         </div>
       </div>
