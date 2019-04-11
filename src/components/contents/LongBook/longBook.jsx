@@ -7,7 +7,7 @@ export default class LongBook extends React.Component {
   render() {
     return (
       <Table  id="longBook" >
-        <thead>        
+        <thead className="longBook2">        
           <tr>
             <th><strong>Bookmakers</strong></th>
             <th><strong>1</strong></th>
