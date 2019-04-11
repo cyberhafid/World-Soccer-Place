@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import "./carousel.scss"
+import "./carousel.scss";
 import {
     Carousel,
     CarouselItem,
@@ -64,7 +64,6 @@ class Carousel1 extends Component {
 
     render() {
         const { activeIndex } = this.state;
-
         const slides = items.map((item) => {
             return (
                 <CarouselItem
@@ -77,9 +76,8 @@ class Carousel1 extends Component {
                 </CarouselItem>
             );
         });
-
         return (
-            <Carousel className="styleCarousel"
+            <Carousel className="style-carousel"
                 activeIndex={activeIndex}
                 next={this.next}
                 previous={this.previous}

@@ -3,21 +3,15 @@ import MatchOfDay from './match_of_day';
 import Results from './results';
 import UpcommingMatchs from './upcomming_matchs';
 
-const MyTables = () => <div>
-
-  <div className="title_table">
-    <h2 >Matchs of the day</h2>
+const MyTables = () =>
+  <div>
+    <h2 className="title-table">Matchs of the day</h2>
     <MatchOfDay />
-    </div>
+    <h2 className="title-table">Results</h2>
+    <Results />
+    <h2 className="title-table">Upcoming matchs</h2>
+    <UpcommingMatchs />
+  </div>
 
-    <div className="title_table">
-    <h2 className="title_table">Results</h2>
-    <Results/>
-    </div>
 
-    <h2 className="title_table">Upcoming matchs</h2>
-    <UpcommingMatchs/>
-    </div>
-
-  
-  export default MyTables;
+export default MyTables;

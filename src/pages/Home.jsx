@@ -12,7 +12,6 @@ export default class Home extends Component {
     render() {
         return (
             <div>
-                
                 <Carousel1 />
                 <div className="container-fluid backg">
                     <ProgressBar />
@@ -29,7 +28,6 @@ export default class Home extends Component {
                             <Book />
                         </Col>
                     </Row>
-                    
                 </div>
             </div>
         )

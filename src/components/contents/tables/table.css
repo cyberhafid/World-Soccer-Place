@@ -1,4 +1,4 @@
-#table_1{
+#table-1{
   
 background-color: rgba(240, 232, 232, 0.966);
 -moz-border-radius: 10px;
@@ -7,15 +7,15 @@ border-radius: 10px;
 -webkit-border-radius: 10px;
 }
 
-#table_2{
+#table-2{
     background-color: #e8e8e8;
 }
 
-#table_3{
+#table-3{
     background-color: #e8e8e8;
 }
 
-.title_table{
+.title-table{
     margin-top: 2%;
     background-color: rgba(0, 0, 0, 0.288);
     color: rgb(255, 255, 255);
@@ -34,12 +34,12 @@ border-radius: 10px;
 .bold{
     font-weight: bold;
 }
-.toMarge_2{
+.toMarge-2{
     width:20%;
 }
-.toMarge_3{
+.toMarge-3{
     width:25%;
 }
-.toMarge_1{
+.toMarge-1{
     width:10%;
 }

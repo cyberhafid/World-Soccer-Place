@@ -9,23 +9,23 @@ import MenuCountry from "../components/contents/menu/menu_country";
 export default class League extends Component {
     render() {
         return (
-                <div className="container-fluid backg">
-                    {/* Ajouter description text */}
-                    <Row>
-                        <Col sm="3">
-                            <MenuLeague />
-                            <MenuTeam />
-                            <MenuCountry />
-                        </Col>
-                        <Col sm="6">
-                            <MyTable />
-                        </Col>
-                        <Col sm="3">
-                            <Book />
-                        </Col>
-                        {/* Ajouter list group rank */}
-                    </Row>
-                </div>
+            <div className="container-fluid backg">
+                {/* Ajouter description text */}
+                <Row>
+                    <Col sm="3">
+                        <MenuLeague />
+                        <MenuTeam />
+                        <MenuCountry />
+                    </Col>
+                    <Col sm="6">
+                        <MyTable />
+                    </Col>
+                    <Col sm="3">
+                        <Book />
+                    </Col>
+                    {/* Ajouter list group rank */}
+                </Row>
+            </div>
         )
     }
 }

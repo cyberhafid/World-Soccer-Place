@@ -9,12 +9,12 @@ import {
   NavItem,
   DropdownToggle,
   UncontrolledDropdown,
-  DropdownMenu,
-  DropdownItem } from 'reactstrap';
-  import ModalLog from './modalLog';
-  import ModalSign from './modalSign';
-  import './navbar.css';
-  import logo from '../../../assets/img/logo.png';
+  DropdownMenu
+} from 'reactstrap';
+import ModalLog from './modalLog';
+import ModalSign from './modalSign';
+import './navbar.css';
+import logo from '../../../assets/img/logo.png';
 
 export default class MyNavbar extends React.Component {
   constructor(props) {
@@ -33,33 +33,33 @@ export default class MyNavbar extends React.Component {
   render() {
     return (
       <div>
-        <Navbar color="light" className="modalNavbar" light expand="md">
+        <Navbar color="light" className="modal-navbar" light expand="md">
           <NavbarBrand href="/">
-          <img src={logo} height="50"></img>
-          <p className="text-light titleNav">Api-Football</p>
+            <img src={logo} height="50"></img>
+            <p className="text-light title-nav">Api-Football</p>
           </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
-          <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  Navigation
+            <UncontrolledDropdown nav inNavbar>
+              <DropdownToggle nav caret>
+                Navigation
                 </DropdownToggle>
-                <DropdownMenu right>
-                  <NavLink className='nav-link' to="/"> Home </NavLink>
-                  <NavLink className='nav-link' to="/league"> League </NavLink>
-                  <NavLink className='nav-link' to="/bet"> Bet </NavLink>
-                  <NavLink className='nav-link' to="/contact"> Contact </NavLink>
-                  </DropdownMenu>
-              </UncontrolledDropdown>
+              <DropdownMenu right>
+                <NavLink className='nav-link' to="/"> Home </NavLink>
+                <NavLink className='nav-link' to="/league"> League </NavLink>
+                <NavLink className='nav-link' to="/bet"> Bet </NavLink>
+                <NavLink className='nav-link' to="/contact"> Contact </NavLink>
+              </DropdownMenu>
+            </UncontrolledDropdown>
             <Nav className="ml-auto" navbar>
               <NavItem>
                 <ModalLog
-                buttonLabel='LOG IN'
+                  buttonLabel='LOG IN'
                 />
               </NavItem>
               <NavItem>
-              <ModalSign
-                buttonLabel='SIGN IN'
+                <ModalSign
+                  buttonLabel='SIGN IN'
                 />
               </NavItem>
             </Nav>

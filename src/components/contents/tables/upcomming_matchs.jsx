@@ -5,17 +5,16 @@ import './table.css';
 export default class UpcommingMatchs extends React.Component {
   render() {
     return (
-      <Table id="table_3">
+      <Table id="table-3">
         <tbody>
-        <tr>
-            <td scope="row" className="toMarge_2">Tuesday, March 10</td>
-            <td className="toMarge_3">Otto</td>
-            <td className="toMarge_1">1</td>
-            <td className="toMarge_1 bold">VS</td>
-            <td className="toMarge_1">0</td>
-            <td className="toMarge_3">@mdo</td>
+          <tr>
+            <td scope="row" className="toMarge-2">Tuesday, March 10</td>
+            <td className="toMarge-3">Otto</td>
+            <td className="toMarge-1">1</td>
+            <td className="toMarge-1 bold">VS</td>
+            <td className="toMarge-1">0</td>
+            <td className="toMarge-3">@mdo</td>
           </tr>
-
           <tr>
             <td scope="row">Tuesday, March 10</td>
             <td>Thornton</td>

@@ -5,15 +5,15 @@ import './table.css';
 export default class MatchOfDay extends React.Component {
   render() {
     return (
-      <Table id="table_1">
+      <Table id="table-1">
         <tbody>
           <tr>
-            <td scope="row" className="direct toMarge_2">Direct •</td>
-            <td className="toMarge_3">Otto</td>
-            <td className="toMarge_1">1</td>
-            <td className="toMarge_1 bold">VS</td>
-            <td className="toMarge_1">0</td>
-            <td className="toMarge_3">@mdo</td>
+            <td scope="row" className="direct toMarge-2">Direct •</td>
+            <td className="toMarge-3">Otto</td>
+            <td className="toMarge-1">1</td>
+            <td className="toMarge-1 bold">VS</td>
+            <td className="toMarge-1">0</td>
+            <td className="toMarge-3">@mdo</td>
           </tr>
           <tr>
             <td scope="row" className="direct">Direct •</td>

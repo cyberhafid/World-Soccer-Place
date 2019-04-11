@@ -12,10 +12,9 @@ import MyFooter from './components/footer/containerFooter';
 class App extends Component {
   render() {
     return (
-     
-        <BrowserRouter>
-         <div className="App">
-         <MyNavbar />
+      <BrowserRouter>
+        <div className="App">
+          <MyNavbar />
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/league" component={League} />
@@ -25,7 +24,6 @@ class App extends Component {
           <MyFooter />
         </div>
       </BrowserRouter>
-      
     );
   }
 }

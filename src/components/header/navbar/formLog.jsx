@@ -8,19 +8,18 @@ export default class FormLogNav extends React.Component {
       <Form>
         <FormGroup>
           <Label for="emailLog">Email</Label>
-          <Input type="email" name="email" id="emailLog" placeholder="Your pseudo
-          " />
+          <Input type="email" name="email" id="emailLog" placeholder="Your pseudo" />
         </FormGroup>
         <FormGroup>
           <Label for="passwordLog">Password</Label>
           <Input type="password" name="password" id="passwordLog" placeholder="Your password" />
         </FormGroup>
-        <MyButton 
-                onClick={this.toggle}
-                colorButton="primary"
-                nameButton='LOG IN'
-                btnNavClass='btnNav'
-                />
+        <MyButton
+          onClick={this.toggle}
+          colorButton="primary"
+          nameButton='LOG IN'
+          btnNavClass='btnNav'
+        />
       </Form>
     );
   }
