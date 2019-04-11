@@ -1,0 +1,81 @@
+.inputform{
+    label{
+        color: white;
+        font-size: 20px
+    }
+
+* {
+    box-sizing: border-box;
+}
+.App {
+    max-width: 420px;
+    margin: 0 auto;
+}
+    p {
+    text-align: center;
+    font-weight: 500;
+    color: white;
+    font-size: 60px;
+}
+    input[type=text],input[type=email], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+img{
+    animation: pulses 5s  infinite;
+}
+
+input[type=submit] {
+    background-color: rgba(0, 0, 0, 0.507);
+    color: rgb(255, 255, 255);
+    padding: 12px 20px;   border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type=submit]:hover {
+    animation: pulse 2s  infinite;
+}
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+@keyframes pulse {
+    0% {
+        transform: rotateY(0deg);
+    background-color: rgba(0, 0, 0, 0.568);
+    }
+    50% {
+        transform: rotateY(60deg);
+        background-color: rgba(0, 255, 0, 0.445);
+        }
+    100% {
+        transform: rotateY(0deg);
+    background-color: rgba(12, 12, 12, 0.527);
+    }
+}
+
+@keyframes pulses {
+    from {
+        transform: rotate(0deg);
+        }
+        to {
+        transform: rotate(360deg);
+     }
+    }
+
+
+}
+
+
+
+
+
