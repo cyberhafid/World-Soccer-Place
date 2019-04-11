@@ -1,9 +1,11 @@
 .inputform{
     label{
         color: white;
-        font-size: 20px
+        font-size: 20px;
     }
-
+.padding-input{
+    padding-bottom: 10%;
+}
 * {
     box-sizing: border-box;
 }
@@ -69,7 +71,7 @@ input[type=submit]:hover {
         }
         to {
         transform: rotate(360deg);
-     }
+        }
     }
 
 
