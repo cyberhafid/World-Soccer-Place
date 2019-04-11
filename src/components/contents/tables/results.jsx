@@ -8,7 +8,7 @@ export default class Results extends React.Component {
       <Table id="table-2">
         <tbody>
           <tr>
-            <td scope="row" className="finish toMarge-2">Finish</td>
+            <td className="finish toMarge-2">Finish</td>
             <td className="toMarge-3">Otto</td>
             <td className="toMarge-1">1</td>
             <td className="toMarge-1 bold">VS</td>
@@ -16,7 +16,7 @@ export default class Results extends React.Component {
             <td className="toMarge-3">@mdo</td>
           </tr>
           <tr>
-            <td scope="row" className="finish">Finish</td>
+            <td className="finish">Finish</td>
             <td>Thornton</td>
             <td>1</td>
             <td className="bold">VS</td>
@@ -24,7 +24,7 @@ export default class Results extends React.Component {
             <td>@mdo</td>
           </tr>
           <tr>
-            <td scope="row" className="finish">Finish</td>
+            <td className="finish">Finish</td>
             <td>the Bird</td>
             <td>2</td>
             <td className="bold">VS</td>
@@ -32,7 +32,7 @@ export default class Results extends React.Component {
             <td>@mdo</td>
           </tr>
           <tr>
-            <td scope="row" className="finish">Finish</td>
+            <td className="finish">Finish</td>
             <td>the Bird</td>
             <td>1</td>
             <td className="bold">VS</td>
@@ -40,7 +40,7 @@ export default class Results extends React.Component {
             <td>@mdo</td>
           </tr>
           <tr>
-            <td scope="row" className="finish">Finish</td>
+            <td className="finish">Finish</td>
             <td>the Bird</td>
             <td>3</td>
             <td className="bold">VS</td>

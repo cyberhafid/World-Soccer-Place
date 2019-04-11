@@ -8,7 +8,6 @@ import Contact from './pages/Contact';
 import MyNavbar from './components/header/navbar/navbar';
 import MyFooter from './components/footer/containerFooter';
 
-
 class App extends Component {
   render() {
     return (

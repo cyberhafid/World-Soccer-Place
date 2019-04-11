@@ -11,7 +11,6 @@ const MyTables = () =>
     <Results />
     <h2 className="title-table">Upcoming matchs</h2>
     <UpcommingMatchs />
-  </div>
-
+  </div>;
 
 export default MyTables;

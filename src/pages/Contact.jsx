@@ -5,6 +5,6 @@ export default class Contact extends Component {
     return (
       <div className="container-fluid backg">
       </div>
-    )
+    );
   }
 }

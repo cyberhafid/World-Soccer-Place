@@ -8,7 +8,7 @@ export default class UpcommingMatchs extends React.Component {
       <Table id="table-3">
         <tbody>
           <tr>
-            <td scope="row" className="toMarge-2">Tuesday, March 10</td>
+            <td className="toMarge-2">Tuesday, March 10</td>
             <td className="toMarge-3">Otto</td>
             <td className="toMarge-1">1</td>
             <td className="toMarge-1 bold">VS</td>
@@ -16,7 +16,7 @@ export default class UpcommingMatchs extends React.Component {
             <td className="toMarge-3">@mdo</td>
           </tr>
           <tr>
-            <td scope="row">Tuesday, March 10</td>
+            <td>Tuesday, March 10</td>
             <td>Thornton</td>
             <td>2</td>
             <td className="bold">VS</td>
@@ -24,7 +24,7 @@ export default class UpcommingMatchs extends React.Component {
             <td>@mdo</td>
           </tr>
           <tr>
-            <td scope="row">Tuesday, March 10</td>
+            <td>Tuesday, March 10</td>
             <td>the Bird</td>
             <td>0</td>
             <td className="bold">VS</td>
@@ -32,7 +32,7 @@ export default class UpcommingMatchs extends React.Component {
             <td>@mdo</td>
           </tr>
           <tr>
-            <td scope="row">Tuesday, March 10</td>
+            <td>Tuesday, March 10</td>
             <td>the Bird</td>
             <td>0</td>
             <td className="bold">VS</td>
@@ -40,7 +40,7 @@ export default class UpcommingMatchs extends React.Component {
             <td>@mdo</td>
           </tr>
           <tr>
-            <td scope="row">Tuesday, March 10</td>
+            <td>Tuesday, March 10</td>
             <td>the Bird</td>
             <td>1</td>
             <td className="bold">VS</td>

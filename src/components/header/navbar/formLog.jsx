@@ -1,6 +1,6 @@
 import React from 'react';
 import { Form, FormGroup, Label, Input } from 'reactstrap';
-import MyButton from '../../shared/button'
+import MyButton from '../../shared/button';
 
 export default class FormLogNav extends React.Component {
   render() {

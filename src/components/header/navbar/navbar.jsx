@@ -35,7 +35,7 @@ export default class MyNavbar extends React.Component {
       <div>
         <Navbar color="light" className="modal-navbar" light expand="md">
           <NavbarBrand href="/">
-            <img src={logo} height="50"></img>
+            <img src={logo} alt="footlogo" height="50"></img>
             <p className="text-light title-nav">Api-Football</p>
           </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
@@ -43,7 +43,7 @@ export default class MyNavbar extends React.Component {
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
                 Navigation
-                </DropdownToggle>
+              </DropdownToggle>
               <DropdownMenu right>
                 <NavLink className='nav-link' to="/"> Home </NavLink>
                 <NavLink className='nav-link' to="/league"> League </NavLink>
