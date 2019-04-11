@@ -33,8 +33,6 @@ export default class MyNavbar extends React.Component {
   render() {
     return (
       <div>
-        
-        
         <Navbar color="light" className="modalNavbar" light expand="md">
           <NavbarBrand href="/">
           <img src={logo} height="50"></img>
@@ -47,34 +45,21 @@ export default class MyNavbar extends React.Component {
                   Navigation
                 </DropdownToggle>
                 <DropdownMenu right>
-                  <DropdownItem>
-                  <NavLink className='nav-link' exact to="/"> Home </NavLink>
-                  </DropdownItem>
-                  <DropdownItem>
+                  <NavLink className='nav-link' to="/"> Home </NavLink>
                   <NavLink className='nav-link' to="/league"> League </NavLink>
-                  </DropdownItem>
-                  <DropdownItem>
                   <NavLink className='nav-link' to="/bet"> Bet </NavLink>
-                  </DropdownItem>
-                  <DropdownItem>
                   <NavLink className='nav-link' to="/contact"> Contact </NavLink>
-                  </DropdownItem>
                   </DropdownMenu>
               </UncontrolledDropdown>
-
             <Nav className="ml-auto" navbar>
               <NavItem>
                 <ModalLog
-      
                 buttonLabel='LOG IN'
                 />
-                
-                
               </NavItem>
               <NavItem>
               <ModalSign
                 buttonLabel='SIGN IN'
-                
                 />
               </NavItem>
             </Nav>
