@@ -1,7 +1,6 @@
 import React from 'react';
 import { Table } from 'reactstrap';
 import './Team1.scss';
-
 export default class Example extends React.Component {
   render() {
     return (
