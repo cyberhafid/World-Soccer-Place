@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import LongBook from '../components/contents/LongBook/LongBook';
+import LongBook from '../components/contents/LongBook/longBook';
 import { Row, Col } from 'reactstrap';
 
 export default class Bet extends Component {

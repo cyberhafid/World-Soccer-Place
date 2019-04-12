@@ -12,12 +12,12 @@ export default class ClassmentTrie extends React.Component {
   };
 
   getcompetitions() {
-
+    let config = { 'X-Auth-Token': 'a8fd10c1a4ce46889c901ab960eaecb1' };
     axios
-      .get('http://api.football-api.com/2.0/competitions?Authorization=565ec012251f932ea4000001fa542ae9d994470e73fdb314a8a56d76')
+      .get('http://api.football-data.org/v2/competitions', { headers: config })
 
       .then(response => {
-        const competitions = response.data;
+        const competitions = response.data.competitions.filter((c) => c.currentSeason != undefined);
         this.setState({
           competitions,
           isLoading: false
@@ -49,13 +49,13 @@ export default class ClassmentTrie extends React.Component {
               </tr>
               {!isLoading ? (
                 competitions.map(competition => {
-                  const { id, name, region } = competition;
+                  const { id, name, currentSeason } = competition;
                   return (
 
                     <tr key={id}>
                       <td className="bold"> #{id}</td>
                       <td>{name}</td>
-                      <td className="bold">{region}</td>
+                      <td className="bold">{currentSeason.id}</td>
                       <td className="bold">Day</td>
                       <td className="direct">Diff</td>
                     </tr>
