@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import LongBook from '../components/contents/LongBook/LongBook';
 import { Row, Col } from 'reactstrap';
+import LongBook from '../components/contents/LongBook/longBook';
 
 export default class Bet extends Component {
   render() {
