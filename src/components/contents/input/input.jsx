@@ -7,7 +7,7 @@ class InputContact extends Component {
     return (
       <Container className="inputform">
         <div className="App">
-          <p><img alt="ballon" height="30" src="https://www.stickersmalin.com/images/ajoute/prd/172/172418-image2_448x448.png" /> Contact us <img height="30" height="30" src="https://www.stickersmalin.com/images/ajoute/prd/172/172418-image2_448x448.png" /></p>
+          <p><img alt="ballon1" height="30" src="https://www.stickersmalin.com/images/ajoute/prd/172/172418-image2_448x448.png" /> Contact us <img alt="ballon" height="30" src="https://www.stickersmalin.com/images/ajoute/prd/172/172418-image2_448x448.png" /></p>
           <div className="padding-input">
             <form action="/action_page.php">
               <label>First Name</label>
