@@ -1,16 +1,16 @@
 import React from 'react';
-import MyTable_1 from './table_1';
-import MyTable_2 from './table_2';
-import MyTable_3 from './table_3';
+import MatchOfDay from './match_of_day';
+import Results from './results';
+import UpcommingMatchs from './upcomming_matchs';
 
-const MyTables = () => <div>
-    <h2 className="title_table">Matchs of the day</h2>
-    <MyTable_1/>
-    <h2 className="title_table">Results</h2>
-    <MyTable_2/>
-    <h2 className="title_table">Upcoming matchs</h2>
-    <MyTable_3/>
-    </div>
+const MyTables = () =>
+  <div>
+    <h2 className="title-table">Matchs of the day</h2>
+    <MatchOfDay />
+    <h2 className="title-table">Results</h2>
+    <Results />
+    <h2 className="title-table">Upcoming matchs</h2>
+    <UpcommingMatchs />
+  </div>;
 
-  
-  export default MyTables;
+export default MyTables;

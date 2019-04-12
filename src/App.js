@@ -1,25 +1,31 @@
 import React, { Component } from 'react';
+import { Route, BrowserRouter, Switch } from 'react-router-dom';
 import './App.css';
-import MyNavbar from './components/navbar/navbar';
-import Progressbarre from "./components/header/progressbarre/progressbarre"
-import Carousel1 from "./components/header/carousel/carousel"
-import MyTable from './components/contents/tables/table';
+import Home from './pages/Home';
+import League from './pages/League';
+import Bet from './pages/Bet';
+import Contact from './pages/Contact';
+import MyNavbar from './components/header/navbar/navbar';
 import MyFooter from './components/footer/containerFooter';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <MyNavbar />
-        <Carousel1 />
-        <div className="container">
-          <Progressbarre />
-          <MyTable />
+      <BrowserRouter>
+        <div className="App">
+          <MyNavbar />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/league" component={League} />
+            <Route path="/bet" component={Bet} />
+            <Route path="/contact" component={Contact} />
+          </Switch>
           <MyFooter />
         </div>
-      </div>
+      </BrowserRouter>
     );
   }
 }
 
 export default App;
+
