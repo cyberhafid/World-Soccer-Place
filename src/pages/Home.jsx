@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ProgressBar from '../components/header/progressbar/progress';
 import Carousel1 from '../components/header/carousel/carousel';
-import MyTable from '../components/header/carousel/carousel';
+import MyTable from '../components/contents/tables/tables_container';
 import Book from '../components/contents/bookmaker/bookmaker';
 import { Row, Col } from 'reactstrap';
 import MenuLeague from '../components/contents/menu/menu_league';
