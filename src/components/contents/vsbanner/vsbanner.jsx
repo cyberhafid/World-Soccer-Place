@@ -16,8 +16,4 @@ export default class VsBanner extends Component {
       </Container >
     );
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 226f19df9256cca325548b21bac0f469293933f2
