@@ -1,0 +1,24 @@
+.nameTeam1 {
+    color: white;
+}
+.team1 {
+    content: counter(repas);
+    padding: 0 0px 0px;
+    margin-right: 850px;
+    vertical-align: top;
+    background: rgba(78, 78, 78, 0.548);
+    -moz-border-radius: 60px !important;
+    border-radius: 60px !important;
+    font-weight: bold;
+    font-size: 1.3em;
+    list-style-type: none;
+    counter-increment: repas;
+    margin-bottom: 30px !important;
+    margin-top: 30px;
+}
+.titleTeam1 {
+    font-size: 50px;
+    width: 1200px !important;
+    padding-left: 0px !important;
+    color: #ffc107;
+}
