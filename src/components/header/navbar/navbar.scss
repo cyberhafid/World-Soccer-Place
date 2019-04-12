@@ -7,8 +7,22 @@
 }
 
 .modal-navbar{
-    margin: 0px 10px !important;
     background-image: url("https://images.wallpaperscraft.com/image/line_background_black_bending_69478_1280x720.jpg");
+}
+
+.margin-button{
+    button{
+        position: relative;
+        right: 10%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    button {
+        position: relative;
+        left: 0%;
+        margin-bottom: 10px;
+    }
 }
 
 #ballon {
@@ -32,4 +46,3 @@
         -webkit-transform: scale(2.0);
     }
 }
-

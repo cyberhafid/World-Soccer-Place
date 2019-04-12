@@ -13,7 +13,7 @@ import {
 } from 'reactstrap';
 import ModalLog from './modalLog';
 import ModalSign from './modalSign';
-import './navbar.css';
+import './navbar.scss';
 import logo from '../../../assets/img/logo.png';
 
 export default class MyNavbar extends React.Component {
@@ -52,7 +52,7 @@ export default class MyNavbar extends React.Component {
               </DropdownMenu>
             </UncontrolledDropdown>
             <Nav className="ml-auto" navbar>
-              <NavItem>
+              <NavItem className="margin-button" media="screen">
                 <ModalLog
                   buttonLabel='LOG IN'
                 />
