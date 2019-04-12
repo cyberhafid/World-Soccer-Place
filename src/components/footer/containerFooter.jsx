@@ -3,52 +3,57 @@ import { Container, Row, Col } from 'reactstrap';
 import './containerFooter.css';
 import logoPlay from '../../assets/img/logo_play.png';
 import logoStore from '../../assets/img/logo_store.png';
-
+import logo from '../../assets/img/logo.png';
 const MyFooter = () => <div className="footer-container">
   <Container >
+  
     <Row>
-      <Col lg="12" sm="12">
-        <h3>About Us</h3>
-      </Col>
-    </Row>
-    <Row>
+
       <Col lg="3" sm="12">
-        <p>Contact Us</p>
+
+        <Row> <img src={logo} alt="footlogo" height="50"></img> </Row>
+
+        <Row>
+          <p>About Us</p>
+        </Row>
+        <Row>
+          <p>Contact Us</p>
+        </Row>
       </Col>
-      <Col lg="3" sm="12">
-        <img src={logoStore} alt="logostore" />
-      </Col>
-      <Col lg="3" sm="12">
-        <img src={logoPlay} alt="logoplay" />
-      </Col>
-      <Col lg="3" sm="12">
-        <p>Article archive</p>
-      </Col>
-    </Row>
-    <Row>
-      <Col lg="3" sm="12">
-        <p>Legal mentions</p>
-      </Col>
-      <Col lg="3" sm="12">
-        <i className="fab fa-twitter"></i>
-      </Col>
-      <Col lg="3" sm="12">
-        <i className="fab fa-facebook"></i>
-      </Col>
-      <Col lg="3" sm="12">
+
+      <Col>
+    
+        <p>Careers</p>
         <p>Executive jobs</p>
-      </Col>
-    </Row>
-    <Row>
-      <Col lg="3" sm="12">
+
         <p>Email alerts and newsletters</p>
       </Col>
-      <Col lg="6" sm="12">
+
+      <Col>
+        <Row>
+  
+          <Col lg="3" sm="12">
+            <i className="fab fa-2x fa-facebook-f" ></i>
+          </Col>
+          <Col lg="3" sm="12">
+            <i className="fab fa-2x fa-twitter-square"></i>
+          </Col>
+
+        </Row>
       </Col>
-      <Col lg="3" sm="12">
-        <p>Careers</p>
+
+      <Col>
+     
+        <Row>
+          <img src={logoPlay} alt="logoplay" />
+        </Row>
+        <Row>
+          <img src={logoStore} alt="logoplay" />
+        </Row>
       </Col>
+
     </Row>
+   
   </Container>
 </div>;
 
