@@ -36,7 +36,7 @@ export default class MyNavbar extends React.Component {
         <Navbar color="light" className="modal-navbar" light expand="md">
           <NavbarBrand href="/">
             <img src={logo} alt="footlogo" height="50"></img>
-            <p className="text-light title-nav">Api-Football</p>
+            <p className="text-light title-nav">World Soccer Place</p>
           </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
