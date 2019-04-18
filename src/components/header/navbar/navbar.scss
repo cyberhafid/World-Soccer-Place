@@ -1,0 +1,56 @@
+.btn-nav{
+    margin: 0 10px;
+}
+
+.title-nav{
+    display: inline-block !important;
+    background: -webkit-linear-gradient(right,rgb(250, 233, 0), rgb(102, 255, 0));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+    padding-left: 10%;
+    font-family: 'Permanent Marker', cursive;;
+    font-size: 100%;
+}
+
+.modal-navbar{
+    background-image: url("https://images.wallpaperscraft.com/image/texture_tree_black_blue_soft_divorce_55263_1280x720.jpg");
+    background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.margin-button{
+    button{
+        position: relative;
+        right: 10%;
+    }
+}
+
+@media screen and (max-width: 765px) {
+    .button-login {
+        position: relative;
+        left: 0%;
+        margin-bottom: 10px;
+    }
+}
+
+#ballon {
+    width:150px;
+    height:80px;
+    z-index:5;
+    position:absolute;
+    top: -10px;
+    left:10px;
+    animation: logo 5s ease-in-out infinite alternate;
+    -webkit-animation: logo 5s ease-in-out infinite alternate;
+}
+
+@keyframe logo {
+    0% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    }
+    100% {
+        transform: scale(2.0);
+        -webkit-transform: scale(2.0);
+    }
+}

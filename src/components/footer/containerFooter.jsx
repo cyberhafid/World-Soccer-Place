@@ -1,52 +1,57 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import './containerFooter.css';
-import logoPlay from '../../assets/img/logo_play.png';
-import logoStore from '../../assets/img/logo_store.png';
+import './containerFooter.scss';
 
 const MyFooter = () => <div className="footer-container">
-  <Container >
+  <Container className="text-size-footer">
     <Row>
-      <Col lg="12" sm="12">
-        <h3>About Us</h3>
+      <Col xs="4" lg="1">
+        <i className="margin-icon far fa-3x fa-address-book"><p>Contact US</p></i>
+      </Col>
+      <Col xs={{ size: 0, offset: 0 }} lg={{ size: 0, offset: 1 }}></Col>
+      <Col xs="4" lg="1">
+        <i className="margin-icon fas fa-3x fa-balance-scale"><p>Legal Mentions</p></i>
+      </Col>
+      <Col xs={{ size: 0, offset: 0 }} lg={{ size: 0, offset: 1 }}></Col>
+      <Col xs="4" lg="1">
+        <i className="margin-icon fab fa-3x fa-apple"><p>Available on Itunes</p></i>
+      </Col>
+      <Col xs={{ size: 0, offset: 0 }} lg={{ size: 0, offset: 1 }}></Col>
+      <Col xs="4" lg="1">
+        <i className="margin-icon fab fa-3x fa-google-play"><p>Available on Google Play</p></i>
+      </Col>
+      <Col xs={{ size: 0, offset: 0 }} lg={{ size: 0, offset: 1 }}></Col>
+      <Col xs="4" lg="1">
+        <i className="margin-icon fab fa-3x fa-facebook-square"><p>Facebook</p></i>
+      </Col>
+      <Col xs={{ size: 0, offset: 0 }} lg={{ size: 0, offset: 1 }}></Col>
+      <Col xs="4" lg="1">
+        <i className="margin-icon fab fa-3x fa-twitter"><p>Twitter</p></i>
       </Col>
     </Row>
     <Row>
-      <Col lg="3" sm="12">
-        <p>Contact Us</p>
+      <Col xs="4" lg="1">
+        <i className="far fa-3x fa-newspaper"><p>newsletters</p></i>
       </Col>
-      <Col lg="3" sm="12">
-        <img src={logoStore} alt="logostore" />
+      <Col xs={{ size: 0, offset: 0 }} lg={{ size: 0, offset: 1 }}></Col>
+      <Col xs="4" lg="1">
+        <i className="fas fa-3x fa-futbol"><p>Actu-Foot</p></i>
       </Col>
-      <Col lg="3" sm="12">
-        <img src={logoPlay} alt="logoplay" />
+      <Col xs={{ size: 0, offset: 0 }} lg={{ size: 0, offset: 1 }}></Col>
+      <Col xs="4" lg="1">
+        <i className="fab fa-3x fa-cc-paypal"><p>Pay With PayPal</p></i>
       </Col>
-      <Col lg="3" sm="12">
-        <p>Article archive</p>
+      <Col xs={{ size: 0, offset: 0 }} lg={{ size: 0, offset: 1 }}></Col>
+      <Col xs="4" lg="1">
+        <i className="far fa-3x fa-credit-card"><p>Pay With CB</p></i>
       </Col>
-    </Row>
-    <Row>
-      <Col lg="3" sm="12">
-        <p>Legal mentions</p>
+      <Col xs={{ size: 0, offset: 0 }} lg={{ size: 0, offset: 1 }}></Col>
+      <Col xs="4" lg="1">
+        <i className="fab fa-3x fa-react"><p>Using React</p></i>
       </Col>
-      <Col lg="3" sm="12">
-        <i className="fab fa-twitter"></i>
-      </Col>
-      <Col lg="3" sm="12">
-        <i className="fab fa-facebook"></i>
-      </Col>
-      <Col lg="3" sm="12">
-        <p>Executive jobs</p>
-      </Col>
-    </Row>
-    <Row>
-      <Col lg="3" sm="12">
-        <p>Email alerts and newsletters</p>
-      </Col>
-      <Col lg="6" sm="12">
-      </Col>
-      <Col lg="3" sm="12">
-        <p>Careers</p>
+      <Col xs={{ size: 0, offset: 0 }} lg={{ size: 0, offset: 1 }}></Col>
+      <Col xs="4" lg="1">
+        <i className="fas fa-3x fa-trophy"><p>Best site 2019</p></i>
       </Col>
     </Row>
   </Container>

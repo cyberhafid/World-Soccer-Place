@@ -19,3 +19,15 @@
         padding-bottom: 5%;
     }
 }
+
+@media screen and (max-width: 776px) {
+    .size-carousel{
+        height: 550px;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .size-carousel{
+        height: 450px;
+    }
+}

@@ -1,11 +1,19 @@
 .list-group {
-    padding: 10px 40px;
+    padding: 10px;
     margin-bottom: 30px;
     font-size: small;
     line-height: 1.5;
+    text-align: left;
 }
 .titre-menu {
     font-weight: bold;
     margin-left: 5px;
 
+}
+
+
+@media screen and (max-width: 500px) {
+    .list-group{
+        text-align: center;
+    }
 }

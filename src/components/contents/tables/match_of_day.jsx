@@ -8,12 +8,12 @@ export default class MatchOfDay extends React.Component {
       <Table id="table-1">
         <tbody>
           <tr>
-            <td className="direct toMarge-2">Direct •</td>
-            <td className="toMarge-3">Otto</td>
-            <td className="toMarge-1">1</td>
-            <td className="toMarge-1 bold">VS</td>
-            <td className="toMarge-1">0</td>
-            <td className="toMarge-3">@mdo</td>
+            <td className="direct">Direct •</td>
+            <td>Otto</td>
+            <td>1</td>
+            <td className="bold">VS</td>
+            <td>0</td>
+            <td>@mdo</td>
           </tr>
           <tr>
             <td className="direct">Direct •</td>
