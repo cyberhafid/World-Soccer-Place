@@ -1,8 +1,11 @@
 .css-banner{
     h2{
-        color: white;
         text-align: center;
-        font-family: 'Permanent Marker', cursive;
+        background: -webkit-linear-gradient(right,rgb(250, 233, 0), rgb(102, 255, 0));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: 'Permanent Marker', cursive;;
+        font-size: 800%;
     }
 
 // ------line------

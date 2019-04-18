@@ -4,6 +4,12 @@
 
 .title-nav{
     display: inline-block !important;
+    background: -webkit-linear-gradient(right,rgb(250, 233, 0), rgb(102, 255, 0));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+    padding-left: 10%;
+    font-family: 'Permanent Marker', cursive;;
+    font-size: 100%;
 }
 
 .modal-navbar{

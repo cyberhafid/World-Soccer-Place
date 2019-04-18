@@ -1,9 +1,5 @@
 #table-1{
 background-color: rgba(240, 232, 232, 0.966);
--moz-border-radius: 10px;
-border-radius: 10px;
--khtml-border-radius: 10px;
--webkit-border-radius: 10px;
 }
 
 #table-2{
@@ -32,13 +28,4 @@ border-radius: 10px;
 
 .bold{
     font-weight: bold;
-}
-.toMarge-2{
-    width:20%;
-}
-.toMarge-3{
-    width:25%;
-}
-.toMarge-1{
-    width:10%;
 }

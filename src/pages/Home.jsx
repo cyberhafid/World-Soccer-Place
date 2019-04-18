@@ -17,9 +17,11 @@ export default class Home extends Component {
           <ProgressBar />
           <Row>
             <Col lg="3">
-              <MenuLeague />
-              <MenuTeam />
-              <MenuCountry />
+              <Row>
+                <Col lg="12" xs="4"><MenuLeague /></Col>
+                <Col lg="12" xs="4"><MenuTeam /></Col>
+                <Col lg="12" xs="4"><MenuCountry /></Col>
+              </Row>
             </Col>
             <Col lg="6">
               <MyTable />
