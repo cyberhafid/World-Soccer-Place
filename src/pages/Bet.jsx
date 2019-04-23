@@ -5,6 +5,7 @@ import TeamVS from '../components/contents/TeamVS/TeamVS';
 import VsBanner from '../components/contents/vsbanner/vsbanner';
 import LongBook from '../components/contents/LongBook/longBook';
 import { Row, Col } from 'reactstrap';
+import './bet.css';
 
 export default class Bet extends Component {
   render() {
@@ -12,12 +13,11 @@ export default class Bet extends Component {
       <div className="container-fluid backg">
         <VsBanner />
 
-        <p>VS</p>
         <Row>
-          <Col offset="2"></Col>
-          <Col sm="3"><Team1 /></Col>
-          <Col sm="2"><TeamVS /></Col>
-          <Col sm="3"><Team2 /></Col>
+          <Col offset="2" className="diffPad"></Col>
+          <Col sm="3" md="4"><Team1 /></Col>
+          <Col sm="2"md="2"><TeamVS /></Col>
+          <Col sm="3"md="4"><Team2 /></Col>
           <Col offset="2"></Col>
         </Row>
 

@@ -17,3 +17,24 @@ th{
 .longBook2{
     background-color:#373A3C !important;
 }
+@media (max-width: 375px) {
+    /* CSS appliqué aux petits écrans */
+    .longBook2 {
+       font-size: 7px !important;
+    }
+    .buttonBook2{
+        font-size: 7px !important;
+    }
+    .btn {
+        font-size: 7px !important;
+    }
+    .logLogo ,.logLogo2{
+        padding-right: 0px !important;
+        padding: 10px 10px 10px 10px !important;
+
+    }
+    // th,td{
+    //     padding: 10px 10px 10px 10px !important;
+    // }
+    
+ }

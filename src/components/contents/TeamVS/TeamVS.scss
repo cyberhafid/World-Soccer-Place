@@ -9,3 +9,16 @@
     -webkit-text-fill-color: transparent;
     font-family: 'Permanent Marker', cursive;
 }
+@media (max-width: 375px) {
+    .title-vs{
+       padding-top:10px !important;
+       padding-left: 0px !important; 
+    }
+    
+}
+ @media (max-width: 1024px) {
+    .title-vs{
+        font-size: 70px !important;
+        padding-left: 15px !important;
+    }
+ }

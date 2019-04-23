@@ -1,53 +1,54 @@
-.modal-css{
-.win{
+.win {
     background-image: url("https://media0.giphy.com/media/3ohhwzIw3bISRhQWME/source.gif");
     height: 300px !important;
     font-size: 150px !important;
     padding-left: 120px !important;
-    
+
 }
-.gifBet{
+
+.gifBet {
     width: 465px;
 }
+
 @keyframes animation {
     from {
-    letter-spacing: 50px;
+        letter-spacing: 50px;
     }
-    to {
-    letter-spacing: 0;
-    }
-  }
-  
-  .animated {
-    animation: animation 5s ease infinite;
-    animation-iteration-count:1;
-    }
-    .clip-text {
-        background: url(https://media.giphy.com/media/MxcInMsEnRKTK/giphy.gif);
-         background-size: contain;
-        background-size: cover;
-        background-position: center;
-        -webkit-background-clip: text;
-        color: transparent; // set to transparent, otherwise won't see the background
-        width: 300px;
-        height: 100px;
-        box-sizing: border-box;
-        font-size: 58px;
-        font-weight: bold;
-        text-align: center;
-        line-height: 100px;
-        flex-shrink: 0;
-     }
-     h2{
-        height: 300px !important;
-        font-size: 100px !important;
-        padding-right: 150px !important;
-        padding-top: 50px;
-     }
-     .effect{
-        background-image: url("https://media0.giphy.com/media/3ohhwzIw3bISRhQWME/source.gif");
-        background-size: contain;
-        background-position: center;
 
-     }
+    to {
+        letter-spacing: 0;
     }
+}
+
+.animated {
+    animation: animation 5s ease infinite;
+    animation-iteration-count: 1;
+    height: 300px !important;
+    font-size: 100px !important;
+    padding-right: 150px !important;
+    padding-top: 50px;
+
+}
+
+.clip-text {
+    background: url(https://media.giphy.com/media/MxcInMsEnRKTK/giphy.gif);
+    background-size: contain;
+    background-size: cover;
+    background-position: center;
+    -webkit-background-clip: text;
+    color: transparent; // set to transparent, otherwise won't see the background
+    width: 300px;
+    height: 100px;
+    box-sizing: border-box;
+    font-size: 58px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 100px;
+    flex-shrink: 0;
+}
+
+.effect {
+    background-image: url("https://media0.giphy.com/media/3ohhwzIw3bISRhQWME/source.gif");
+    background-size: contain;
+    background-position: center;
+}
