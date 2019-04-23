@@ -16,15 +16,17 @@ export default class Home extends Component {
         <div className="container-fluid backg">
           <ProgressBar />
           <Row>
-            <Col sm="3">
-              <MenuLeague />
-              <MenuTeam />
-              <MenuCountry />
+            <Col lg="3">
+              <Row>
+                <Col lg="12" xs="4"><MenuLeague /></Col>
+                <Col lg="12" xs="4"><MenuTeam /></Col>
+                <Col lg="12" xs="4"><MenuCountry /></Col>
+              </Row>
             </Col>
-            <Col sm="6">
+            <Col lg="6">
               <MyTable />
             </Col>
-            <Col sm="3">
+            <Col lg="3">
               <Book />
             </Col>
           </Row>
