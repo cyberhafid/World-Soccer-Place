@@ -10,6 +10,8 @@ export default class Bet extends Component {
   render() {
     return (
       <div className="container-fluid backg">
+
+        <VsBanner />
         <p>VS</p>
         <Row>
           <Col offset="2"></Col>
@@ -18,8 +20,7 @@ export default class Bet extends Component {
           <Col sm="3"><Team2 /></Col>
           <Col offset="2"></Col>
         </Row>
-
-        <VsBanner />
+      
         <Row>
           <Col offset="2"></Col>
           <Col sm="8"><LongBook /></Col>
