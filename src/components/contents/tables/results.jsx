@@ -32,9 +32,6 @@ export default class Results extends React.Component {
     this.getcompetitions();
   }
 
-
-
-
   render() {
     const { isLoading, competitions } = this.state;
     return (
@@ -47,15 +44,10 @@ export default class Results extends React.Component {
 
               {!isLoading ? (
 
-
-
-
                 competitions.filter(competition => competition.comp_id == '1221' && competition.localteam_score == '2').map((competition, idx) => {
 
-                  const { comp_id, id, formatted_date, localteam_name, visitorteam_name, localteam_score, visitorteam_score } = competition;
+                  const { id, formatted_date, localteam_name, visitorteam_name, localteam_score, visitorteam_score } = competition;
                   return (
-
-
 
                     <tr>
                       <Link to={'/bet/' + id}><td className="finish toMarge-2" key={id}>{formatted_date}•</td></Link>
@@ -65,7 +57,6 @@ export default class Results extends React.Component {
                       <td className="toMarge-1">{visitorteam_score}</td>
                       <td className="toMarge-3">{visitorteam_name}</td>
                     </tr>
-
 
                   );
                 })
@@ -78,5 +69,4 @@ export default class Results extends React.Component {
     );
   }
 }
-
 

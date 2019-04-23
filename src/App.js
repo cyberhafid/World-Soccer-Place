@@ -11,17 +11,14 @@ import MyFooter from './components/footer/containerFooter';
 class App extends Component {
   render() {
     return (
-
-      
       <BrowserRouter>
         <div className="App">
           <MyNavbar />
           <Switch>
-          <Route exact path="/" component={Home} />
+            <Route exact path="/" component={Home} />
             <Route path="/league" component={League} />
-            <Route  path="/bet/:id" component={Bet} />
+            <Route path="/bet/:id" component={Bet} />
             <Route path="/contact" component={Contact} />
- 
           </Switch>
           <MyFooter />
         </div>
@@ -29,6 +26,5 @@ class App extends Component {
     );
   }
 }
-
 export default App;
 

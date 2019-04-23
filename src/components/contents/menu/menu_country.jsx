@@ -6,7 +6,7 @@ export default class MenuCountry extends React.Component {
   render() {
     return (
       <div class="list-group">
-          <h3 className="title-table">Country</h3>
+        <h3 className="title-table">Country</h3>
         <ListGroup>
           <ListGroupItem><img width="30px" src="http://flags.fmcdn.net/data/flags/h20/fr.png" alt="index country" class="img-thumbnail"></img><span class="titre-menu"> France</span></ListGroupItem>
           <ListGroupItem> <img width="30px" src="http://flags.fmcdn.net/data/flags/h20/gb.png" alt="index country" class="img-thumbnail"></img><span class="titre-menu"> Angleterre</span></ListGroupItem>

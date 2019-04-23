@@ -9,7 +9,6 @@ import {
 } from 'react-router-dom';
 import './table.css';
 
-
 const Child = ({ match }) => (
   <div>
     {match.params.id}
@@ -24,11 +23,9 @@ export default class MatchOfDay extends React.Component {
       competitions: [],
       isLoading: true,
       errors: null,
-    
 
     };
   }
-
   
   getcompetitions() {
 
@@ -49,8 +46,6 @@ export default class MatchOfDay extends React.Component {
     this.getcompetitions();
   }
 
-
-
   render() {
     const { isLoading, competitions } = this.state;
     return (
@@ -69,7 +64,6 @@ export default class MatchOfDay extends React.Component {
                     const { id, formatted_date, localteam_name, visitorteam_name, localteam_score, visitorteam_score } = competition;
                     return (
 
-
                       <tr key={idx}>
                         <Link to={'/bet/' + id}>  <td className="direct toMarge-2">{formatted_date} •</td> </Link>
                         <td >{localteam_name}</td>
@@ -78,8 +72,6 @@ export default class MatchOfDay extends React.Component {
                         <td >{visitorteam_score}</td>
                         <td >{visitorteam_name}</td>
                       </tr>
-
-
 
                     );
                   })
