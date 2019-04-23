@@ -13,7 +13,7 @@ import {
 } from 'reactstrap';
 import ModalLog from './modalLog';
 import ModalSign from './modalSign';
-import './navbar.css';
+import './navbar.scss';
 import logo from '../../../assets/img/logo.png';
 
 export default class MyNavbar extends React.Component {
@@ -36,7 +36,7 @@ export default class MyNavbar extends React.Component {
         <Navbar color="light" className="modal-navbar" light expand="md">
           <NavbarBrand href="/">
             <img src={logo} alt="footlogo" height="50"></img>
-            <p className="text-light title-nav">Api-Football</p>
+            <p className="text-light title-nav">World Soccer Place</p>
           </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
@@ -52,7 +52,7 @@ export default class MyNavbar extends React.Component {
               </DropdownMenu>
             </UncontrolledDropdown>
             <Nav className="ml-auto" navbar>
-              <NavItem>
+              <NavItem className="margin-button" media="screen">
                 <ModalLog
                   buttonLabel='LOG IN'
                 />

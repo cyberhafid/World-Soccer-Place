@@ -8,12 +8,12 @@ export default class UpcommingMatchs extends React.Component {
       <Table id="table-3">
         <tbody>
           <tr>
-            <td className="toMarge-2">Tuesday, March 10</td>
-            <td className="toMarge-3">Otto</td>
-            <td className="toMarge-1">1</td>
-            <td className="toMarge-1 bold">VS</td>
-            <td className="toMarge-1">0</td>
-            <td className="toMarge-3">@mdo</td>
+            <td>Tuesday, March 10</td>
+            <td>Otto</td>
+            <td>1</td>
+            <td className="bold">VS</td>
+            <td>0</td>
+            <td>@mdo</td>
           </tr>
           <tr>
             <td>Tuesday, March 10</td>

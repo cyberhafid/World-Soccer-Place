@@ -3,3 +3,9 @@ body{
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+
+p, .titre-menu, td, label{
+  font-family: 'Oswald', sans-serif;
+  font-size: 120%
+
+}

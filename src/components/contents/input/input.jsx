@@ -5,9 +5,12 @@ import './input.scss';
 class InputContact extends Component {
   render() {
     return (
+      <>
+      <div className="lolo-container">
+        <p className="lolo"><img alt="ballon1" height="40" src="https://www.stickersmalin.com/images/ajoute/prd/172/172418-image2_448x448.png" /> Contact us <img alt="ballon" height="40" src="https://www.stickersmalin.com/images/ajoute/prd/172/172418-image2_448x448.png" /></p>
+      </div>
       <Container className="inputform">
         <div className="App">
-          <p className="lolo"><img alt="ballon1" height="30" src="https://www.stickersmalin.com/images/ajoute/prd/172/172418-image2_448x448.png" /> Contact us <img alt="ballon" height="30" src="https://www.stickersmalin.com/images/ajoute/prd/172/172418-image2_448x448.png" /></p>
           <div className="padding-input">
             <form action="/action_page.php">
               <label>First Name</label>
@@ -23,6 +26,7 @@ class InputContact extends Component {
           </div>
         </div>
       </Container>
+      </>
     );
   }
 }
