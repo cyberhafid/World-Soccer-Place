@@ -5,7 +5,7 @@ import { Row, Col } from 'reactstrap';
 import MenuLeague from '../components/contents/menu/menu_league';
 import MenuTeam from '../components/contents/menu/menu_team';
 import MenuCountry from '../components/contents/menu/menu_country';
-
+import ClassmentTrie from '../components/contents/tables/classement';
 export default class League extends Component {
   render() {
     return (
@@ -23,6 +23,7 @@ export default class League extends Component {
           </Col>
           <Col lg="3">
             <Book />
+            <ClassmentTrie />
           </Col>
         </Row>
       </div>
