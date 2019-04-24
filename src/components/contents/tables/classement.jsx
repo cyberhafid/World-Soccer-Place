@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
-import { Table } from 'reactstrap';
-import './table.css';
+import { Table, ListGroupItem } from 'reactstrap';
+import './table.scss';
 
 export default class ClassmentTrie extends React.Component {
 
@@ -37,23 +37,23 @@ export default class ClassmentTrie extends React.Component {
 
       <React.Fragment>
 
-        <h2 className="title-table">Classement</h2>
+        <ListGroupItem className="bg-list"><h2 className="title-tab">Classement</h2></ListGroupItem>
         <div>
           <Table id="table-1">
             <tbody>
               <tr>
-                <td>classement</td>
+                <td>Position</td>
                 <td>Equipe</td>
                 <td>Pts</td>
 
               </tr>
               {!isLoading ? (
-                competitions.sort((a, b) =>  b.points - a.points).filter((competition, idx) => competition.comp_id = '1221' && idx < '10' ).map((competition, idx) => {
+                competitions.sort((a, b) => b.points - a.points).filter((competition, idx) => competition.comp_id = '1221' && idx < '10').map((competition, idx) => {
                   const { team_name, position, points } = competition;
                   return (
 
                     <tr key={idx}>
-                      <td className="bold">{position} </td>
+                      <td className="bold"># {position} </td>
                       <td className="bold"> {team_name}</td>
 
                       <td className="bold">{points} pts </td>

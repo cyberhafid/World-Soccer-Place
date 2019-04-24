@@ -1,13 +1,11 @@
 import React from 'react';
 import axios from 'axios';
-import { Table } from 'reactstrap';
-
+import {Link} from 'react-router-dom';
 import {
   BrowserRouter as Router,
-  Route,
-  Link
+  Route
 } from 'react-router-dom';
-import './table.css';
+import './table.scss';
 
 const Child = ({ match }) => (
   <div>
@@ -51,37 +49,49 @@ export default class MatchOfDay extends React.Component {
     return (
       <Router>
         <React.Fragment>
+          <div className="test">
+            <div className="wrapper-day">
 
-          <div className="table table-striped table-condensed table-hover" >
-            <Table id="table-1">
+              <div className="table">
 
-              <tbody>
-
-                {!isLoading ? (
-
-                  competitions.filter((competition, idx) => competition.comp_id = '1221' && idx < '10').map((competition, idx) => {
-
-                    const { id, formatted_date, localteam_name, visitorteam_name, localteam_score, visitorteam_score } = competition;
-                    return (
-
-                      <tr key={idx}>
-                        <Link to={'/bet/' + id}>  <td className="direct toMarge-2">{formatted_date} •</td> </Link>
-                        <td >{localteam_name}</td>
-                        <td>{localteam_score}</td>
-                        <td >{Child}</td>
-                        <td >{visitorteam_score}</td>
-                        <td >{visitorteam_name}</td>
-                      </tr>
-
-                    );
-                  })
-                ) : (<tr><td>Loading...</td></tr>)}
-                <Route path={'/league/:id'} component={Child} />
-              </tbody>
-            </Table>
-
+                <div className="row header">
+                  <h2 className="title-tab">Match of Day</h2>
+                </div>
+                <div className="table">
+                  {!isLoading ? (
+                    competitions.filter((competition, idx) => competition.comp_id = '1221' && idx < '10').map((competition, idx) => {
+                      const { id, formatted_date, localteam_name, visitorteam_name, localteam_score, visitorteam_score } = competition;
+                      return (
+                        <div className="row" key={idx}>
+                          <div className="cell direct" data-title="Diffusion">
+                            <Link to={'/bet/' + id}><p className="direct">{formatted_date}</p></Link>
+                          </div>
+                          <div className="cell" data-title="Domicile">
+                            <p>{localteam_name}</p>
+                          </div>
+                          <div className="cell" data-title="Score">
+                            <p>{localteam_score}</p>
+                          </div>
+                          <div className="cell" data-title="">
+                            <p>VS</p>
+                          </div>
+                          <div className="cell" data-title="Score">
+                            <p>{visitorteam_score}</p>
+                          </div>
+                          <div className="cell" data-title="exterior">
+                            <p>{visitorteam_name}</p>
+                          </div>
+                        </div>
+                      );
+                    })
+                  ) : (<tr><td>Loading...</td></tr>)}
+                  <Route path={'/league/:id'} component={Child} />
+                </div>
+              </div>
+            </div>
           </div>
-        </React.Fragment>  </Router>
+        </React.Fragment>
+      </Router>
     );
   }
 }
