@@ -1,9 +1,14 @@
 import React from 'react';
 import axios from 'axios';
 import { Table } from 'reactstrap';
+import {
+  BrowserRouter as Router,
+  withRouter,
+  Link
+} from 'react-router-dom';
 import './table.css';
 
-export default class ClassmentTrie extends React.Component {
+class ClassmentTrie extends React.Component {
 
   state = {
     competitions: [],
@@ -11,25 +16,35 @@ export default class ClassmentTrie extends React.Component {
     errors: null
   };
 
-  getcompetitions() {
+  componentDidMount() {
+    this.fetchMatch()
+  }
+  componentDidUpdate(){
+    if(this.props.match.params.id !== this.state.lea){
+      this.fetchMatch()
+    }
+  }
 
+
+
+  fetchMatch() {
+    const Leagueid = this.props.match.params.id;
     axios
-      .get('http://api.football-api.com/2.0/standings/1221?Authorization=565ec012251f932ea4000001fa542ae9d994470e73fdb314a8a56d76')
+    .get(`http://api.football-api.com/2.0/standings/${Leagueid}?Authorization=565ec012251f932ea4000001fa542ae9d994470e73fdb314a8a56d76`)
 
       .then(response => {
 
         const competitions = response.data;
         this.setState({
           competitions,
-          isLoading: false
+          isLoading: false,
+          lea: Leagueid
         });
       })
       .catch(error => this.setState({ error, isLoading: false }));
   }
 
-  componentDidMount() {
-    this.getcompetitions();
-  }
+
 
   render() {
     const { isLoading, competitions } = this.state;
@@ -48,7 +63,7 @@ export default class ClassmentTrie extends React.Component {
 
               </tr>
               {!isLoading ? (
-                competitions.sort((a, b) =>  b.points - a.points).filter((competition, idx) => competition.comp_id = '1221' && idx < '10' ).map((competition, idx) => {
+                competitions.sort((a, b) =>  b.points - a.points).filter((competition, idx) => competition.comp_id == this.state.lea && idx < 10 ).map((competition, idx) => {
                   const { team_name, position, points } = competition;
                   return (
 
@@ -70,4 +85,4 @@ export default class ClassmentTrie extends React.Component {
     );
   }
 }
-
+export default withRouter(ClassmentTrie)

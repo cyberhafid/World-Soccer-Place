@@ -19,6 +19,7 @@ export default class Bet extends Component {
 
   componentDidMount(){
     const id = this.props.match.params.id;
+    console.log (id);
     Axios.get(`http://api.football-api.com/2.0/matches/${id}?Authorization=565ec012251f932ea4000001fa542ae9d994470e73fdb314a8a56d76`)  
       .then((response) => {
         console.log(response);
