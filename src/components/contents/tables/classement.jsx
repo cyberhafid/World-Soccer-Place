@@ -1,12 +1,8 @@
 import React from 'react';
 import axios from 'axios';
-import { Table } from 'reactstrap';
-import {
-  BrowserRouter as Router,
-  withRouter,
-  Link
-} from 'react-router-dom';
-import './table.css';
+import {withRouter } from 'react-router-dom';
+import { Table, ListGroupItem } from 'reactstrap';
+import './table.scss';
 
 class ClassmentTrie extends React.Component {
 
@@ -48,12 +44,12 @@ class ClassmentTrie extends React.Component {
 
       <React.Fragment>
 
-        <h2 className="title-table">Classement</h2>
+        <ListGroupItem className="bg-list"><h2 className="title-tab">Classement</h2></ListGroupItem>
         <div>
           <Table id="table-1">
             <tbody>
               <tr>
-                <td>classement</td>
+                <td>Position</td>
                 <td>Equipe</td>
                 <td>Pts</td>
 
@@ -64,7 +60,7 @@ class ClassmentTrie extends React.Component {
                   return (
 
                     <tr key={idx}>
-                      <td className="bold">{position} </td>
+                      <td className="bold"># {idx} </td>
                       <td className="bold"> {team_name}</td>
 
                       <td className="bold">{points} pts </td>

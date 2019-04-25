@@ -47,7 +47,7 @@ class ModalExample extends React.Component {
 
   render() {
     return (
-      <div className="modal-css">
+      <div>
         <Button color="secondary" onClick={this.toggle}>cotes{this.props.buttonLabel}</Button>
         <Modal isOpen={this.state.modal} toggle={this.toggle}>
           <ModalHeader toggle={this.toggle}>Cotes</ModalHeader>
@@ -70,7 +70,7 @@ class ModalExample extends React.Component {
                 }
                 {
                   !this.state.loading &&
-                  <div className="win"> <h2 class="clip-text animated">YOU WIN</h2></div>
+                  <div className="win"> <h2 className="clip-text animated">YOU WIN</h2></div>
                 }
               </ModalBody>
               <ModalFooter>
