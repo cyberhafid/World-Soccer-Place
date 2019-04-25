@@ -11,23 +11,22 @@ import './table.css';
 
 class Results extends React.Component {
 
-    constructor(props) {
-      super(props);
-      this.state = {
-        competitions: [],
-        isLoading: true,
-        errors: null,
-       };
+  constructor(props) {
+    super(props);
+    this.state = {
+      competitions: [],
+      isLoading: true,
+      errors: null,
+    };
+  }
+  componentDidMount() {
+    this.fetchMatch();
+  }
+  componentDidUpdate(){
+    if(this.props.match.params.id !== this.state.lea){
+      this.fetchMatch();
     }
-    componentDidMount() {
-      this.fetchMatch()
-    }
-    componentDidUpdate(){
-      if(this.props.match.params.id !== this.state.lea){
-        this.fetchMatch()
-      }
-    }
-
+  }
 
   fetchMatch() {
     const leagueId = this.props.match.params.id;
@@ -44,8 +43,6 @@ class Results extends React.Component {
       })
       .catch(error => this.setState({ error, isLoading: false }));
   }
-
-
 
   render() {
     const { isLoading, competitions } = this.state;
@@ -85,4 +82,4 @@ class Results extends React.Component {
   }
 }
 
-export default withRouter(Results)
+export default withRouter(Results);

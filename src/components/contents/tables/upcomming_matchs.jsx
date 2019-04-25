@@ -16,15 +16,15 @@ class UpcommingMatchs extends React.Component {
       competitions: [],
       isLoading: true,
       errors: null,
-     };
+    };
   }
 
   componentDidMount() {
-    this.fetchMatch()
+    this.fetchMatch();
   }
   componentDidUpdate(){
     if(this.props.match.params.id !== this.state.lea){
-      this.fetchMatch()
+      this.fetchMatch();
     }
   }
   
@@ -43,8 +43,6 @@ class UpcommingMatchs extends React.Component {
       })
       .catch(error => this.setState({ error, isLoading: false }));
   }
-
-
 
   render() {
     const { isLoading, competitions } = this.state;
@@ -82,4 +80,4 @@ class UpcommingMatchs extends React.Component {
     );
   }
 }
-export default withRouter(UpcommingMatchs)
+export default withRouter(UpcommingMatchs);

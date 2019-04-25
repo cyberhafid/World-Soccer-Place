@@ -17,20 +17,18 @@ class ClassmentTrie extends React.Component {
   };
 
   componentDidMount() {
-    this.fetchMatch()
+    this.fetchMatch();
   }
   componentDidUpdate(){
     if(this.props.match.params.id !== this.state.lea){
-      this.fetchMatch()
+      this.fetchMatch();
     }
   }
-
-
 
   fetchMatch() {
     const Leagueid = this.props.match.params.id;
     axios
-    .get(`http://api.football-api.com/2.0/standings/${Leagueid}?Authorization=565ec012251f932ea4000001fa542ae9d994470e73fdb314a8a56d76`)
+      .get(`http://api.football-api.com/2.0/standings/${Leagueid}?Authorization=565ec012251f932ea4000001fa542ae9d994470e73fdb314a8a56d76`)
 
       .then(response => {
 
@@ -43,8 +41,6 @@ class ClassmentTrie extends React.Component {
       })
       .catch(error => this.setState({ error, isLoading: false }));
   }
-
-
 
   render() {
     const { isLoading, competitions } = this.state;
@@ -85,4 +81,4 @@ class ClassmentTrie extends React.Component {
     );
   }
 }
-export default withRouter(ClassmentTrie)
+export default withRouter(ClassmentTrie);
