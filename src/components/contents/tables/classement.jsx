@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import {withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import { Table, ListGroupItem } from 'reactstrap';
 import './table.scss';
 
@@ -56,7 +56,7 @@ class ClassmentTrie extends React.Component {
               </tr>
               {!isLoading ? (
                 competitions.sort((a, b) =>  b.points - a.points).filter((competition, idx) => competition.comp_id == this.state.lea && idx < 10 ).map((competition, idx) => {
-                  const { team_name, position, points } = competition;
+                  const { team_name, points } = competition;
                   return (
 
                     <tr key={idx}>

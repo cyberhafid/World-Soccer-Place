@@ -2,7 +2,6 @@ import React from 'react';
 import axios from 'axios';
 
 import {
-  BrowserRouter as Router,
   withRouter,
   Link
 } from 'react-router-dom';
@@ -21,8 +20,8 @@ class Results extends React.Component {
   componentDidMount() {
     this.fetchMatch();
   }
-  componentDidUpdate(){
-    if(this.props.match.params.id !== this.state.lea){
+  componentDidUpdate() {
+    if (this.props.match.params.id !== this.state.lea) {
       this.fetchMatch();
     }
   }
@@ -56,12 +55,12 @@ class Results extends React.Component {
               <div className="table">
                 {!isLoading ? (
 
-competitions.filter((competition, idx) => competition.comp_id == this.state.lea && idx < 10).map((competition, idx) => {
-   
+                  competitions.filter((competition, idx) => competition.comp_id == this.state.lea && idx < 10).map((competition, idx) => {
+
                     const { id, formatted_date, localteam_name, visitorteam_name, localteam_score, visitorteam_score } = competition;
                     return (
                       <div className="row">
-                        
+
                         <div className="cell direct" data-title="Diffusion">
                           <Link to={'/bet/' + id}><p className="finish">{formatted_date}</p></Link>
                         </div>

@@ -2,7 +2,6 @@ import React from 'react';
 import axios from 'axios';
 import './table.scss';
 import {
-  BrowserRouter as Router,
   withRouter,
   Link
 } from 'react-router-dom';
@@ -55,10 +54,9 @@ class UpcommingMatchs extends React.Component {
               <div className="table">
                 {!isLoading ? (
                  
-                 competitions.filter((competition, idx) => competition.comp_id == this.state.lea && idx < 10).map((competition, idx) => {
-    
+                  competitions.filter((competition, idx) => competition.comp_id == this.state.lea && idx < 10).map((competition, idx) => {
                   
-                  const { id, formatted_date, localteam_name, visitorteam_name, localteam_score, visitorteam_score } = competition;
+                    const { id, formatted_date, localteam_name, visitorteam_name, localteam_score, visitorteam_score } = competition;
                     return (
                       <div className="row">
                         <div className="cell direct" data-title="Diffusion">
