@@ -21,7 +21,7 @@ class UpcommingMatchs extends React.Component {
     this.fetchMatch();
   }
   componentDidUpdate(){
-    if(this.props.match.params.id !== this.state.lea){
+    if(this.props.match.params.id !== this.state.league){
       this.fetchMatch();
     }
   }
@@ -36,7 +36,7 @@ class UpcommingMatchs extends React.Component {
         this.setState({
           competitions,
           isLoading: false,
-          lea: leagueId
+          league: leagueId
         });
       })
       .catch(error => this.setState({ error, isLoading: false }));
@@ -54,7 +54,7 @@ class UpcommingMatchs extends React.Component {
               <div className="table">
                 {!isLoading ? (
                  
-                  competitions.filter((competition, idx) => competition.comp_id == this.state.lea && idx < 10).map((competition, idx) => {
+                  competitions.filter((competition, idx) => competition.comp_id == this.state.league && idx < 10).map((competition, idx) => {
                   
                     const { id, formatted_date, localteam_name, visitorteam_name, localteam_score, visitorteam_score } = competition;
                     return (

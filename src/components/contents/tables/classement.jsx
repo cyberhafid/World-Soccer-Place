@@ -16,7 +16,7 @@ class ClassmentTrie extends React.Component {
     this.fetchMatch();
   }
   componentDidUpdate(){
-    if(this.props.match.params.id !== this.state.lea){
+    if(this.props.match.params.id !== this.state.league){
       this.fetchMatch();
     }
   }
@@ -32,7 +32,7 @@ class ClassmentTrie extends React.Component {
         this.setState({
           competitions,
           isLoading: false,
-          lea: Leagueid
+          league: Leagueid
         });
       })
       .catch(error => this.setState({ error, isLoading: false }));
@@ -55,7 +55,7 @@ class ClassmentTrie extends React.Component {
 
               </tr>
               {!isLoading ? (
-                competitions.sort((a, b) =>  b.points - a.points).filter((competition, idx) => competition.comp_id == this.state.lea && idx < 10 ).map((competition, idx) => {
+                competitions.sort((a, b) =>  b.points - a.points).filter((competition, idx) => competition.comp_id == this.state.league && idx < 10 ).map((competition, idx) => {
                   const { team_name, points } = competition;
                   return (
 
