@@ -1,9 +1,10 @@
 import React from 'react';
 import axios from 'axios';
+import { withRouter } from 'react-router-dom';
 import { Table, ListGroupItem } from 'reactstrap';
 import './table.scss';
 
-export default class ClassmentTrie extends React.Component {
+class ClassmentTrie extends React.Component {
 
   state = {
     competitions: [],
@@ -11,24 +12,30 @@ export default class ClassmentTrie extends React.Component {
     errors: null
   };
 
-  getcompetitions() {
+  componentDidMount() {
+    this.fetchMatch();
+  }
+  componentDidUpdate(){
+    if(this.props.match.params.id !== this.state.league){
+      this.fetchMatch();
+    }
+  }
 
+  fetchMatch() {
+    const Leagueid = this.props.match.params.id;
     axios
-      .get('http://api.football-api.com/2.0/standings/1221?Authorization=565ec012251f932ea4000001fa542ae9d994470e73fdb314a8a56d76')
+      .get(`http://api.football-api.com/2.0/standings/${Leagueid}?Authorization=565ec012251f932ea4000001fa542ae9d994470e73fdb314a8a56d76`)
 
       .then(response => {
 
         const competitions = response.data;
         this.setState({
           competitions,
-          isLoading: false
+          isLoading: false,
+          league: Leagueid
         });
       })
       .catch(error => this.setState({ error, isLoading: false }));
-  }
-
-  componentDidMount() {
-    this.getcompetitions();
   }
 
   render() {
@@ -48,12 +55,12 @@ export default class ClassmentTrie extends React.Component {
 
               </tr>
               {!isLoading ? (
-                competitions.sort((a, b) => b.points - a.points).filter((competition, idx) => competition.comp_id = '1221' && idx < '10').map((competition, idx) => {
-                  const { team_name, position, points } = competition;
+                competitions.sort((a, b) =>  b.points - a.points).filter((competition, idx) => competition.comp_id == this.state.league && idx < 10 ).map((competition, idx) => {
+                  const { team_name, points } = competition;
                   return (
 
                     <tr key={idx}>
-                      <td className="bold"># {position} </td>
+                      <td className="bold"># {idx} </td>
                       <td className="bold"> {team_name}</td>
 
                       <td className="bold">{points} pts </td>
@@ -70,4 +77,4 @@ export default class ClassmentTrie extends React.Component {
     );
   }
 }
-
+export default withRouter(ClassmentTrie);
