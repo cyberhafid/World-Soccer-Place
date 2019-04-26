@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import MyTable from '../components/contents/tables/tables_container';
-import Book from '../components/contents/bookmaker/bookmaker';
 import { Row, Col } from 'reactstrap';
 import MenuLeague from '../components/contents/menu/menu_league';
 import MenuTeam from '../components/contents/menu/menu_team';
 import MenuCountry from '../components/contents/menu/menu_country';
-import ClassmentTrie from '../components/contents/tables/classement';
-export default class League extends Component {
+import MyTable from '../components/contents/tables/tables_container';
+import Book from '../components/contents/bookmaker/bookmaker';
+
+export default class Country extends Component {
   render() {
     return (
-      <div className="container-fluid backg">
+      <div className="">
         <Row>
           <Col lg="3">
             <Row>
@@ -23,7 +23,6 @@ export default class League extends Component {
           </Col>
           <Col lg="3">
             <Book />
-            <ClassmentTrie />
           </Col>
         </Row>
       </div>

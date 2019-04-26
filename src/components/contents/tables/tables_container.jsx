@@ -5,11 +5,8 @@ import UpcommingMatchs from './upcomming_matchs';
 
 const MyTables = () =>
   <div>
-    <h2 className="title-table">Matchs of the day</h2>
     <MatchOfDay />
-    <h2 className="title-table">Results</h2>
     <Results />
-    <h2 className="title-table">Upcoming matchs</h2>
     <UpcommingMatchs />
   </div>;
 
