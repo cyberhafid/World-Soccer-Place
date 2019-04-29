@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-import { InputGroup, InputGroupAddon, Input, } from 'reactstrap';
+import { InputGroup, InputGroupAddon, Input } from 'reactstrap';
 import './Modals.scss';
 
 class ModalExample extends React.Component {
@@ -25,15 +25,19 @@ class ModalExample extends React.Component {
   }
 
   toggleNested() {
+    const isWinner = Math.random() > 0.5;
     this.setState({
       nestedModal: !this.state.nestedModal,
-      closeAll: false
+      closeAll: false,
+      isWinner
     });
     setTimeout(() => {
       this.setState({ loading: false });
       const effectContainer = document.getElementById('bet-effect-container');
-      if(effectContainer){
+      if (effectContainer && isWinner) {
         effectContainer.parentNode.classList.add('effect');
+      } else {
+        effectContainer.parentNode.classList.add('effect2');
       }
     }, 6500);
   }
@@ -46,6 +50,7 @@ class ModalExample extends React.Component {
   }
 
   render() {
+    const resultTitle = this.state.isWinner ? 'YOU WIN' : 'YOU LOOSE';
     return (
       <div className="modal-css">
         <Button color="secondary" onClick={this.toggle}>cotes{this.props.buttonLabel}</Button>
@@ -70,7 +75,7 @@ class ModalExample extends React.Component {
                 }
                 {
                   !this.state.loading &&
-                  <div className="win"> <h2 class="clip-text animated">YOU WIN</h2></div>
+                  <div className="win" id="loose"> <h2 class="clip-text animated">{resultTitle}</h2></div>
                 }
               </ModalBody>
               <ModalFooter>

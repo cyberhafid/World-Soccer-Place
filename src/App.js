@@ -17,7 +17,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/league" component={League} />
-            <Route path="/bet" component={Bet} />
+            <Route path="/bet/:id" component={Bet} />
             <Route path="/contact" component={Contact} />
           </Switch>
           <MyFooter />
@@ -26,6 +26,5 @@ class App extends Component {
     );
   }
 }
-
 export default App;
 

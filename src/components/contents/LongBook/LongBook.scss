@@ -1,40 +1,49 @@
 #longBook {
     background-color: white;
 }
-.buttonBook2{
+
+.buttonBook2 {
     font-size: 15px !important;
     padding-bottom: 2px !important;
 }
-th{
+
+th {
     width: 200px;
     color: white;
-    padding-left: 40px !important;
+    padding-left: 35px !important;
 }
-.bonusOffered{
+
+.bonusOffered {
     color: #ffc107;
     padding-left: 5px !important;
 }
-.longBook2{
-    background-color:#373A3C !important;
+
+.longBook2 {
+    background-color: #373A3C !important;
 }
+
 @media (max-width: 375px) {
-    /* CSS appliqué aux petits écrans */
     .longBook2 {
-       font-size: 7px !important;
-    }
-    .buttonBook2{
         font-size: 7px !important;
     }
+
+    th {
+        padding-left: 25px !important;
+        font-size: 7px !important;
+    }
+
+    .buttonBook2 {
+        font-size: 7px !important;
+    }
+
     .btn {
         font-size: 7px !important;
     }
-    .logLogo ,.logLogo2{
+
+    .logLogo,
+    .logLogo2 {
         padding-right: 0px !important;
         padding: 10px 10px 10px 10px !important;
-
     }
-    // th,td{
-    //     padding: 10px 10px 10px 10px !important;
-    // }
-    
- }
+
+}
