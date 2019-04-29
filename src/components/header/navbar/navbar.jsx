@@ -15,6 +15,8 @@ import ModalLog from './modalLog';
 import ModalSign from './modalSign';
 import './navbar.scss';
 import logo from '../../../assets/img/logo.png';
+import ActiveUser from './activeUser';
+import { UserConsumer } from '../../../store/userProvider';
 
 export default class MyNavbar extends React.Component {
   constructor(props) {
@@ -22,15 +24,19 @@ export default class MyNavbar extends React.Component {
 
     this.toggle = this.toggle.bind(this);
     this.state = {
-      isOpen: false
+      isOpen: false,
+      isAuthentified: false,
+      email: ''
     };
   }
+
   toggle() {
     this.setState({
       isOpen: !this.state.isOpen
     });
   }
   render() {
+    const className = !this.state.isAuthentified ? 'toShow' : 'toHide';
     return (
       <div>
         <Navbar color="light" className="modal-navbar" light expand="md">
@@ -51,19 +57,37 @@ export default class MyNavbar extends React.Component {
                 <NavLink className='nav-link' to="/contact"> Contact </NavLink>
               </DropdownMenu>
             </UncontrolledDropdown>
-            <Nav className="ml-auto" navbar>
-              <NavItem className="margin-button" media="screen">
-                <ModalLog
-                  buttonLabel='LOG IN'
-                />
-              </NavItem>
-              <NavItem>
-                <ModalSign
-                  buttonLabel='SIGN IN'
-                />
-              </NavItem>
-            </Nav>
+            <UserConsumer>
+              {
+                context => {
+                  if(context.isAuthentified){
+                    return (
+                      <span style={{color: 'white'}}>{context.email}</span>
+                    );
+                  } else {
+                    return (
+                      <Nav className="ml-auto" navbar>
+                        <NavItem className="margin-button" media="screen">
+                          <ModalLog
+                            buttonLabel='LOG IN'
+                          />
+                        </NavItem>
+                        <NavItem>
+                          <ModalSign
+                            buttonLabel='SIGN IN'
+                          />
+                        </NavItem>
+                      </Nav>
+                    );
+                  }
+                }
+              }
+            </UserConsumer>
           </Collapse>
+          <ActiveUser
+            className={className} 
+            activeUser={this.state.email}
+          />
         </Navbar>
       </div>
     );

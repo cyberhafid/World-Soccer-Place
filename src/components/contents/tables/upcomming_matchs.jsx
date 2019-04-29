@@ -1,28 +1,45 @@
 import React from 'react';
 import axios from 'axios';
-import {Link} from 'react-router-dom';
 import './table.scss';
+import {
+  withRouter,
+  Link
+} from 'react-router-dom';
 
-export default class UpcommingMatchs extends React.Component {
-  state = {
-    competitions: [],
-    isLoading: true,
-    errors: null
-  };
-  getcompetitions() {
+class UpcommingMatchs extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      competitions: [],
+      isLoading: true,
+      errors: null,
+    };
+  }
+
+  componentDidMount() {
+    this.fetchMatch();
+  }
+  componentDidUpdate(){
+    if(this.props.match.params.id !== this.state.league){
+      this.fetchMatch();
+    }
+  }
+  
+  fetchMatch() {
+    const leagueId = this.props.match.params.id;
     axios
-      .get('http://api.football-api.com/2.0/matches?from_date=05.04.2019&to_date=15.04.2019&Authorization=565ec012251f932ea4000001fa542ae9d994470e73fdb314a8a56d76')
+      .get(`http://api.football-api.com/2.0/matches?comp_id=${leagueId}&from_date=15.05.2019&to_date=15.07.2019&Authorization=565ec012251f932ea4000001fa542ae9d994470e73fdb314a8a56d76`)
+
       .then(response => {
         const competitions = response.data;
         this.setState({
           competitions,
-          isLoading: false
+          isLoading: false,
+          league: leagueId
         });
       })
       .catch(error => this.setState({ error, isLoading: false }));
-  }
-  componentDidMount() {
-    this.getcompetitions();
   }
   render() {
     const { isLoading, competitions } = this.state;
@@ -36,7 +53,9 @@ export default class UpcommingMatchs extends React.Component {
               </div>
               <div className="table">
                 {!isLoading ? (
-                  competitions.filter(competition => competition.comp_id === '1221' && competition.localteam_score > '2').map((competition) => {
+                 
+                  competitions.filter((competition, idx) => competition.comp_id == this.state.league && idx < 10).map((competition, idx) => {
+                  
                     const { id, formatted_date, localteam_name, visitorteam_name, localteam_score, visitorteam_score } = competition;
                     return (
                       <div className="row">
@@ -70,4 +89,4 @@ export default class UpcommingMatchs extends React.Component {
     );
   }
 }
-
+export default withRouter(UpcommingMatchs);

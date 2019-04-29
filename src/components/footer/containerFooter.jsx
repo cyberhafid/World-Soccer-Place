@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Row, Col, ModalFooter } from 'reactstrap';
+import { Container, Row, Col,} from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 import './containerFooter.scss';
 import ModalMyFooter from './Modal';
