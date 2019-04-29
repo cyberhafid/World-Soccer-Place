@@ -4,20 +4,15 @@ import { Table, ListGroupItem } from 'reactstrap';
 import './table.scss';
 
 export default class ClassmentTrie extends React.Component {
-
   state = {
     competitions: [],
     isLoading: true,
     errors: null
   };
-
   getcompetitions() {
-
     axios
       .get('http://api.football-api.com/2.0/standings/1221?Authorization=565ec012251f932ea4000001fa542ae9d994470e73fdb314a8a56d76')
-
       .then(response => {
-
         const competitions = response.data;
         this.setState({
           competitions,
@@ -26,17 +21,13 @@ export default class ClassmentTrie extends React.Component {
       })
       .catch(error => this.setState({ error, isLoading: false }));
   }
-
   componentDidMount() {
     this.getcompetitions();
   }
-
   render() {
     const { isLoading, competitions } = this.state;
     return (
-
       <React.Fragment>
-
         <ListGroupItem className="bg-list"><h2 className="title-tab">Classement</h2></ListGroupItem>
         <div>
           <Table id="table-1">
@@ -45,26 +36,21 @@ export default class ClassmentTrie extends React.Component {
                 <td>Position</td>
                 <td>Equipe</td>
                 <td>Pts</td>
-
               </tr>
               {!isLoading ? (
                 competitions.sort((a, b) => b.points - a.points).filter((competition, idx) => competition.comp_id = '1221' && idx < '10').map((competition, idx) => {
                   const { team_name, position, points } = competition;
                   return (
-
                     <tr key={idx}>
                       <td className="bold"># {position} </td>
                       <td className="bold"> {team_name}</td>
-
                       <td className="bold">{points} pts </td>
-
                     </tr>
                   );
                 })
               ) : (<tr><td>Loading...</td></tr>)}
             </tbody>
           </Table>
-
         </div>
       </React.Fragment>
     );

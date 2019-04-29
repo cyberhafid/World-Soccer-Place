@@ -5,7 +5,6 @@ import Home from './pages/Home';
 import League from './pages/League';
 import Bet from './pages/Bet';
 import Contact from './pages/Contact';
-import Country from './pages/Country';
 import MyNavbar from './components/header/navbar/navbar';
 import MyFooter from './components/footer/containerFooter';
 
@@ -20,7 +19,6 @@ class App extends Component {
             <Route path="/league" component={League} />
             <Route path="/bet/:id" component={Bet} />
             <Route path="/contact" component={Contact} />
-            <Route path="/country" component={Country} />
           </Switch>
           <MyFooter />
         </div>

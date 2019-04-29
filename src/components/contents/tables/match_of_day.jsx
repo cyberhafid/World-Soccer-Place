@@ -51,9 +51,7 @@ export default class MatchOfDay extends React.Component {
         <React.Fragment>
           <div className="test">
             <div className="wrapper-day">
-
               <div className="table">
-
                 <div className="row header">
                   <h2 className="title-tab">Match of Day</h2>
                 </div>
