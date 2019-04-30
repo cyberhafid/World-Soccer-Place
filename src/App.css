@@ -7,5 +7,21 @@ body{
 p, .titre-menu, td, label{
   font-family: 'Oswald', sans-serif;
   font-size: 120%
-
 }
+
+/* @media (max-width: 728px) {
+  body{
+    background-image: url(https://layout.eurosport.com/i/v8/match/backgrounds/large/background_v8_s22.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  
+  }
+  
+}
+@media (max-width: 1024px) {
+  body{
+    background-image: url(https://layout.eurosport.com/i/v8/match/backgrounds/large/background_v8_s22.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    }
+} */

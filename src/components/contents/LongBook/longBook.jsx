@@ -19,33 +19,32 @@ export default class LongBook extends React.Component {
         </thead>
         <tbody>
           <tr>
-            <th scope="row"><img width="55%" src="https://www.itiforums.com/beeiti/images/logos_societes/pmu.png" alt="Card longBookmaker" /></th>
-            <td><Modals /></td>
-            <td><Modals /></td>
-            <td><Modals /></td>
-            <td><Button color="warning" className="buttonBook2">To register</Button></td>
+            <th scope="row" className="logLogo"><img width="55%" src="https://www.itiforums.com/beeiti/images/logos_societes/pmu.png" alt="Card longBookmaker" /></th>
+            <td className="logLogo2"><Modals /></td>
+            <td className="logLogo2"><Modals /></td>
+            <td className="logLogo2"><Modals /></td>
+            <td><Button color="warning" className="buttonBook2" href="https://www.pmu.fr/ouverture/?typeCompte=2010&clientApi=1&redirectionUrl=https://www.pmu.fr&codePromo=SPORT&univers=S" target="_blank">Register</Button></td>
           </tr>
           <tr>
-            <th scope="row"><img width="55%" src="https://avantagebet.com/wp-content/uploads/2018/04/logo-betclic-1.jpg" alt="Card longBookmaker" /></th>
-            <td><Modals /></td>
-            <td><Modals /></td>
-            <td><Modals /></td>
-            <td><Button color="warning" className="buttonBook2">To register</Button></td>
+            <th scope="row" className="logLogo"><img width="55%" src="https://avantagebet.com/wp-content/uploads/2018/04/logo-betclic-1.jpg" alt="Card longBookmaker" /></th>
+            <td className="logLogo2"><Modals /></td>
+            <td className="logLogo2"><Modals /></td>
+            <td className="logLogo2"><Modals /></td>
+            <td><Button color="warning" className="buttonBook2" href="https://en.betclic.com/register" target="_blank">Register</Button></td>
           </tr>
           <tr>
-            <th scope="row"><img width="55%" src="https://y4f9x2y5.stackpathcdn.com/wp-content/uploads/2019/01/NetBet.png" alt="Card longBookmaker" /></th>
-            <td><Modals /></td>
-            <td><Modals /></td>
-            <td><Modals /></td>
-            <td><Button color="warning" className="buttonBook2">To register</Button></td>
+            <th scope="row" className="logLogo"><img width="55%" src="https://y4f9x2y5.stackpathcdn.com/wp-content/uploads/2019/01/NetBet.png" alt="Card longBookmaker" /></th>
+            <td className="logLogo2"><Modals /></td>
+            <td className="logLogo2"><Modals /></td>
+            <td className="logLogo2"><Modals /></td>
+            <td><Button color="warning" className="buttonBook2" href="https://www.netbet.fr/inscription" target="_blank">Register</Button></td>
           </tr>
           <tr>
-            <th scope="row"><img width="55%" src="https://www.wannabet.fr/wp-content/uploads/2017/08/zebet-300x133.png" alt="Card longBookmaker" /></th>
-            <td><Modals /></td>
-            <td><Modals /></td>
-            {/* <td><Button color="secondary">cotes</Button>{' '}</td> */}
-            <td><Modals /></td>
-            <td><Button color="warning" className="buttonBook2">To register</Button></td>
+            <th scope="row" className="logLogo"><img width="55%" src="https://www.wannabet.fr/wp-content/uploads/2017/08/zebet-300x133.png" alt="Card longBookmaker" /></th>
+            <td className="logLogo2"><Modals /></td>
+            <td className="logLogo2"><Modals /></td>
+            <td className="logLogo2"><Modals /></td>
+            <td><Button color="warning" className="buttonBook2" href="https://www.zebet.fr/fr/inscription?gclid=CjwKCAjwwZrmBRA7EiwA4iMzBM59RsNiY1OKOtja5vbtLbgz0Y-EHr6xjDVoewJSYb5V4c4s5SspsRoCf08QAvD_BwE" target="_blank">Register</Button></td>
           </tr>
         </tbody>
       </Table>

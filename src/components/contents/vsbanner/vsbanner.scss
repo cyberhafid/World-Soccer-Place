@@ -25,3 +25,15 @@
 }
 
 }
+@media (max-width: 375px) {
+    /* CSS appliqué aux petits écrans */
+    .titleMatch{
+font-size: 70px !important;
+    }
+    .soccer-place{
+        height: 200px !important;
+        width: 300px !important;
+        margin: 8px !important;
+    }
+    
+ }
