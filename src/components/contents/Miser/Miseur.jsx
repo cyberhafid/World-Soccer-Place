@@ -39,8 +39,8 @@ export default class Miseur extends React.Component {
 
   submitForm(e) {
     e.preventDefault();
-    
-    this.state.mises.push({
+    let currentMise = this.state.mises;
+    currentMise.mises.push({
       'startDate': new Date(),
       'idmatch': 'quelMatch',
       'versement': this.state.versement,
@@ -51,7 +51,7 @@ export default class Miseur extends React.Component {
       "solde": this.state.versement
     })*/}
 
-    this.state.user.mises = this.state.mises;
+    this.setState({mises: [...currentMise]});
     const config = {
       method: 'PATCH',
       headers: {
