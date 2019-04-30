@@ -51,11 +51,11 @@ class ClassmentTrie extends React.Component {
                 <td>Pts</td>
               </tr>
               {!isLoading ? (
-                competitions.sort((a, b) => b.points - a.points).filter((competition, idx) => competition.comp_id == this.state.league && idx < 10).map((competition, idx) => {
+                competitions.sort((a, b) => b.points - a.points).filter((competition, idx) => competition.comp_id === this.state.league && idx < 10).map((competition, idx) => {
                   const { team_name, points } = competition;
                   return (
                     <tr key={idx}>
-                      <td className="bold"># {idx} </td>
+                      <td className="bold"># {idx +1} </td>
                       <td className="bold"> {team_name}</td>
                       <td className="bold">{points} pts </td>
                     </tr>

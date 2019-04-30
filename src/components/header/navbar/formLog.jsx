@@ -2,7 +2,6 @@ import React from 'react';
 import { Form, FormGroup, Label, Input } from 'reactstrap';
 import MyButton from '../../shared/button';
 import axios from 'axios';
-import ActiveUser from './activeUser';
 import { UserContext } from '../../../store/userProvider';
 
 export default class FormLogNav extends React.Component {
@@ -50,11 +49,12 @@ export default class FormLogNav extends React.Component {
 
   render() {
     const className = !this.state.isAuthentified ? 'toShow' : 'toHide';
-    localStorage.setItem('userAuthentified', JSON.stringify({
-      'isAuthentified': this.state.isAuthentified,
-      'email': this.state.email,
-      'className': `${className}`
-    }));
+    // To use localStorage:
+    //  localStorage.setItem('userAuthentified', JSON.stringify({
+    //    'isAuthentified': this.state.isAuthentified,
+    //    'email': this.state.email,
+    //    'className': `${className}`
+    //  }));
     return (
       <div>
         <Form onSubmit={(e) => this.submitForm(e)} className={className}>
@@ -81,11 +81,12 @@ export default class FormLogNav extends React.Component {
             />
           </FormGroup>
           <MyButton type="submit" colorButton="primary"
-            className='btnNav' nameButton='LOG IN' />
+            btnNavClass='btn-nav-log' nameButton='LOG IN' />
         </Form>
-        <ActiveUser
+        {/* To use localStorage:
+          <ActiveUser
           activeUser={this.state.email}
-        />
+        /> */}
       </div>
     );
   }
