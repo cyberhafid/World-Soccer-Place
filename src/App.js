@@ -8,7 +8,6 @@ import Contact from './pages/Contact';
 import MyNavbar from './components/header/navbar/navbar';
 import MyFooter from './components/footer/containerFooter';
 import {userContextData, UserProvider} from './store/userProvider';
-import LongBook from '../components/contents/LongBook/longBook';
 
 class App extends Component {
   constructor(props) {
@@ -31,7 +30,6 @@ class App extends Component {
         <UserProvider value={this.state}>
           <div className="App">
             <MyNavbar />
-           <LongBook />
             <Switch>
               <Route exact path="/" component={Home} />
               <Route path="/league/:id" component={League} />
