@@ -12,15 +12,15 @@ export default class League extends Component {
     return (
       <div className="container-fluid backg">
         <Row>
-          <Col sm="3">
+          <Col sm='3'>
             <MenuLeague />
             <MenuTeam />
             <MenuCountry />
           </Col>
-          <Col sm="6">
+          <Col sm='6'>
             <MyTable />
           </Col>
-          <Col sm="3">
+          <Col sm='3'>
             <Book />
             <ClassmentTrie />
           </Col>

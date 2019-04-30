@@ -2,27 +2,15 @@
   "users": [
     {
       "id": 1,
-      "email": "david@gmail.com",
+      "email": "equipe@gmail.com",
       "password": "123",
-      "solde": 9810489,
+      "solde": 1050,
       "mises": [
         {
           "startDate": "2019-04-30T09:48:00.410Z",
           "idmatch": 0,
-          "pari": 1000,
-          "solde": 98000
-        },
-        {
-          "startDate": "2019-04-30T09:48:07.285Z",
-          "idmatch": 0,
-          "pari": 2000,
-          "solde": 96000
-        },
-        {
-          "startDate": "2019-04-30T09:48:13.970Z",
-          "idmatch": 0,
-          "pari": 1290,
-          "solde": 94710
+          "pari": 100,
+          "solde": 900
         }
       ]
     },
@@ -34,15 +22,15 @@
     },
     {
       "isSigned": false,
-      "email": "shini@gmail.com",
-      "password": "lol",
-      "id": 3
-    },
-    {
-      "isSigned": false,
       "email": "yolo@gmail.com",
       "password": "123",
       "id": 4
+    },
+    {
+      "isSigned": false,
+      "email": "yololo@gmail.com",
+      "password": "123",
+      "id": 5
     }
   ]
 }
