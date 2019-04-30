@@ -7,9 +7,6 @@ import LongBook from '../components/contents/LongBook/longBook';
 import { Row, Col } from 'reactstrap';
 import './bet.css';
 import Axios from 'axios';
-import Team1 from '../components/contents/Team1/Team1';
-import Team2 from '../components/contents/Team2/Team2';
-import TeamVS from '../components/contents/TeamVS/TeamVS';
 
 export default class Bet extends Component {
   constructor(props) {
