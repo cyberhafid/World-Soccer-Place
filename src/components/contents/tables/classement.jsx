@@ -7,6 +7,7 @@ import './table.scss';
 class ClassmentTrie extends React.Component {
 
   state = {
+    league: 0,
     competitions: [],
     isLoading: true,
     errors: null
@@ -22,19 +23,19 @@ class ClassmentTrie extends React.Component {
   }
 
   fetchMatch() {
-    const Leagueid = this.props.match.params.id;
+    const LeagueId = this.props.match.params.id;
     axios
-      .get(`http://api.football-api.com/2.0/standings/${Leagueid}?Authorization=${process.env.REACT_APP_API_KEY}`)
+      .get(`http://api.football-api.com/2.0/standings/${LeagueId}?Authorization=${process.env.REACT_APP_API_KEY}`)
 
       .then(response => {
         const competitions = response.data;
         this.setState({
           competitions,
           isLoading: false,
-          league: Leagueid
+          league: LeagueId
         });
       })
-      .catch(error => this.setState({ error, isLoading: false }));
+      .catch(error => this.setState({ error, isLoading: false, league: LeagueId }));
   }
   render() {
     const { isLoading, competitions } = this.state;

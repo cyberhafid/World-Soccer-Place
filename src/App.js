@@ -7,21 +7,33 @@ import Bet from './pages/Bet';
 import Contact from './pages/Contact';
 import MyNavbar from './components/header/navbar/navbar';
 import MyFooter from './components/footer/containerFooter';
-import {userContextData, UserProvider} from './store/userProvider';
+import { userContextData, UserProvider } from './store/userProvider';
+import Axios from 'axios';
+import Miseur from './components/contents/Miser/Miseur';
 
 class App extends Component {
   constructor(props) {
     super(props);
-  
+
     this.state = {
       ...userContextData,
-      updateContextField: this.updateContextField
-      // email: userContextData.email
+      updateContextField: this.updateContextField,
+      updateUserProfile: this.updateUserProfile
     };
   }
 
   updateContextField = (field, value) => {
-    this.setState({[field]: value});
+    this.setState({ [field]: value });
+  }
+
+  updateUserProfile = (userId, datas) => {
+    Axios.patch(`http://localhost:3000/users/${userId}`, datas)
+      .then(res => {
+        console.log(res);
+      })
+      .catch(err => {
+        console.error(err);
+      });
   }
 
   render() {
@@ -35,6 +47,7 @@ class App extends Component {
               <Route path="/league/:id" component={League} />
               <Route path="/bet/:id" component={Bet} />
               <Route path="/contact" component={Contact} />
+              <Route path="/miseur" component={Miseur} />
             </Switch>
             <MyFooter />
           </div>

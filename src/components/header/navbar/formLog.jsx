@@ -37,6 +37,7 @@ export default class FormLogNav extends React.Component {
             this.context.updateContextField('isAuthentified', true);
             this.context.updateContextField('solde', res.data[index].solde);
             this.context.updateContextField('mises', res.data[index].mises);
+            this.context.updateContextField('id', res.data[index].id);
           }
         }
       })

@@ -10,6 +10,7 @@ class MatchOfDay extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      league: 0,
       competitions: [],
       isLoading: true,
       errors: null,
@@ -18,11 +19,11 @@ class MatchOfDay extends React.Component {
   componentDidMount() {
     this.fetchMatch();
   }
-  componentDidUpdate() {
-    if (this.props.match.params.id !== this.state.league) {
-      this.fetchMatch();
-    }
-  }
+  // componentDidUpdate() {
+  //   if (this.props.match.params.id !== this.state.league) {
+  //     this.fetchMatch();
+  //   }
+  // }
 
   fetchMatch() {
     const leagueId = this.props.match.params.id;
@@ -36,7 +37,7 @@ class MatchOfDay extends React.Component {
           league: leagueId
         });
       })
-      .catch(error => this.setState({ error, isLoading: false }));
+      .catch(error => this.setState({ error, isLoading: false, league: leagueId }));
   }
 
   render() {

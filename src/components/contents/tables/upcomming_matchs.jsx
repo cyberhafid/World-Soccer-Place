@@ -11,6 +11,7 @@ class UpcommingMatchs extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      league: 0,
       competitions: [],
       isLoading: true,
       errors: null,
@@ -39,7 +40,7 @@ class UpcommingMatchs extends React.Component {
           league: leagueId
         });
       })
-      .catch(error => this.setState({ error, isLoading: false }));
+      .catch(error => this.setState({ error, isLoading: false, league: leagueId }));
   }
   render() {
     const { isLoading, competitions } = this.state;
