@@ -25,17 +25,12 @@ class ModalMyFooter extends React.Component {
           toggle={this.toggle} className={this.props.className}>
           <ModalHeader className="modal-footer-header bg-warning" toggle={this.toggle}>Legal Mentions</ModalHeader>
           <ModalBody>
-						Identité
-	Association de défense des joueurs et parieurs
-	Association loi 2019
-	Préfecture de la Wild Code School
-	Déclaration n°W313019183
-	Email : Wild.Code@gmail.fr
-	Hébergement
-	Google Inc. 1 Place Francis Richard
-	Le Patio - 13002
-	France
-	Téléphone : (+1) 650-253-0000
+            Identity Association of the defense of the players and punters
+           Association law 2019 Prefecture of the Wild Code School
+           Declaration n ° W313019183
+           Email: Wild.Code@gmail.fr
+           Hosting Google Inc. 1 Place Francis Richard The Patio - 13002 France
+           Telephone: (1) 650- 253-0000
           </ModalBody>
           <ModalFooter>
             <Button className="text-black" color="warning" onClick={this.toggle}>Cancel</Button>

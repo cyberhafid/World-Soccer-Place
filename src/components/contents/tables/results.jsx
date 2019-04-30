@@ -47,7 +47,7 @@ class Results extends React.Component {
     const { isLoading, competitions } = this.state;
     return (
       <React.Fragment>
-        <div className="test">
+        <div className="contain-tab">
           <div class="wrapper-result">
             <div class="table">
               <div class="row header green">

@@ -92,3 +92,15 @@
         }
     }
 }
+
+@media (max-width: 375px) {
+    .gifBet{
+        width:325px !important;
+    }
+    .clip-text.animated{
+        font-size: 60px !important;
+        }
+    #loose.win{
+        padding-left: 80px !important;
+    }
+ }

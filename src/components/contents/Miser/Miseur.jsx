@@ -71,49 +71,49 @@ export default class Miseur extends React.Component {
         <div className="test">
           <div className="wrapper-day">
 
-            <div className="table">
+            <div className="table shadow-tab">
               <div className="row header yellow">
                 <h2 className="title-tab">identity</h2>
               </div>
               <div className="table">
-                <div className="row" >
+                <div className="row delete-respon" >
                   <div className="cell bold" data-title="Domicile">
                     <p>E-Mail</p></div>
                   <div className="cell bold" data-title="Domicile">
                     <p>Solde</p> </div>
                 </div>
                 <div className="row" >
-                  <div className="cell bold" data-title="Diffusion">
+                  <div className="cell bold" data-title="Email">
                     <p className="direct">{this.state.user.email}</p> </div>
-                  <div className="cell bold" data-title="Diffusion">
+                  <div className="cell bold" data-title="Solde">
                     <h2 className="direct">{this.state.user.solde}</h2> </div>
                 </div>
               </div>
             </div>
 
-            <div className="table">
+            <div className="table shadow-tab">
               <div className="row header yellow">
                 <h2 className="title-tab"> betting history</h2>
               </div>
               <div className="table">
-                <div className="row" >
-                  <div className="cell bold" data-title="Diffusion">
+                <div className="row delete-respon" >
+                  <div className="cell bold" data-title="Matche N°">
                     <p className="direct">Matche N°</p> </div>
-                  <div className="cell bold" data-title="Domicile">
+                  <div className="cell bold" data-title="Pari">
                     <p>Pari</p></div>
-                  <div className="cell bold" data-title="Domicile">
+                  <div className="cell bold" data-title="Solde">
                     <p>Solde</p> </div>
                 </div>
                 {this.state.mises.map((mise, idx) => {
                   const { idmatch, pari, solde } = mise;
                   return (
                     <div className="row" key={idx}>
-                      <div className="cell direct" data-title="Diffusion">
+                      <div className="cell direct" data-title="Matche N°">
                         <p className="direct">{idmatch}</p> </div>
-                      <div className="cell" data-title="Domicile">
+                      <div className="cell" data-title="Pari">
                         <p>{pari}</p>
                       </div>
-                      <div className="cell" data-title="Domicile">
+                      <div className="cell" data-title="Solde">
                         <p>{solde}</p>
                       </div>
                     </div>
@@ -124,17 +124,22 @@ export default class Miseur extends React.Component {
               </div>
             </div>
 
-            <div className="table">
+            <div className="table shadow-tab">
               <div className="row header yellow">
-                <h2 className="title-tab">portefeuille</h2>
+                <h2 className="title-tab">Wallet</h2>
               </div>
               <div className="table">
                 <Form onSubmit={this.submitForm}>
                   <div className="row" >
-                    <div className="cell direct" data-title="Diffusion">
-                      <p className="direct">Montant a ajouter</p>                </div>
-                    <input type="texte" id="versement" name="versement" onChange={this.onChange} value={this.state.versement} placeholder="Mise" />
-                    <div className="cell" data-title="Domicile">      <Button type="submit" value="Envoyer" >Submit</Button>   </div>
+                    <div className="cell size-cell1" data-title="">
+                      <p className="direct">Add Amount</p>
+                    </div>
+                    <div className="cell" data-title="">
+                      <input type="texte" id="versement" name="versement" onChange={this.onChange} value={this.state.versement} placeholder="Amount" />
+                    </div>
+                    <div className="cell size-cell2 padding-title" data-title="">
+                      <Button type="submit" value="Envoyer" >Submit</Button>
+                    </div>
                   </div>
                 </Form>
               </div> </div>

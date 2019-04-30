@@ -46,7 +46,7 @@ class UpcommingMatchs extends React.Component {
     const { isLoading, competitions } = this.state;
     return (
       <React.Fragment>
-        <div className="test">
+        <div className="contain-tab">
           <div class="wrapper-up">
             <div class="table">
               <div class="row header blue">

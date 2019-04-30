@@ -14,7 +14,7 @@
     font-weight: bold;
 }
 
-.test{
+.contain-tab{
   box-shadow: 15px 15px 6px rgba(0, 0, 0, 0.801);
     body {
         font-family: "Helvetica Neue", Helvetica, Arial;
@@ -161,4 +161,8 @@ background-color: rgb(255, 255, 255);
    color: rgb(255, 255, 255);
    text-align: center;
    font-family: 'Permanent Marker', cursive;;
+}
+
+.box-rank{
+  box-shadow: 15px 15px 6px rgba(0, 0, 0, 0.801) !important;
 }

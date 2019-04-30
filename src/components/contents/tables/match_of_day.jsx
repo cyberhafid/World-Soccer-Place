@@ -44,7 +44,7 @@ class MatchOfDay extends React.Component {
     const { isLoading, competitions } = this.state;
     return (
       <React.Fragment>
-        <div className="test">
+        <div className="contain-tab">
           <div className="wrapper-day">
             <div className="table">
               <div className="row header">

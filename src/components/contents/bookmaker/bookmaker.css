@@ -3,7 +3,9 @@
     font-size: 90% !important;
     box-shadow: 15px 15px 6px rgba(0, 0, 0, 0.801);
     padding-right: 0px !important;
-    padding-bottom: 0px !important
+    padding-bottom: 0px !important;
+    box-shadow: 15px 15px 6px rgba(0, 0, 0, 0.801);
+
 }
 .button-book
 {
@@ -22,3 +24,5 @@
     padding-left: 10px;
     padding-right: 15px;
 }
+
+

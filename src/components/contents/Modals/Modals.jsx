@@ -86,7 +86,7 @@ class ModalExample extends React.Component {
       };
       this.context.updateUserProfile(this.context.id, user);
     } else {
-      alert("Vous n'avez pas assez de crédit !");
+      alert('You do not have enough credits !');
       return this.closeAll();
     }
     this.toggleNested();

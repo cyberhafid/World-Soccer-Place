@@ -41,29 +41,31 @@ class ClassmentTrie extends React.Component {
     const { isLoading, competitions } = this.state;
     return (
       <React.Fragment>
-        <ListGroupItem className="bg-list"><h2 className="title-tab">Classement</h2></ListGroupItem>
-        <div>
-          <Table id="table-1">
-            <tbody>
-              <tr>
-                <td>Position</td>
-                <td>Equipe</td>
-                <td>Pts</td>
-              </tr>
-              {!isLoading ? (
-                competitions.sort((a, b) => b.points - a.points).filter((competition, idx) => competition.comp_id == this.state.league && idx < 10).map((competition, idx) => {
-                  const { team_name, points } = competition;
-                  return (
-                    <tr key={idx}>
-                      <td className="bold"># {idx} </td>
-                      <td className="bold"> {team_name}</td>
-                      <td className="bold">{points} pts </td>
-                    </tr>
-                  );
-                })
-              ) : (<tr><td>Loading...</td></tr>)}
-            </tbody>
-          </Table>
+        <div className="box-rank">
+          <ListGroupItem className="bg-list"><h2 className="title-tab">Classement</h2></ListGroupItem>
+          <div>
+            <Table id="table-1">
+              <tbody>
+                <tr>
+                  <td>Position</td>
+                  <td>Equipe</td>
+                  <td>Pts</td>
+                </tr>
+                {!isLoading ? (
+                  competitions.sort((a, b) => b.points - a.points).filter((competition, idx) => competition.comp_id == this.state.league && idx < 10).map((competition, idx) => {
+                    const { team_name, points } = competition;
+                    return (
+                      <tr key={idx}>
+                        <td className="bold"># {idx} </td>
+                        <td className="bold"> {team_name}</td>
+                        <td className="bold">{points} pts </td>
+                      </tr>
+                    );
+                  })
+                ) : (<tr><td>Loading...</td></tr>)}
+              </tbody>
+            </Table>
+          </div>
         </div>
       </React.Fragment>
     );
