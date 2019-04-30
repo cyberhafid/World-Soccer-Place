@@ -35,9 +35,7 @@ export default class Bet extends Component {
         <p>VS</p>
         <Row>
        
-          <Col sm="5"><Team1 teamId={this.state.localTeamId} /></Col>
-          <Col sm="2"><TeamVS /></Col>
-          <Col sm="5"><Team2 teamId={this.state.visitorTeamId}/></Col>
+
     
         </Row>
 
