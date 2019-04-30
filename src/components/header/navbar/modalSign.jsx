@@ -20,7 +20,6 @@ export default class ModalSign extends React.Component {
   }
 
   render() {
-    console.log(this.state.isSigned);
     return (
       <div>
         <Button color="primary" className='modal-navbar' onClick={this.toggle}>{this.props.buttonLabel}</Button>

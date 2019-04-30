@@ -2,7 +2,9 @@ import React from 'react';
 import axios from 'axios';
 import { Button, Form } from 'reactstrap';
 import './mise.scss';
+import { UserContext } from '../../../store/userProvider';
 export default class Miseur extends React.Component {
+  static contextType = UserContext
 
   constructor(props) {
     super(props);
@@ -19,7 +21,7 @@ export default class Miseur extends React.Component {
     this.fetchUserData();
   }
   fetchUserData() {
-    axios.get('http://localhost:3000/users/2')
+    axios.get(`http://localhost:3000/users/${this.context.id}`)
       .then(res => {
         const mises = res.data.mises;
         const user = res.data;
@@ -39,35 +41,23 @@ export default class Miseur extends React.Component {
 
   submitForm(e) {
     e.preventDefault();
-    let currentMise = this.state.mises;
-    currentMise.mises.push({
-      'startDate': new Date(),
-      'idmatch': 'quelMatch',
-      'versement': this.state.versement,
-      'pari': this.state.mise
-    });
-    
-    {/*this.state.users.push({
-      "solde": this.state.versement
-    })*/}
-
-    this.setState({mises: [...currentMise]});
     const config = {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(this.state.user),
+      body: JSON.stringify({ solde: this.context.solde + parseInt(this.state.versement) }),
     };
-    const url = 'http://localhost:3000/users/2';
+    const url = `http://localhost:3000/users/${this.context.id}`;
     fetch(url, config)
       .then(res => res.json())
       .then(res => {
         if (res.error) {
           alert('le champ panier doit etre non vide');
         } else {
-          alert(`Montant enregistré sous le numero ${res}!`);
+          alert(`Montant enregistré sous le numero ${res.id}!`);
           this.fetchUserData();
+          this.setState({ versement: '' });
         }
       }).catch(e => {
         console.error(e);
@@ -87,8 +77,6 @@ export default class Miseur extends React.Component {
               </div>
               <div className="table">
                 <div className="row" >
-                  <div className="cell bold" data-title="Diffusion">
-                    <p>Nom Prenom</p> </div>
                   <div className="cell bold" data-title="Domicile">
                     <p>E-Mail</p></div>
                   <div className="cell bold" data-title="Domicile">
@@ -96,9 +84,7 @@ export default class Miseur extends React.Component {
                 </div>
                 <div className="row" >
                   <div className="cell bold" data-title="Diffusion">
-                    <p className="direct">{this.state.user.username}</p> </div>
-                  <div className="cell bold" data-title="Diffusion">
-                    <p className="direct">{this.state.user.mail}</p> </div>
+                    <p className="direct">{this.state.user.email}</p> </div>
                   <div className="cell bold" data-title="Diffusion">
                     <h2 className="direct">{this.state.user.solde}</h2> </div>
                 </div>
@@ -114,21 +100,21 @@ export default class Miseur extends React.Component {
                   <div className="cell bold" data-title="Diffusion">
                     <p className="direct">Matche N°</p> </div>
                   <div className="cell bold" data-title="Domicile">
-                    <p>Versement</p></div>
+                    <p>Pari</p></div>
                   <div className="cell bold" data-title="Domicile">
                     <p>Solde</p> </div>
                 </div>
                 {this.state.mises.map((mise, idx) => {
-                  const { idmatch, versement, pari } = mise;
+                  const { idmatch, pari, solde } = mise;
                   return (
                     <div className="row" key={idx}>
                       <div className="cell direct" data-title="Diffusion">
                         <p className="direct">{idmatch}</p> </div>
                       <div className="cell" data-title="Domicile">
-                        <p>{versement}</p>
+                        <p>{pari}</p>
                       </div>
                       <div className="cell" data-title="Domicile">
-                        <p>{pari}</p>
+                        <p>{solde}</p>
                       </div>
                     </div>
                   );
