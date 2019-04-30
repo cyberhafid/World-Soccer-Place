@@ -5,6 +5,7 @@ import TeamVS from '../components/contents/TeamVS/TeamVS';
 import VsBanner from '../components/contents/vsbanner/vsbanner';
 import LongBook from '../components/contents/LongBook/longBook';
 import { Row, Col } from 'reactstrap';
+import './bet.css';
 import Axios from 'axios';
 
 export default class Bet extends Component {
@@ -13,7 +14,7 @@ export default class Bet extends Component {
     this.state = {
       localTeamId: null,
       visitorTeamId: null,
-      loading: true
+      loading: true,
     };
   }
 
@@ -32,16 +33,15 @@ export default class Bet extends Component {
     }
     return (
       <div className="container-fluid backg">
-        <p>VS</p>
-        <Row>
-       
-          <Col sm="5"><Team1 teamId={this.state.localTeamId} /></Col>
-          <Col sm="2"><TeamVS /></Col>
-          <Col sm="5"><Team2 teamId={this.state.visitorTeamId}/></Col>
-    
-        </Row>
-
         <VsBanner />
+
+        <Row>
+          <Col offset="2" className="diffPad"></Col>
+          <Col sm="3" md="4"><Team1 teamId={this.state.localTeamId} /></Col>
+          <Col sm="2"md="2"><TeamVS /></Col>
+          <Col sm="3"md="4"><Team2 teamId={this.state.visitorTeamId}/></Col>
+          <Col offset="2"></Col>    
+        </Row>
         <Row>
           <Col offset="2"></Col>
           <Col sm="8"><LongBook /></Col>
