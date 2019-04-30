@@ -58,7 +58,7 @@ class ModalExample extends React.Component {
   render() {
     const resultTitle = this.state.isWinner ? 'YOU WIN' : 'YOU LOOSE';
     return (
-      <div className="modal-css">
+      <div>
         <Button color="secondary" onClick={this.toggle}>cotes{this.props.buttonLabel}</Button>
         <Modal isOpen={this.state.modal} toggle={this.toggle}>
           <ModalHeader toggle={this.toggle}>Cotes</ModalHeader>

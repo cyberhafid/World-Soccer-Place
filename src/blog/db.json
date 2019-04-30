@@ -1,0 +1,69 @@
+{
+  "users": [
+    {
+      "email": "Gamma@gmail.com",
+      "password": "123",
+      "id": 1
+    },
+    {
+      "email": "doudou@gmail.com",
+      "password": "234",
+      "id": 2
+    },
+    {
+      "email": "zanma@gmail.com",
+      "password": "gggg",
+      "id": 3
+    },
+    {
+      "email": "hello@gmail.com",
+      "password": "world",
+      "id": 4
+    },
+    {
+      "email": "shini@gmail.com",
+      "password": "567",
+      "id": 5
+    },
+    {
+      "email": "new@gmail.com",
+      "password": "890",
+      "id": 6
+    },
+    {
+      "email": "bloupbloup@gmail.com",
+      "password": "bloup",
+      "id": 7
+    },
+    {
+      "isSigned": false,
+      "email": "yoloyolo@gmail.com",
+      "password": "yolo",
+      "id": 8
+    },
+    {
+      "isSigned": false,
+      "email": "yolo@gmail.com",
+      "password": "yolo",
+      "id": 9
+    },
+    {
+      "isSigned": false,
+      "email": "test@gmail.com",
+      "password": "test",
+      "id": 10
+    },
+    {
+      "isSigned": false,
+      "email": "yoloyolo@gmail.com",
+      "password": "yolo",
+      "id": 11
+    },
+    {
+      "isSigned": false,
+      "email": "test@gmail.com",
+      "password": "lol",
+      "id": 12
+    }
+  ]
+}
