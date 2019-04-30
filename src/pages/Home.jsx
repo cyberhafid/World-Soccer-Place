@@ -7,6 +7,7 @@ import { Row, Col } from 'reactstrap';
 import MenuLeague from '../components/contents/menu/menu_league';
 import MenuTeam from '../components/contents/menu/menu_team';
 import MenuCountry from '../components/contents/menu/menu_country';
+import LongBook from '../components/contents/LongBook/longBook';
 
 export default class Home extends Component {
   render() {

@@ -16,6 +16,8 @@ class ModalExample extends React.Component {
     this.toggle = this.toggle.bind(this);
     this.toggleNested = this.toggleNested.bind(this);
     this.toggleAll = this.toggleAll.bind(this);
+
+    this.modalEffect = React.createRef();
   }
 
   toggle() {
@@ -29,17 +31,21 @@ class ModalExample extends React.Component {
     this.setState({
       nestedModal: !this.state.nestedModal,
       closeAll: false,
-      isWinner
+      isWinner,
     });
-    setTimeout(() => {
-      this.setState({ loading: false });
-      const effectContainer = document.getElementById('bet-effect-container');
-      if (effectContainer && isWinner) {
-        effectContainer.parentNode.classList.add('effect');
-      } else {
-        effectContainer.parentNode.classList.add('effect2');
-      }
-    }, 6500);
+    if(this.state.loading){
+      setTimeout(() => {
+        this.setState({ loading: false });
+        const effectContainer = this.modalEffect.current;
+        if (effectContainer && isWinner) {
+          effectContainer.parentNode.parentNode.parentNode.classList.remove('effect2');
+          effectContainer.parentNode.parentNode.parentNode.classList.add('effect');
+        }else if(effectContainer && !isWinner) {
+          effectContainer.parentNode.parentNode.parentNode.classList.remove('effect');
+          effectContainer.parentNode.parentNode.parentNode.classList.add('effect2');
+        }
+      }, 6500);
+    }
   }
 
   toggleAll() {
@@ -64,25 +70,30 @@ class ModalExample extends React.Component {
             </InputGroup><br />
             <InputGroup>
               <InputGroupAddon addonType="prepend"> bet $</InputGroupAddon>
-              <Input min={0} max={100} type="number" step="1" />
+              <Input min={1} max={100} type="number" step="1" />
             </InputGroup><br />
             <Button color="primary" onClick={this.toggleNested}>BET</Button>
-            <Modal id="bet-effect-container" isOpen={this.state.nestedModal} toggle={this.toggleNested} onClosed={this.state.closeAll ? this.toggle : undefined}>
-              <ModalBody>
-                {
-                  this.state.loading &&
+            {
+              this.state.nestedModal && 
+              <Modal onExit={() => this.setState({loading: true, nestedModal: false})} isOpen={this.state.nestedModal} toggle={this.toggleNested} onClosed={this.state.closeAll ? this.toggle : undefined}>
+                <div ref={this.modalEffect}>
+                  <ModalBody>
+                    {
+                      this.state.loading &&
                   <img className="gifBet" src="https://media.giphy.com/media/13bQxguhLJolC8/giphy.gif" alt="BetWin"></img>
-                }
-                {
-                  !this.state.loading &&
+                    }
+                    {
+                      !this.state.loading &&
                   <div className="win" id="loose"> <h2 class="clip-text animated">{resultTitle}</h2></div>
-                }
-              </ModalBody>
-              <ModalFooter>
-                <Button color="primary" onClick={this.toggleNested}>Done</Button>{' '}
-                <Button color="secondary" onClick={this.toggleAll}>All Done</Button>
-              </ModalFooter>
-            </Modal>
+                    }
+                  </ModalBody>
+                  <ModalFooter>
+                    <Button color="primary" onClick={this.toggleNested}>Done</Button>{' '}
+                    <Button color="secondary" onClick={this.toggleAll}>All Done</Button>
+                  </ModalFooter>
+                </div>
+              </Modal>
+            }
           </ModalBody>
           <ModalFooter>
             <Modal />
