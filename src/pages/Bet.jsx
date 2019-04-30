@@ -15,7 +15,7 @@ export default class Bet extends Component {
       matchId: 0,
       localTeamId: null,
       visitorTeamId: null,
-      loading: false,
+      loading: true,
     };
   }
 
