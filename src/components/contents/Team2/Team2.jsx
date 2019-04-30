@@ -18,9 +18,10 @@ export default class Example extends React.Component {
 
       .then(response => {
         const competitions = response.data.squad;
-        console.log('HERERERERERERERREREREREREER', competitions);
+        const teamVisitor = response.data.venue_city;
         this.setState({
           competitions,
+          teamVisitor,
           isLoading: false
         });
       })
@@ -43,21 +44,21 @@ export default class Example extends React.Component {
           
               <tr>
                 <th></th>
-                <th className="titleTeam2">Team-2</th>
+                <th className="titleTeam2">{this.state.teamVisitor}</th>
               </tr>
             </thead>
             <tbody className="nameTeam2">
 
               {!isLoading ? (
 
-                competitions.filter(competition  =>  competition.comp_id = '1221').map((competition, idx  )=> {
+                competitions.filter((competition , idx)  =>  competition.comp_id = '1221'  && idx < '11').map((competition, idx  )=> {
  
-                  const { id, name , age, position } = competition;
+                  const {id, name , age, position } = competition;
                   return (
 
-                    <tr>
+                    <tr key={idx}>
 
-                      <th scope="row" key={id}>{id}</th>
+                      <th scope="row" key={id}></th>
                       <td>{name}</td>
 
                       <td>{age}</td>

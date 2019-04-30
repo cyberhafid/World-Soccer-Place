@@ -13,4 +13,9 @@
     background: rgb(141, 140, 140) !important;
     color: white;
     text-align: center;
+
+}
+.bookText{
+    padding-left: 10px;
+    padding-right: 15px;
 }
