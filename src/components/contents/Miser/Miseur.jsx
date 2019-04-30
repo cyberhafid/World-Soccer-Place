@@ -16,7 +16,7 @@ export default class Miseur extends React.Component {
   }
 
   componentDidMount() {
-    this.fetchUserData()
+    this.fetchUserData();
   }
   fetchUserData() {
     axios.get('http://localhost:3000/users/2')
@@ -28,7 +28,7 @@ export default class Miseur extends React.Component {
           user
         });
       })
-      .catch((err) => console.log(err))
+      .catch((err) => console.log(err));
   }
 
   onChange(e) {
@@ -41,17 +41,17 @@ export default class Miseur extends React.Component {
     e.preventDefault();
     
     this.state.mises.push({
-      "startDate": new Date(),
-      "idmatch": 'quelMatch',
-      "versement": this.state.versement,
-      "pari": this.state.mise
-    })
+      'startDate': new Date(),
+      'idmatch': 'quelMatch',
+      'versement': this.state.versement,
+      'pari': this.state.mise
+    });
     
     {/*this.state.users.push({
       "solde": this.state.versement
     })*/}
 
-    this.state.user.mises = this.state.mises
+    this.state.user.mises = this.state.mises;
     const config = {
       method: 'PATCH',
       headers: {
@@ -105,7 +105,6 @@ export default class Miseur extends React.Component {
               </div>
             </div>
 
-
             <div className="table">
               <div className="row header yellow">
                 <h2 className="title-tab"> betting history</h2>
@@ -157,10 +156,9 @@ export default class Miseur extends React.Component {
         </div>
       </React.Fragment>
 
-    )
+    );
   }
 }
-
 
 // GET /users => index [user1, user2, user3]
 // GET /users/:id => show user1
