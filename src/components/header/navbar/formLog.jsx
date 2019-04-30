@@ -35,6 +35,9 @@ export default class FormLogNav extends React.Component {
             this.setState({ isAuthentified: true });
             this.context.updateContextField('email', res.data[index].email);
             this.context.updateContextField('isAuthentified', true);
+            this.context.updateContextField('solde', res.data[index].solde);
+            this.context.updateContextField('mises', res.data[index].mises);
+            this.context.updateContextField('id', res.data[index].id);
           }
         }
       })
@@ -81,7 +84,6 @@ export default class FormLogNav extends React.Component {
             className='btnNav' nameButton='LOG IN' />
         </Form>
         <ActiveUser
-          // className={this.state.hiddenUser} 
           activeUser={this.state.email}
         />
       </div>

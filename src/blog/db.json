@@ -1,29 +1,30 @@
 {
   "users": [
     {
-      "email": "Gamma@gmail.com",
+      "id": 1,
+      "email": "david@gmail.com",
       "password": "123",
-      "id": 1
-    },
-    {
-      "email": "doudou@gmail.com",
-      "password": "234",
-      "id": 2
-    },
-    {
-      "email": "zanma@gmail.com",
-      "password": "gggg",
-      "id": 3
-    },
-    {
-      "email": "hello@gmail.com",
-      "password": "world",
-      "id": 4
-    },
-    {
-      "email": "shini@gmail.com",
-      "password": "567",
-      "id": 5
+      "solde": 9810489,
+      "mises": [
+        {
+          "startDate": "2019-04-30T09:48:00.410Z",
+          "idmatch": 0,
+          "pari": 1000,
+          "solde": 98000
+        },
+        {
+          "startDate": "2019-04-30T09:48:07.285Z",
+          "idmatch": 0,
+          "pari": 2000,
+          "solde": 96000
+        },
+        {
+          "startDate": "2019-04-30T09:48:13.970Z",
+          "idmatch": 0,
+          "pari": 1290,
+          "solde": 94710
+        }
+      ]
     }
   ]
 }

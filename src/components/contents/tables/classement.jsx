@@ -7,6 +7,7 @@ import './table.scss';
 class ClassmentTrie extends React.Component {
 
   state = {
+    league: 0,
     competitions: [],
     isLoading: true,
     errors: null
@@ -15,26 +16,26 @@ class ClassmentTrie extends React.Component {
   componentDidMount() {
     this.fetchMatch();
   }
-  componentDidUpdate(){
-    if(this.props.match.params.id !== this.state.league){
+  componentDidUpdate() {
+    if (this.props.match.params.id !== this.state.league) {
       this.fetchMatch();
     }
   }
 
   fetchMatch() {
-    const Leagueid = this.props.match.params.id;
+    const LeagueId = this.props.match.params.id;
     axios
-      .get(`http://api.football-api.com/2.0/standings/${Leagueid}?Authorization=565ec012251f932ea4000001fa542ae9d994470e73fdb314a8a56d76`)
+      .get(`http://api.football-api.com/2.0/standings/${LeagueId}?Authorization=${process.env.REACT_APP_API_KEY}`)
 
       .then(response => {
         const competitions = response.data;
         this.setState({
           competitions,
           isLoading: false,
-          league: Leagueid
+          league: LeagueId
         });
       })
-      .catch(error => this.setState({ error, isLoading: false }));
+      .catch(error => this.setState({ error, isLoading: false, league: LeagueId }));
   }
   render() {
     const { isLoading, competitions } = this.state;
@@ -50,7 +51,7 @@ class ClassmentTrie extends React.Component {
                 <td>Pts</td>
               </tr>
               {!isLoading ? (
-                competitions.sort((a, b) =>  b.points - a.points).filter((competition, idx) => competition.comp_id == this.state.league && idx < 10 ).map((competition, idx) => {
+                competitions.sort((a, b) => b.points - a.points).filter((competition, idx) => competition.comp_id == this.state.league && idx < 10).map((competition, idx) => {
                   const { team_name, points } = competition;
                   return (
                     <tr key={idx}>

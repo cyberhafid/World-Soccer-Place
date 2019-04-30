@@ -7,6 +7,7 @@ export default class FormSignNav extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      isSigned: false,
       email: '',
       password: '',
     };
@@ -27,6 +28,8 @@ export default class FormSignNav extends React.Component {
     axios.post(url, this.state)
       .then((res) => {
         alert('Inscription réussie !');
+        this.setState({ isSigned: true });
+        this.props.toggle();
       })
       .catch((err) => {
         alert('Erreur lors de l\'ajout d\'un membre ');

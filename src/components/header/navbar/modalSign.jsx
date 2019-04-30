@@ -3,10 +3,11 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import MyButton from '../../shared/button';
 import FormSignNav from './formSign';
 
-class ModalSign extends React.Component {
+export default class ModalSign extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      isSigned: false,
       modal: false
     };
     this.toggle = this.toggle.bind(this);
@@ -25,7 +26,7 @@ class ModalSign extends React.Component {
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
           <ModalHeader toggle={this.toggle}>SIGN IN   ZONE</ModalHeader>
           <ModalBody>
-            <FormSignNav />
+            <FormSignNav toggle={this.toggle} />
           </ModalBody>
           <ModalFooter>
             <MyButton
@@ -41,4 +42,3 @@ class ModalSign extends React.Component {
   }
 }
 
-export default ModalSign;

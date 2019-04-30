@@ -12,6 +12,7 @@ class Results extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      league: 0,
       competitions: [],
       isLoading: true,
       errors: null,
@@ -29,7 +30,7 @@ class Results extends React.Component {
   fetchMatch() {
     const leagueId = this.props.match.params.id;
     axios
-      .get(`http://api.football-api.com/2.0/matches?comp_id=${leagueId}&from_date=01.04.2019&to_date=25.04.2019&Authorization=565ec012251f932ea4000001fa542ae9d994470e73fdb314a8a56d76`)
+      .get(`http://api.football-api.com/2.0/matches?comp_id=${leagueId}&from_date=01.04.2019&to_date=25.04.2019&Authorization=${process.env.REACT_APP_API_KEY}`)
 
       .then(response => {
         const competitions = response.data;
@@ -39,7 +40,7 @@ class Results extends React.Component {
           league: leagueId
         });
       })
-      .catch(error => this.setState({ error, isLoading: false }));
+      .catch(error => this.setState({ error, isLoading: false, league: leagueId }));
   }
 
   render() {

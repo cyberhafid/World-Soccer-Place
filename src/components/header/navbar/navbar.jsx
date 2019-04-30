@@ -1,4 +1,3 @@
-import { NavLink } from 'react-router-dom';
 import React from 'react';
 import {
   Collapse,
@@ -6,10 +5,7 @@ import {
   NavbarToggler,
   NavbarBrand,
   Nav,
-  NavItem,
-  DropdownToggle,
-  UncontrolledDropdown,
-  DropdownMenu
+  NavItem
 } from 'reactstrap';
 import ModalLog from './modalLog';
 import ModalSign from './modalSign';
@@ -17,8 +13,9 @@ import './navbar.scss';
 import logo from '../../../assets/img/logo.png';
 import ActiveUser from './activeUser';
 import { UserConsumer } from '../../../store/userProvider';
+import { Link, withRouter } from 'react-router-dom';
 
-export default class MyNavbar extends React.Component {
+class MyNavbar extends React.Component {
   constructor(props) {
     super(props);
 
@@ -40,29 +37,18 @@ export default class MyNavbar extends React.Component {
     return (
       <div>
         <Navbar color="light" className="modal-navbar" light expand="md">
-          <NavbarBrand href="/">
+          <NavbarBrand onClick={() => this.props.history.push('/')}>
             <img src={logo} alt="footlogo" height="50"></img>
             <p className="text-light title-nav">World Soccer Place</p>
           </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                Navigation
-              </DropdownToggle>
-              <DropdownMenu right>
-                <NavLink className='nav-link' to="/"> Home </NavLink>
-                <NavLink className='nav-link' to="/league"> League </NavLink>
-                <NavLink className='nav-link' to="/bet"> Bet </NavLink>
-                <NavLink className='nav-link' to="/contact"> Contact </NavLink>
-              </DropdownMenu>
-            </UncontrolledDropdown>
             <UserConsumer>
               {
                 context => {
-                  if(context.isAuthentified){
+                  if (context.isAuthentified) {
                     return (
-                      <span style={{color: 'white'}}>{context.email}</span>
+                      <Link to="/miseur"><span className='text-light' style={{ marginLeft: '35px' }}>`Bonjour {context.email}`</span></Link>
                     );
                   } else {
                     return (
@@ -85,7 +71,7 @@ export default class MyNavbar extends React.Component {
             </UserConsumer>
           </Collapse>
           <ActiveUser
-            className={className} 
+            className={className}
             activeUser={this.state.email}
           />
         </Navbar>
@@ -93,3 +79,5 @@ export default class MyNavbar extends React.Component {
     );
   }
 }
+
+export default withRouter(MyNavbar);

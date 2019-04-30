@@ -14,13 +14,14 @@ export default class Example extends React.Component {
   getcompetitions() {
 
     axios
-      .get(`http://api.football-api.com/2.0/team/${this.props.teamId}?Authorization=565ec012251f932ea4000001fa542ae9d994470e73fdb314a8a56d76`)
+      .get(`http://api.football-api.com/2.0/team/${this.props.teamId}?Authorization=${process.env.REACT_APP_API_KEY}`)
 
       .then(response => {
         const competitions = response.data.squad;
-        console.log('HERERERERERERERREREREREREER', competitions);
+        const teamVisitor = response.data.venue_city;
         this.setState({
           competitions,
+          teamVisitor,
           isLoading: false
         });
       })
@@ -40,24 +41,24 @@ export default class Example extends React.Component {
         <div className="nameTeam2">
           <Table className="team2" borderless>
             <thead>
-          
+
               <tr>
                 <th></th>
-                <th className="titleTeam2">Team-2</th>
+                <th className="titleTeam2">{this.state.teamVisitor}</th>
               </tr>
             </thead>
             <tbody className="nameTeam2">
 
               {!isLoading ? (
 
-                competitions.filter(competition  =>  competition.comp_id = '1221').map((competition, idx  )=> {
- 
-                  const { id, name , age, position } = competition;
+                competitions.filter((competition, idx) => competition.comp_id = '1221' && idx < '11').map((competition, idx) => {
+
+                  const { id, name, age, position } = competition;
                   return (
 
-                    <tr>
+                    <tr key={idx}>
 
-                      <th scope="row" key={id}>{id}</th>
+                      <th scope="row" key={id}></th>
                       <td>{name}</td>
 
                       <td>{age}</td>
@@ -67,7 +68,7 @@ export default class Example extends React.Component {
 
                   );
                 })
-              ) : (   <tr><td>Loading...</td></tr>  )}
+              ) : (<tr><td>Loading...</td></tr>)}
 
             </tbody>
           </Table>
