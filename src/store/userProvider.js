@@ -2,7 +2,9 @@ import React from 'react';
 
 const datas = {
   email: '',
-  isAuthentified: false
+  isAuthentified: false,
+  solde: 0,
+  mises: []
 };
 
 export const UserContext = React.createContext({});
