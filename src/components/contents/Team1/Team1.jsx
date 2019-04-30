@@ -8,11 +8,11 @@ export default class Example extends React.Component {
     competitions: [],
     isLoading: true,
     errors: null,
-    team1:null,
+    team1: null,
   };
   getcompetitions() {
     axios
-      .get(`http://api.football-api.com/2.0/team/${this.props.teamId}?Authorization=565ec012251f932ea4000001fa542ae9d994470e73fdb314a8a56d76`)
+      .get(`http://api.football-api.com/2.0/team/${this.props.teamId}?Authorization=${process.env.REACT_APP_API_KEY}`)
       .then(response => {
         const competitions = response.data.squad;
         const teamLocale = response.data.venue_city;

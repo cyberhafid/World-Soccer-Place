@@ -13,7 +13,7 @@ export default class MenuCountry extends React.Component {
   }
 
   componentDidMount() {
-    Axios.get('http://api.football-api.com/2.0/competitions?Authorization=565ec012251f932ea4000001fa542ae9d994470e73fdb314a8a56d76')
+    Axios.get(`http://api.football-api.com/2.0/competitions?Authorization=${process.env.REACT_APP_API_KEY}`)
       .then(res => {
         console.log(res.data);
         const regions = res.data;

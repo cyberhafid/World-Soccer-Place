@@ -20,16 +20,16 @@ class UpcommingMatchs extends React.Component {
   componentDidMount() {
     this.fetchMatch();
   }
-  componentDidUpdate(){
-    if(this.props.match.params.id !== this.state.league){
+  componentDidUpdate() {
+    if (this.props.match.params.id !== this.state.league) {
       this.fetchMatch();
     }
   }
-  
+
   fetchMatch() {
     const leagueId = this.props.match.params.id;
     axios
-      .get(`http://api.football-api.com/2.0/matches?comp_id=${leagueId}&from_date=15.05.2019&to_date=15.07.2019&Authorization=565ec012251f932ea4000001fa542ae9d994470e73fdb314a8a56d76`)
+      .get(`http://api.football-api.com/2.0/matches?comp_id=${leagueId}&from_date=15.05.2019&to_date=15.07.2019&Authorization=${process.env.REACT_APP_API_KEY}`)
 
       .then(response => {
         const competitions = response.data;
@@ -53,9 +53,9 @@ class UpcommingMatchs extends React.Component {
               </div>
               <div className="table">
                 {!isLoading ? (
-                 
+
                   competitions.filter((competition, idx) => competition.comp_id == this.state.league && idx < 10).map((competition, idx) => {
-                  
+
                     const { id, formatted_date, localteam_name, visitorteam_name, localteam_score, visitorteam_score } = competition;
                     return (
                       <div className="row">

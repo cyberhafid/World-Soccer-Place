@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
-import { withRouter,
+import {
+  withRouter,
   Link
 } from 'react-router-dom';
 import './table.scss';
@@ -17,16 +18,16 @@ class MatchOfDay extends React.Component {
   componentDidMount() {
     this.fetchMatch();
   }
-  componentDidUpdate(){
-    if(this.props.match.params.id !== this.state.league){
+  componentDidUpdate() {
+    if (this.props.match.params.id !== this.state.league) {
       this.fetchMatch();
     }
   }
 
-  fetchMatch(){
+  fetchMatch() {
     const leagueId = this.props.match.params.id;
     axios
-      .get(`http://api.football-api.com/2.0/matches?comp_id=${leagueId}&from_date=26.04.2018&to_date=15.05.2019&Authorization=565ec012251f932ea4000001fa542ae9d994470e73fdb314a8a56d76`)
+      .get(`http://api.football-api.com/2.0/matches?comp_id=${leagueId}&from_date=26.04.2018&to_date=15.05.2019&Authorization=${process.env.REACT_APP_API_KEY}`)
       .then(response => {
         const competitions = response.data;
         this.setState({
@@ -81,7 +82,7 @@ class MatchOfDay extends React.Component {
           </div>
         </div>
       </React.Fragment>
-    
+
     );
   }
 }
