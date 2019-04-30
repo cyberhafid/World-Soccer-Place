@@ -2,9 +2,12 @@
   margin-top: 20px;
   div{
     width: 70%;
+    
   }
 }
-
+.width-bar{
+  box-shadow: 15px 15px 6px rgba(0, 0, 0, 0.801);
+}
 .text-size-describe{
 font-size: 15px ;
 font-family: 'Permanent Marker', cursive;
@@ -19,6 +22,8 @@ color: rgb(0, 0, 0);
     background-color: rgba(255, 255, 255, 0.411);
     border-radius: 30px;
     padding-bottom: 60px;
+    box-shadow: 15px 15px 6px rgba(0, 0, 0, 0.801);
+
 }
 .App-logo {
     animation: App-logo-spin infinite 5s linear;

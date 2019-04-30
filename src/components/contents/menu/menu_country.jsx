@@ -1,5 +1,5 @@
 import React from 'react';
-import './menu.css';
+import './menu.scss';
 import { ListGroup, ListGroupItem } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 import Axios from 'axios';
@@ -23,7 +23,7 @@ export default class MenuCountry extends React.Component {
   render() {
     return (
       <div class="list-group" >
-        <ListGroup>
+        <ListGroup id="menu-img-country" className="menu-img">
           <ListGroupItem className="bg-list"><h2 className="title-tab">Country</h2></ListGroupItem>
           {
             this.state.regions.filter((elem, pos, arr) => {

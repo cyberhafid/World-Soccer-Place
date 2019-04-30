@@ -17,7 +17,6 @@ class ModalMyFooter extends React.Component {
       modal: !prevState.modal
     }));
   }
-
   render() {
     return (
       <div>
