@@ -81,7 +81,6 @@ export default class FormLogNav extends React.Component {
             className='btnNav' nameButton='LOG IN' />
         </Form>
         <ActiveUser
-          // className={this.state.hiddenUser} 
           activeUser={this.state.email}
         />
       </div>

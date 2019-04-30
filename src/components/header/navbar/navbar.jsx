@@ -1,4 +1,3 @@
-import { NavLink } from 'react-router-dom';
 import React from 'react';
 import {
   Collapse,
@@ -6,10 +5,7 @@ import {
   NavbarToggler,
   NavbarBrand,
   Nav,
-  NavItem,
-  DropdownToggle,
-  UncontrolledDropdown,
-  DropdownMenu
+  NavItem
 } from 'reactstrap';
 import ModalLog from './modalLog';
 import ModalSign from './modalSign';
@@ -46,23 +42,12 @@ export default class MyNavbar extends React.Component {
           </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                Navigation
-              </DropdownToggle>
-              <DropdownMenu right>
-                <NavLink className='nav-link' to="/"> Home </NavLink>
-                <NavLink className='nav-link' to="/league"> League </NavLink>
-                <NavLink className='nav-link' to="/bet"> Bet </NavLink>
-                <NavLink className='nav-link' to="/contact"> Contact </NavLink>
-              </DropdownMenu>
-            </UncontrolledDropdown>
             <UserConsumer>
               {
                 context => {
                   if(context.isAuthentified){
                     return (
-                      <span style={{color: 'white'}}>{context.email}</span>
+                      <span className='text-light' style={{marginLeft:'35px'}}>`Bonjour {context.email}`</span>
                     );
                   } else {
                     return (
