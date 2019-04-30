@@ -39,16 +39,12 @@ class MatchOfDay extends React.Component {
   }
 
   render() {
-   
     const { isLoading, competitions } = this.state;
     return (
-     
       <React.Fragment>
         <div className="test">
           <div className="wrapper-day">
-
             <div className="table">
-
               <div className="row header">
                 <h2 className="title-tab">Match of Day</h2>
               </div>
@@ -80,7 +76,6 @@ class MatchOfDay extends React.Component {
                     );
                   })
                 ) : (<tr><td>Loading...</td></tr>)}
-              
               </div>
             </div>
           </div>
