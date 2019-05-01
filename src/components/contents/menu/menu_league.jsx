@@ -40,4 +40,3 @@ export default class MenuLeague extends React.Component {
     );
   }
 }
-

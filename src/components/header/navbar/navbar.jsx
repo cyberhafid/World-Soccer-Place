@@ -7,13 +7,14 @@ import {
   Nav,
   NavItem
 } from 'reactstrap';
-import ModalLog from './modalLog';
-import ModalSign from './modalSign';
+
 import './navbar.scss';
 import logo from '../../../assets/img/logo.png';
 import ActiveUser from './activeUser';
 import { UserConsumer } from '../../../store/userProvider';
 import { Link, withRouter } from 'react-router-dom';
+import Inscription from './login/inscription';
+import Connex from './login/connex';
 
 class MyNavbar extends React.Component {
   constructor(props) {
@@ -54,12 +55,12 @@ class MyNavbar extends React.Component {
                     return (
                       <Nav className="ml-auto" navbar>
                         <NavItem className="margin-button" media="screen">
-                          <ModalLog
+                          <Connex
                             buttonLabel='LOG IN'
                           />
                         </NavItem>
                         <NavItem>
-                          <ModalSign
+                          <Inscription
                             buttonLabel='SIGN IN'
                           />
                         </NavItem>

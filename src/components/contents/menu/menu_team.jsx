@@ -1,8 +1,9 @@
 import React from 'react';
 import './menu.css';
-import { ListGroup, ListGroupItem } from 'reactstrap';
+import { ListGroup, ListGroupItem, Nav } from 'reactstrap';
+import { NavLink } from 'react-router-dom';
 
-export default class Matchresults extends React.Component {
+export default class MenuLeague extends React.Component {
   render() {
     return (
       <div className="list-group">

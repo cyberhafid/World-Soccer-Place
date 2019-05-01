@@ -1,6 +1,6 @@
 import React from 'react';
-import { Form, FormGroup, Label, Input } from 'reactstrap';
-import MyButton from '../../shared/button';
+import { Form, FormGroup, Label, Input, Button } from 'reactstrap';
+
 import axios from 'axios';
 
 export default class FormSignNav extends React.Component {
@@ -63,8 +63,8 @@ export default class FormSignNav extends React.Component {
             value={this.state.pass}
           />
         </FormGroup>
-        <MyButton  type="submit" colorButton="primary"
-          className='btnNav' nameButton='SIGN IN'/>
+        <Button type="submit" color="primary" className="btn-nav" >SIGN IN</Button>
+  
       </Form>
     );
   }
