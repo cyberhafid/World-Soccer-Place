@@ -1,0 +1,70 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "usertest",
+      "surrname": "surok",
+      "email": "a@gmail.com",
+      "password": "123",
+      "solde": "1000",
+      "mises": [
+        {
+          "startDate": "2015-10-07",
+          "idmatch": "999999",
+          "versement": "22222",
+          "pari": "11111"
+        }
+      ]
+    },
+    {
+      "isSigned": false,
+      "modal": true,
+      "username": "dd",
+      "email": "dd@gmail.com",
+      "password": "123",
+      "solde": "100",
+      "mises": [],
+      "id": 2
+    },
+    {
+      "isSigned": false,
+      "modal": true,
+      "username": "aa",
+      "email": "a@gmail.com",
+      "password": "123",
+      "solde": "",
+      "mises": [],
+      "id": 3
+    },
+    {
+      "isSigned": false,
+      "modal": true,
+      "username": "b",
+      "email": "b@gmail.com",
+      "password": "123",
+      "solde": "100",
+      "mises": [],
+      "id": 4
+    },
+    {
+      "isSigned": false,
+      "modal": true,
+      "username": "v",
+      "email": "v@gmail",
+      "password": "123",
+      "solde": "30",
+      "mises": [],
+      "id": 5
+    },
+    {
+      "isSigned": false,
+      "modal": true,
+      "username": "d",
+      "email": "ddd@gmail.com",
+      "password": "123",
+      "solde": "200",
+      "mises": [],
+      "id": 6
+    }
+  ]
+}

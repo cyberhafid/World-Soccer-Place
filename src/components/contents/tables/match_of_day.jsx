@@ -19,11 +19,11 @@ class MatchOfDay extends React.Component {
   componentDidMount() {
     this.fetchMatch();
   }
-  // componentDidUpdate() {
-  //   if (this.props.match.params.id !== this.state.league) {
-  //     this.fetchMatch();
-  //   }
-  // }
+  componentDidUpdate() {
+    if (this.props.match.params.id !== this.state.league) {
+      this.fetchMatch();
+    }
+  }
 
   fetchMatch() {
     const leagueId = this.props.match.params.id;

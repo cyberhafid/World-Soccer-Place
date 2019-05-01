@@ -1,0 +1,21 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "usertest",
+      "surrname": "surok",
+      "email": "a@gmail.com",
+      "password": "123",
+      "solde": "1000",
+      "mises": [
+        {
+          "startDate": "2015-10-07",
+          "idmatch": "999999",
+          "versement": "22222",
+          "pari": "11111"
+        }
+      ]
+    }
+   
+  ]
+}

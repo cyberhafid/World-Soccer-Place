@@ -1,16 +1,18 @@
 import React from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { Button, Modal, ModalHeader, ModalBody } from 'reactstrap';
 import { Form, FormGroup, Label, Input } from 'reactstrap';
 import axios from 'axios';
-
 export default class Inscription extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       isSigned: false,
       modal: false,
+      username: '',
       email: '',
-      password: ''
+      password: '',
+      solde: '',
+      mises: []
     };
     this.toggle = this.toggle.bind(this);
     this.onChange = this.onChange;
@@ -35,8 +37,7 @@ export default class Inscription extends React.Component {
     axios.post(url, this.state)
       .then((res) => {
         alert('Inscription réussie !');
-        this.setState({ isSigned: true });
-        this.props.toggle();
+        this.setState({ isSigned: true, modal: false });
       })
       .catch((err) => {
         alert('Erreur lors de l\'ajout d\'un membre ');
@@ -44,7 +45,6 @@ export default class Inscription extends React.Component {
       });
  
   }
-
 
   render() {
     return (
@@ -55,6 +55,17 @@ export default class Inscription extends React.Component {
           <ModalBody>
 
             <Form onSubmit={(e) => this.submitForm(e)}>
+              <FormGroup>
+                <Label for="userName">Name</Label>
+                <Input
+                  type="text"
+                  name="username"
+                  id="username"
+                  placeholder="Your name"
+                  onChange={(e) => this.onChange(e)}
+                  value={this.state.username}
+                />
+              </FormGroup>
               <FormGroup>
                 <Label for="userMail">Email</Label>
                 <Input
@@ -76,17 +87,17 @@ export default class Inscription extends React.Component {
                   onChange={(e) => this.onChange(e)}
                   value={this.state.pass}
                 />
+                <Input
+                  type="hidden"
+                  name="mises"
+                  id="mises"
+                  onChange={(e) => this.onChange(e)}
+                  value={this.state.mises}
+                />
               </FormGroup>
               <Button type="submit" color="primary" className="btn-nav" >SIGN IN</Button>
 
             </Form>
-
-
-
-
-
-
-
 
           </ModalBody>
 

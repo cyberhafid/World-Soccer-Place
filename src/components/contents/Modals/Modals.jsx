@@ -19,10 +19,9 @@ class ModalExample extends React.Component {
     this.toggle = this.toggle.bind(this);
     this.toggleNested = this.toggleNested.bind(this);
     this.toggleAll = this.toggleAll.bind(this);
-
     this.modalEffect = React.createRef();
   }
-
+  
   toggle() {
     this.setState(prevState => ({
       modal: !prevState.modal
@@ -86,11 +85,12 @@ class ModalExample extends React.Component {
       };
       this.context.updateUserProfile(this.context.id, user);
     } else {
-      alert("Vous n'avez pas assez de crédit !");
+      alert('Vous n\'avez pas assez de crédit !');
       return this.closeAll();
     }
     this.toggleNested();
   }
+  
   render() {
     const resultTitle = this.state.isWinner ? 'YOU WIN' : 'YOU LOOSE';
     return (
@@ -102,7 +102,7 @@ class ModalExample extends React.Component {
             <br />
             <InputGroup>
               <InputGroupAddon addonType="prepend"> Money $</InputGroupAddon>
-              <Input placeholder={this.props.solde} readOnly />
+              <Input placeholder={this.context.solde} readOnly />
             </InputGroup><br />
             <InputGroup>
               <InputGroupAddon addonType="prepend"> bet $</InputGroupAddon>

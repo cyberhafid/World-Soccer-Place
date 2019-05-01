@@ -11,7 +11,7 @@ export default class Miseur extends React.Component {
     this.state = {
       user: {},
       mises: [],
-      versement: '',
+      versement: ''
     };
     this.onChange = this.onChange.bind(this);
     this.submitForm = this.submitForm.bind(this);
@@ -19,6 +19,7 @@ export default class Miseur extends React.Component {
 
   componentDidMount() {
     this.fetchUserData();
+  
   }
   fetchUserData() {
     axios.get(`http://localhost:3000/users/${this.context.id}`)
@@ -27,7 +28,8 @@ export default class Miseur extends React.Component {
         const user = res.data;
         this.setState({
           mises,
-          user
+          user,
+        
         });
       })
       .catch((err) => console.log(err));
@@ -49,6 +51,7 @@ export default class Miseur extends React.Component {
       body: JSON.stringify({ solde: this.context.solde + parseInt(this.state.versement) }),
     };
     const url = `http://localhost:3000/users/${this.context.id}`;
+  
     fetch(url, config)
       .then(res => res.json())
       .then(res => {

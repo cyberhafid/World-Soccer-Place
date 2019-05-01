@@ -33,12 +33,13 @@ class MyNavbar extends React.Component {
       isOpen: !this.state.isOpen
     });
   }
+
   render() {
     const className = !this.state.isAuthentified ? 'toShow' : 'toHide';
     return (
       <div>
         <Navbar color="light" className="modal-navbar" light expand="md">
-          <NavbarBrand onClick={() => this.props.history.push('/')}>
+          <NavbarBrand onClick={() => this.props.history.push('/league/1221')}>
             <img src={logo} alt="footlogo" height="50"></img>
             <p className="text-light title-nav">World Soccer Place</p>
           </NavbarBrand>
@@ -60,6 +61,7 @@ class MyNavbar extends React.Component {
                           />
                         </NavItem>
                         <NavItem>
+
                           <Inscription
                             buttonLabel='SIGN IN'
                           />

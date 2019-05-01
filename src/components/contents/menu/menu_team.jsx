@@ -1,7 +1,6 @@
 import React from 'react';
 import './menu.css';
-import { ListGroup, ListGroupItem, Nav } from 'reactstrap';
-import { NavLink } from 'react-router-dom';
+import { ListGroup, ListGroupItem } from 'reactstrap';
 
 export default class MenuLeague extends React.Component {
   render() {
