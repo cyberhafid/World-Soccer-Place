@@ -10,6 +10,7 @@ import MyFooter from './components/footer/containerFooter';
 import { userContextData, UserProvider } from './store/userProvider';
 import Axios from 'axios';
 import Miseur from './components/contents/Miser/Miseur';
+import Presentation from './pages/Presentation';
 
 class App extends Component {
   constructor(props) {
@@ -48,6 +49,7 @@ class App extends Component {
               <Route path="/bet/:id" component={Bet} />
               <Route path="/contact" component={Contact} />
               <Route path="/miseur" component={Miseur} />
+              <Route path="/presentation/:id" component={Presentation} />
             </Switch>
             <MyFooter />
           </div>
