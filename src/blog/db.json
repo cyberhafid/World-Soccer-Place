@@ -1,5 +1,42 @@
 {
   "users": [
-    
+    {
+      "email": "dd@gmail.com",
+      "password": "123",
+      "solde": 110,
+      "mises": [
+        {
+          "startDate": "2019-05-02T10:44:39.846Z",
+          "idmatch": "2502859",
+          "pari": 10,
+          "solde": 110
+        },
+        {
+          "startDate": "2019-05-02T10:44:50.733Z",
+          "idmatch": "2502859",
+          "pari": 0,
+          "solde": 110
+        },
+        {
+          "startDate": "2019-05-02T10:44:59.601Z",
+          "idmatch": "2502859",
+          "pari": 0,
+          "solde": 110
+        },
+        {
+          "startDate": "2019-05-02T10:45:08.470Z",
+          "idmatch": "2502859",
+          "pari": 0,
+          "solde": 110
+        },
+        {
+          "startDate": "2019-05-02T10:45:16.908Z",
+          "idmatch": "2502859",
+          "pari": 0,
+          "solde": 110
+        }
+      ],
+      "id": 1
+    }
   ]
 }
