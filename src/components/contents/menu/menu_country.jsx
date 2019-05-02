@@ -22,15 +22,15 @@ export default class MenuCountry extends React.Component {
   }
   render() {
     return (
-      <div class="list-group" >
+      <div className="list-group" >
         <ListGroup id="menu-img-country" className="menu-img">
           <ListGroupItem className="bg-list"><h2 className="title-tab">Country</h2></ListGroupItem>
           {
             this.state.regions.filter((elem, pos, arr) => {
               return arr.map(el => el.region).indexOf(elem.region) === pos;
-            }).map((region) => {
+            }).map((region, idx) => {
               return (
-                <ListGroupItem><span class="titre-menu"><NavLink to={`/league/${region.id}`}>{region.region}</NavLink></span></ListGroupItem>
+                <ListGroupItem key={idx}><span className="titre-menu"><NavLink to={`/league/${region.id}`}>{region.region}</NavLink></span></ListGroupItem>
               );
             })
           }

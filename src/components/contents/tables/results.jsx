@@ -30,7 +30,7 @@ class Results extends React.Component {
   fetchMatch() {
     const leagueId = this.props.match.params.id;
     axios
-      .get(`http://api.football-api.com/2.0/matches?comp_id=${leagueId}&from_date=01.04.2019&to_date=25.04.2019&Authorization=${process.env.REACT_APP_API_KEY}`)
+      .get(`http://api.football-api.com/2.0/matches?comp_id=${leagueId}&from_date=01.04.2019&to_date=20.04.2019&Authorization=${process.env.REACT_APP_API_KEY}`)
 
       .then(response => {
         const competitions = response.data;
@@ -48,19 +48,19 @@ class Results extends React.Component {
     return (
       <React.Fragment>
         <div className="contain-tab">
-          <div class="wrapper-result">
-            <div class="table">
-              <div class="row header green">
-                <h2 className="title-tab">Result</h2>
+          <div className="wrapper-result">
+            <div className="table">
+              <div className="row header green">
+                <h2 className="title-tab">Results</h2>
               </div>
               <div className="table">
                 {!isLoading ? (
 
-                  competitions.filter((competition, idx) => competition.comp_id == this.state.league && idx < 10).map((competition, idx) => {
+                  competitions.filter((competition, idx) => competition.comp_id === this.state.league && idx < 10).map((competition, idx) => {
 
                     const { id, formatted_date, localteam_name, visitorteam_name, localteam_score, visitorteam_score } = competition;
                     return (
-                      <div className="row">
+                      <div className="row" key={idx}>
 
                         <div className="cell direct" data-title="Diffusion">
                           <Link to={'/bet/' + id}><p className="finish">{formatted_date}</p></Link>
@@ -83,7 +83,7 @@ class Results extends React.Component {
                       </div>
                     );
                   })
-                ) : (<tr><td>Loading...</td></tr>)}
+                ) : (<p>Loading...</p>)}
               </div>
             </div>
           </div>

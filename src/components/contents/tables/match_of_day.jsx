@@ -19,16 +19,16 @@ class MatchOfDay extends React.Component {
   componentDidMount() {
     this.fetchMatch();
   }
-  // componentDidUpdate() {
-  //   if (this.props.match.params.id !== this.state.league) {
-  //     this.fetchMatch();
-  //   }
-  // }
+  componentDidUpdate() {
+    if (this.props.match.params.id !== this.state.league) {
+      this.fetchMatch();
+    }
+  }
 
   fetchMatch() {
     const leagueId = this.props.match.params.id;
     axios
-      .get(`http://api.football-api.com/2.0/matches?comp_id=${leagueId}&from_date=26.04.2018&to_date=15.05.2019&Authorization=${process.env.REACT_APP_API_KEY}`)
+      .get(`http://api.football-api.com/2.0/matches?comp_id=${leagueId}&from_date=20.04.2019&to_date=15.05.2019&Authorization=${process.env.REACT_APP_API_KEY}`)
       .then(response => {
         const competitions = response.data;
         this.setState({
@@ -48,11 +48,11 @@ class MatchOfDay extends React.Component {
           <div className="wrapper-day">
             <div className="table">
               <div className="row header">
-                <h2 className="title-tab">Match of Day</h2>
+                <h2 className="title-tab">Matches of Week</h2>
               </div>
               <div className="table">
                 {!isLoading ? (
-                  competitions.filter((competition, idx) => competition.comp_id == this.state.league && idx < 10).map((competition, idx) => {
+                  competitions.filter((competition, idx) => competition.comp_id === this.state.league && idx < 10).map((competition, idx) => {
                     const { id, formatted_date, localteam_name, visitorteam_name, localteam_score, visitorteam_score } = competition;
                     return (
                       <div className="row" key={idx}>
@@ -77,7 +77,7 @@ class MatchOfDay extends React.Component {
                       </div>
                     );
                   })
-                ) : (<tr><td>Loading...</td></tr>)}
+                ) : (<p>Loading...</p>)}
               </div>
             </div>
           </div>

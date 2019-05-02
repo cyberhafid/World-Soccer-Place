@@ -43,7 +43,7 @@ export default class LongBook extends Component {
             <th><strong>1</strong></th>
             <th><strong>N</strong></th>
             <th><strong>2</strong></th>
-            <th className="bonusOffered"><strong>Bonus offered</strong></th>
+            <th className="bonusOffered"><strong>Free Bonus</strong></th>
           </tr>
         </thead>
         <tbody>

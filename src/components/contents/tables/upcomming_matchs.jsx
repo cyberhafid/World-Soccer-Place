@@ -47,19 +47,19 @@ class UpcommingMatchs extends React.Component {
     return (
       <React.Fragment>
         <div className="contain-tab">
-          <div class="wrapper-up">
-            <div class="table">
-              <div class="row header blue">
-                <h2 className="title-tab">Upcomming Match</h2>
+          <div className="wrapper-up">
+            <div className="table">
+              <div className="row header blue">
+                <h2 className="title-tab">Upcoming Match</h2>
               </div>
               <div className="table">
                 {!isLoading ? (
 
-                  competitions.filter((competition, idx) => competition.comp_id == this.state.league && idx < 10).map((competition, idx) => {
+                  competitions.filter((competition, idx) => competition.comp_id === this.state.league && idx < 10).map((competition, idx) => {
 
                     const { id, formatted_date, localteam_name, visitorteam_name, localteam_score, visitorteam_score } = competition;
                     return (
-                      <div className="row">
+                      <div className="row" key={idx}>
                         <div className="cell direct" data-title="Diffusion">
                           <Link to={'/bet/' + id}><p className="date-blue">{formatted_date}</p></Link>
                         </div>
@@ -81,7 +81,7 @@ class UpcommingMatchs extends React.Component {
                       </div>
                     );
                   })
-                ) : (<tr><td>Loading...</td></tr>)}
+                ) : (<p>Loading...</p>)}
               </div>
             </div>
           </div>

@@ -43,7 +43,7 @@ class App extends Component {
           <div className="App">
             <MyNavbar />
             <Switch>
-              <Route exact path="/" component={Home} />
+              <Route exact path="/:id" component={Home} />
               <Route path="/league/:id" component={League} />
               <Route path="/bet/:id" component={Bet} />
               <Route path="/contact" component={Contact} />

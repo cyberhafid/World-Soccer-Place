@@ -19,6 +19,13 @@
  @media (max-width: 1024px) {
     .title-vs{
         font-size: 70px !important;
-        padding-left: 15px !important;
+        padding-left: 25px !important;
+    }
+ }
+
+ @media (max-width: 768px) {
+    .title-vs{
+        font-size: 40px !important;
+        padding-left: 50px !important;
     }
  }

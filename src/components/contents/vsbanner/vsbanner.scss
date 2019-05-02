@@ -37,3 +37,43 @@ font-size: 70px !important;
     }
     
  }
+
+ .box {
+   position: relative;
+ }
+ .box .img-ballon-bet {
+   width: 60px;
+   height: 60px;
+   position: absolute;
+   -webkit-animation: XXX 3.05s linear 0s infinite alternate, YYY 3.4s linear 0s infinite alternate;
+   -moz-animation: XXX 3.05s linear 0s infinite alternate, YYY 3.4s linear 0s infinite alternate;
+   -o-animation: XXX 3.05s linear 0s infinite alternate, YYY 3.4s linear 0s infinite alternate;
+   animation:pulses 5000s  infinite, XXX 3.05s linear 0s infinite alternate, YYY 3.4s linear 0s infinite alternate;
+
+   @-webkit-keyframes XXX {
+    from { left: 0; } to { left: 90%; }
+  }
+  @-moz-keyframes XXX {
+    from { left: 0; } to { left: 90%; }
+  }
+  @-o-keyframes XXX {
+    from { left: 0; } to { left: 90%; }
+  }
+  @keyframes XXX {
+    from { left: 0; } to { left: 90%; }
+  }
+  @-webkit-keyframes YYY {
+    from { top: 0; } to { top: 90%; }
+  }
+  @-moz-keyframes YYY {
+    from { top: 0; } to { top: 90%; }
+  }
+  @-o-keyframes YYY {
+    from { top: 0; } to { top: 90%; }
+  }
+  @keyframes YYY {
+    from { top: 0; } to { top: 90%; }
+  }
+
+ }
+ 

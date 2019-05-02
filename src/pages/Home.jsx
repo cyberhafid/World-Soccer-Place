@@ -14,7 +14,7 @@ export default class Home extends Component {
       <div>
         <Carousel1 />
         <div className="container-fluid backg">
-          <ProgressBar />
+          
           <Row>
             <Col lg="3">
               <Row>
@@ -24,6 +24,7 @@ export default class Home extends Component {
               </Row>
             </Col>
             <Col lg="6">
+              <ProgressBar />
               <MyTable />
             </Col>
             <Col lg="3">

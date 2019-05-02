@@ -53,15 +53,15 @@ export default class Miseur extends React.Component {
       .then(res => res.json())
       .then(res => {
         if (res.error) {
-          alert('le champ panier doit etre non vide');
+          alert('please enter text value');
         } else {
-          alert(`Montant enregistré sous le numero ${res.id}!`);
+          alert(` ${this.state.versement} $ Amount added in to your Wallet`);
           this.fetchUserData();
           this.setState({ versement: '' });
         }
       }).catch(e => {
         console.error(e);
-        alert('Votre CB ne sera pas debité ');
+        alert('Your credit card will not be debited ');
       });
   }
 
@@ -73,36 +73,36 @@ export default class Miseur extends React.Component {
 
             <div className="table shadow-tab">
               <div className="row header yellow">
-                <h2 className="title-tab">identity</h2>
+                <h2 className="title-tab">Account</h2>
               </div>
               <div className="table">
                 <div className="row delete-respon" >
                   <div className="cell bold" data-title="Domicile">
                     <p>E-Mail</p></div>
                   <div className="cell bold" data-title="Domicile">
-                    <p>Solde</p> </div>
+                    <p>Balance</p> </div>
                 </div>
                 <div className="row" >
                   <div className="cell bold" data-title="Email">
                     <p className="direct">{this.state.user.email}</p> </div>
                   <div className="cell bold" data-title="Solde">
-                    <h2 className="direct">{this.state.user.solde}</h2> </div>
+                    <h2 className="direct">{this.state.user.solde} $</h2> </div>
                 </div>
               </div>
             </div>
 
             <div className="table shadow-tab">
               <div className="row header yellow">
-                <h2 className="title-tab"> betting history</h2>
+                <h2 className="title-tab">Betting history</h2>
               </div>
               <div className="table">
                 <div className="row delete-respon" >
                   <div className="cell bold" data-title="Matche N°">
-                    <p className="direct">Matche N°</p> </div>
+                    <p className="direct">Match N°</p> </div>
                   <div className="cell bold" data-title="Pari">
-                    <p>Pari</p></div>
+                    <p>Bet Amount</p></div>
                   <div className="cell bold" data-title="Solde">
-                    <p>Solde</p> </div>
+                    <p>Balance</p> </div>
                 </div>
                 {this.state.mises.map((mise, idx) => {
                   const { idmatch, pari, solde } = mise;
@@ -130,7 +130,7 @@ export default class Miseur extends React.Component {
               </div>
               <div className="table">
                 <Form onSubmit={this.submitForm}>
-                  <div className="row" >
+                  <div className="row pad-left-input" >
                     <div className="cell size-cell1" data-title="">
                       <p className="direct">Add Amount</p>
                     </div>

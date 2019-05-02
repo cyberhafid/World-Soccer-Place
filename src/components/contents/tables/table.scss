@@ -15,7 +15,12 @@
 }
 
 .contain-tab{
-  box-shadow: 15px 15px 6px rgba(0, 0, 0, 0.801);
+  box-shadow: 15px 15px 6px rgba(0, 0, 0, 0.801) !important;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  @media screen and (max-width: 580px) {
+    box-shadow: none !important;
+  }
     body {
         font-family: "Helvetica Neue", Helvetica, Arial;
         font-size: 14px;
@@ -32,14 +37,14 @@
           line-height: 22px;
         }
         .wrapper-result {
-          margin: 0 auto;
-          padding: 40px;
-          max-width: 800px;
+          margin: 0 auto !important;
+          padding: 40px !important;
+          max-width: 800px !important;
         }
         .wrapper-up {
-          margin: 0 auto;
-          padding: 40px;
-          max-width: 800px;
+          margin: 0 auto !important;
+          padding: 40px !important;
+          max-width: 800px !important;
         }
         .wrapper-day {
           margin: 0 auto;
@@ -60,15 +65,15 @@
       }
       .wrapper-day {
         margin: 0 auto;
-        padding-top: 60px;
+        margin-top: 60px;
         max-width: 800px;
       }
       
       .table {
-        margin: 0 0 40px 0;
         width: 100%;
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
         display: table;
+        margin-bottom: 0rem;
       }
       @media screen and (max-width: 580px) {
         .table {
@@ -165,4 +170,12 @@ background-color: rgb(255, 255, 255);
 
 .box-rank{
   box-shadow: 15px 15px 6px rgba(0, 0, 0, 0.801) !important;
+}
+
+@media screen and (max-width: 580px) {
+.title-rank{
+  position: absolute;
+  bottom: 50% !important;
+
+}
 }

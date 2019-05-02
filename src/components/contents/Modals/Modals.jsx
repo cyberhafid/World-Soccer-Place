@@ -124,8 +124,8 @@ class ModalExample extends React.Component {
                     }
                   </ModalBody>
                   <ModalFooter>
-                    <Button color="primary" onClick={this.toggleNested}>Done</Button>{' '}
-                    <Button color="secondary" onClick={this.toggleAll}>All Done</Button>
+                    {/* <Button color="primary" onClick={this.toggleNested}>Close</Button>{' '} */}
+                    <Button color="secondary" onClick={this.toggleAll}>Close</Button>
                   </ModalFooter>
                 </div>
               </Modal>
