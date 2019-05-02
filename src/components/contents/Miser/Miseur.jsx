@@ -20,6 +20,7 @@ export default class Miseur extends React.Component {
   componentDidMount() {
     this.fetchUserData();
   }
+  
   fetchUserData() {
     axios.get(`http://localhost:3000/users/${this.context.id}`)
       .then(res => {
@@ -55,6 +56,7 @@ export default class Miseur extends React.Component {
         if (res.error) {
           alert('please enter text value');
         } else {
+          this.context.updateContextField('solde', this.context.solde + parseInt(this.state.versement) );
           alert(` ${this.state.versement} $ Amount added in to your Wallet`);
           this.fetchUserData();
           this.setState({ versement: '' });

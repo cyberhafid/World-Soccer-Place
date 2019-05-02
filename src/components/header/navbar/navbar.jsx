@@ -48,7 +48,7 @@ class MyNavbar extends React.Component {
                 context => {
                   if (context.isAuthentified) {
                     return (
-                      <Link to="/miseur"><span className='text-light' style={{ marginLeft: '35px' }}>`Bonjour {context.email}`</span></Link>
+                      <Link to="/miseur"><span className='text-light' style={{ marginLeft: '35px' }}>Welcome {context.email}</span></Link>
                     );
                   } else {
                     return (
