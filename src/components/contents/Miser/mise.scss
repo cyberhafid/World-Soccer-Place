@@ -1,14 +1,4 @@
-.date-blue{
-       color: #2980b9;
-   }
-   
-   .direct{
-       color: #ea6153;
-   }
-   
-   .finish{
-       color: #27ae60;
-   }
+
    
    .bold{
        font-weight: bold;
@@ -64,10 +54,11 @@
          }
          
          .table {
-           margin: 0 0 40px 0;
+           margin-top: 0 40px 0px 0;
            width: 100%;
            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
            display: table;
+           margin-bottom: 0px;
          }
          @media screen and (max-width: 580px) {
            .table {
@@ -154,6 +145,7 @@
    
    #table-1{
    background-color: rgb(255, 255, 255);
+   
    }
    
    
@@ -165,3 +157,36 @@
       font-family: 'Permanent Marker', cursive;;
    }
    
+   @media screen and (max-width: 580px) {
+     .table{
+       .delete-respon{
+         display: none;
+       }
+     }
+    }
+
+    .size-cell{
+      width: 100%
+    }
+
+    .size-cell1{
+      width: 50%
+    }
+
+    .size-cell2{
+      width: 50%
+    }
+
+    .padding-title{
+      text-align: right;
+    }
+
+    .shadow-tab{
+      box-shadow: 15px 15px 6px rgba(0, 0, 0, 0.801) !important;
+      margin-top: 50px;
+      margin-bottom: 60px !important;
+    }
+
+    .pad-left-input{
+      padding-left: 200px !important;
+    }

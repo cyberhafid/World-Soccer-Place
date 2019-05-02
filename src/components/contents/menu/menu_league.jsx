@@ -1,5 +1,5 @@
 import React from 'react';
-import './menu.css';
+import './menu.scss';
 import { ListGroup, ListGroupItem, Nav } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 
@@ -7,7 +7,7 @@ export default class MenuLeague extends React.Component {
   render() {
     return (
       <div className="list-group">
-        <ListGroup>
+        <ListGroup id="menu-img-league" className="menu-img">
           <ListGroupItem className="bg-list"><h2 className="title-tab">League</h2></ListGroupItem>
           <Nav vertical>
           
@@ -18,7 +18,6 @@ export default class MenuLeague extends React.Component {
             <ListGroupItem> <img width="30px" src="https://icons.footendirect.com/competition/s/normal/678.png" alt="index leaugue" className="img-thumbnail"></img>
               <span className="titre-menu"> <NavLink to="/league/1005"> UEFA Champions League</NavLink></span>
             </ListGroupItem>
-
             <ListGroupItem>  <img width="30px" src="http://www.foot-direct.com/squelettes/img/competitions/70x70/18.png" alt="index leaugue" ></img>
               <span className="titre-menu"> <NavLink to="/league/1007"> UEFA Europa League</NavLink></span>     
             </ListGroupItem>

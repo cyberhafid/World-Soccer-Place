@@ -41,13 +41,13 @@ class ClassmentTrie extends React.Component {
     const { isLoading, competitions } = this.state;
     return (
       <React.Fragment>
-        <ListGroupItem className="bg-list"><h2 className="title-tab">Classement</h2></ListGroupItem>
+        <ListGroupItem className="bg-list"><h2 className="title-tab title-rank">Ranking</h2></ListGroupItem>
         <div>
           <Table id="table-1">
             <tbody>
               <tr>
-                <td>Position</td>
-                <td>Equipe</td>
+                <td>Rank</td>
+                <td>Team</td>
                 <td>Pts</td>
               </tr>
               {!isLoading ? (
@@ -55,7 +55,7 @@ class ClassmentTrie extends React.Component {
                   const { team_name, points } = competition;
                   return (
                     <tr key={idx}>
-                      <td className="bold"># {idx +1} </td>
+                      <td className="bold"># {idx + 1} </td>
                       <td className="bold"> {team_name}</td>
                       <td className="bold">{points} pts </td>
                     </tr>
