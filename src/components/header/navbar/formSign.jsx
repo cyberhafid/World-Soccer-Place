@@ -8,8 +8,10 @@ export default class FormSignNav extends React.Component {
     super(props);
     this.state = {
       isSigned: false,
-      email: '',
+      email: 'Choose your email',
       password: '',
+      solde: 0,
+      mises: []
     };
     this.onChange = this.onChange;
     this.submitForm = this.submitForm;
@@ -25,14 +27,20 @@ export default class FormSignNav extends React.Component {
   submitForm(e) {
     e.preventDefault();
     const url = 'http://localhost:3000/users';
-    axios.post(url, this.state)
+    const user = {
+      email: this.state.email,     
+      password: this.state.password,
+      solde: this.state.solde,
+      mises: this.state.mises
+    };
+    axios.post(url, user)
       .then((res) => {
-        alert('Inscription réussie !');
+        alert('successful registration');
         this.setState({ isSigned: true });
         this.props.toggle();
       })
       .catch((err) => {
-        alert('Erreur lors de l\'ajout d\'un membre ');
+        alert('Error adding a member');
         console.log(err);
       });
  
@@ -64,7 +72,7 @@ export default class FormSignNav extends React.Component {
           />
         </FormGroup>
         <MyButton  type="submit" colorButton="primary"
-          className='btnNav' nameButton='SIGN IN'/>
+          className='btnNav' nameButton='SIGN UP'/>
       </Form>
     );
   }

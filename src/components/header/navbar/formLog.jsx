@@ -9,8 +9,8 @@ export default class FormLogNav extends React.Component {
     super(props);
     this.state = {
       isAuthentified: false,
-      email: 'hello@gmail.com',
-      password: 'world',
+      email: 'Enter your email',
+      password: '',
     };
     this.onChange = this.onChange;
     this.submitForm = this.submitForm;
@@ -37,11 +37,17 @@ export default class FormLogNav extends React.Component {
             this.context.updateContextField('solde', res.data[index].solde);
             this.context.updateContextField('mises', res.data[index].mises);
             this.context.updateContextField('id', res.data[index].id);
+          } else {
+            alert('wrong password');
           }
+          
+        } else {
+          alert('wrong email');
         }
+        
       })
       .catch((err) => {
-        alert('Erreur lors de l\'ajout d\'un membre ');
+        alert('error occurs');
         console.log(err);
       });
 
@@ -64,7 +70,7 @@ export default class FormLogNav extends React.Component {
               type="email"
               name="email"
               id="userMail"
-              placeholder="Your pseudo"
+              
               onChange={(e) => this.onChange(e)}
               value={this.state.email}
             />
@@ -75,7 +81,7 @@ export default class FormLogNav extends React.Component {
               type="password"
               name="password"
               id="userPass"
-              placeholder="Your password"
+              
               onChange={(e) => this.onChange(e)}
               value={this.state.password}
             />

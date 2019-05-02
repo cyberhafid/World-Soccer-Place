@@ -20,6 +20,7 @@ export default class Miseur extends React.Component {
   componentDidMount() {
     this.fetchUserData();
   }
+  
   fetchUserData() {
     axios.get(`http://localhost:3000/users/${this.context.id}`)
       .then(res => {
@@ -56,6 +57,7 @@ export default class Miseur extends React.Component {
           alert('le champ panier doit etre non vide');
         } else {
           alert(`Montant enregistré sous le numero ${res.id}!`);
+          this.context.updateContextField('solde', this.context.solde + parseInt(this.state.versement) );
           this.fetchUserData();
           this.setState({ versement: '' });
         }
