@@ -39,7 +39,7 @@ class MyNavbar extends React.Component {
     return (
       <div>
         <Navbar color="light" className="modal-navbar" light expand="md">
-          <NavbarBrand onClick={() => this.props.history.push('/league/1221')}>
+          <NavbarBrand onClick={() => this.props.history.push('/presentation/1221')}>
             <img src={logo} alt="footlogo" height="50"></img>
             <p className="text-light title-nav">World Soccer Place</p>
           </NavbarBrand>
@@ -50,7 +50,7 @@ class MyNavbar extends React.Component {
                 context => {
                   if (context.isAuthentified) {
                     return (
-                      <Link to="/miseur"><span className='text-light' style={{ marginLeft: '35px' }}>`Bonjour {context.email}`</span></Link>
+                      <Link to="/miseur"><span className='text-light' style={{ marginLeft: '35px' }}>Welcome {context.email}</span></Link>
                     );
                   } else {
                     return (

@@ -11,7 +11,7 @@ import {
 const items = [
   {
     src: 'https://i.ibb.co/ypWcdxn/82ca09c772b70646a3341a59219d4803.jpg',
-    altText: 'Welcome to Api-Football Actu-foot in real time',
+    altText: 'Welcome to World Soccer Place Actu-foot in real time',
     caption: 'live match news, upcoming matches and finished match scores'
   },
   {

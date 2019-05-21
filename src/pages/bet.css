@@ -2,4 +2,7 @@
     .diffPad {
         padding-left: 0px !important;
     }
-}
+    td{
+        font-size: 15px;
+    }
+ }

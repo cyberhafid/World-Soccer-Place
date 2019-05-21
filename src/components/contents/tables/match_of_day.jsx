@@ -44,11 +44,11 @@ class MatchOfDay extends React.Component {
     const { isLoading, competitions } = this.state;
     return (
       <React.Fragment>
-        <div className="test">
+        <div className="contain-tab">
           <div className="wrapper-day">
             <div className="table">
               <div className="row header">
-                <h2 className="title-tab">Match of Week</h2>
+                <h2 className="title-tab">Matches of Week</h2>
               </div>
               <div className="table">
                 {!isLoading ? (

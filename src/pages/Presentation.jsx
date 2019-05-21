@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-
+import ProgressBar from '../components/header/progressbar/progress';
+import Carousel1 from '../components/header/carousel/carousel';
 import MyTable from '../components/contents/tables/tables_container';
 import Book from '../components/contents/bookmaker/bookmaker';
 import { Row, Col } from 'reactstrap';
@@ -11,7 +12,7 @@ export default class Home extends Component {
   render() {
     return (
       <div>
-      
+        <Carousel1 />
         <div className="container-fluid backg">
           
           <Row>
@@ -23,7 +24,7 @@ export default class Home extends Component {
               </Row>
             </Col>
             <Col lg="6">
-             
+              <ProgressBar />
               <MyTable />
             </Col>
             <Col lg="3">

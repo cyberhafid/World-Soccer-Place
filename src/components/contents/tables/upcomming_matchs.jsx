@@ -46,11 +46,11 @@ class UpcommingMatchs extends React.Component {
     const { isLoading, competitions } = this.state;
     return (
       <React.Fragment>
-        <div className="test">
+        <div className="contain-tab">
           <div className="wrapper-up">
             <div className="table">
               <div className="row header blue">
-                <h2 className="title-tab">Upcomming Match</h2>
+                <h2 className="title-tab">Upcoming Match</h2>
               </div>
               <div className="table">
                 {!isLoading ? (
